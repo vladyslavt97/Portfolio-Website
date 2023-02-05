@@ -9,6 +9,7 @@ import chess from '../public/chess-project.png'
 import petition from '../public/petition-project.gif'
 import connectfour from '../public/connect-four.gif'
 import resume from '../public/resume.png'
+import VT from '../public/VT.png'
 
 import { Link } from "react-scroll";
 import { useState } from 'react'
@@ -43,9 +44,12 @@ export default function Home() {
       <main className=' bg-white px-10 md:px-10 lg:px-60 dark:bg-gray-600'>
         <section className="min-h-screen">
           <nav className='py-10 mb-12 flex justify-between'>
-            <h1 className='text-xl'>Vladyslav Tsurkanenko</h1>
+            <Image alt='VT' src={VT} className="w-40 px-8"/>
             <ul className='flex items-center'>
-              <li><BsFillMoonStarsFill className='cursor-pointer text-2xl dark:fill-white' onClick={()=>setDarkmode(!darkmode)}/></li>
+
+              <li>
+                <BsFillMoonStarsFill className='cursor-pointer text-2xl dark:fill-white' onClick={()=>setDarkmode(!darkmode)}/>
+              </li>
 
               <li>
                 <Link to='projects' smooth={true} duration={1000} className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8"> 
