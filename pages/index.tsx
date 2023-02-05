@@ -2,7 +2,6 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import {BsFillMoonStarsFill} from 'react-icons/bs'
 import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
-
 import Image from 'next/image'
 import vlad from '../public/Vlad.png'
 import chess from '../public/chess-project.png'
@@ -10,6 +9,7 @@ import petition from '../public/petition-project.gif'
 import connectfour from '../public/connect-four.gif'
 import resume from '../public/resume.png'
 import VT from '../public/VT.png'
+import menu from '../public/menu.png'
 
 import { Link } from "react-scroll";
 import { useState } from 'react'
@@ -18,6 +18,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [darkmode, setDarkmode] = useState<boolean>(false); 
+  const [visibleMenuList, setVisibleMenuList] = useState<boolean>(false); 
 
   // download
   const [isLoading, setLoading] = useState(false);
@@ -41,9 +42,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className=' bg-white px-10 md:px-10 lg:px-60 dark:bg-gray-600'>
+      <main className=' bg-white lg:px-60 dark:bg-gray-600'>
         <section className="min-h-screen">
-          <nav className='py-10 mb-12 flex justify-between'>
+          <nav className='py-10 mb-12 flex justify-between' id='nav1'>
             <Image alt='VT' src={VT} className="w-40 px-8"/>
             <ul className='flex items-center'>
 
@@ -52,31 +53,77 @@ export default function Home() {
               </li>
 
               <li>
-                <Link to='projects' smooth={true} duration={1000} className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8"> 
+                <Link to='projects' smooth={true} duration={1000} 
+                className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8 xs:m-2 sm:m-2"> 
                   Projects 
                 </Link>
               </li>
 
               <li>
-                <Link to='skills' smooth={true} duration={1000} className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8"> 
+                <Link to='skills' smooth={true} duration={1000} 
+                className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8 xs:m-2 sm:m-2"> 
                   Skills 
                 </Link>
               </li>
 
               <li>
-                <Link to='resume' smooth={true} duration={1000} className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8"> 
+                <Link to='resume' smooth={true} duration={1000} 
+                className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8 xs:m-2 sm:m-2"> 
                   Resume 
                 </Link>
               </li>
             </ul>
           </nav>
-          
 
+          {/*  */}
+          <nav className="lg:hidden" id='nav2'>
+            <div 
+            // id='nav-div'
+            className='flex justify-center text-center w-screen items-center'
+            >
+              {/* flex justify-center text-center */}
+              <Image alt='VT' src={VT} className="grow w-5 px-20"/>
 
-          <div className='text-center p-10 py-10'>
-            <h2 className='text-5xl py-2 text-teal-600 font-medium'>Vladyslav Tsurkanenko</h2>
-            <h3 className='text-2xl py-2'>Full Stack Web Developer</h3>
-            <p className='text-md py-5 leading-8 text-gray-800 dark:text-white'>Front-end developer with a banking, accounting and political science background. Enjoy writing readable and clean code. Specialised in Javascript, Node, Vue and React, technology I enjoy the most working with, although it is alway exciting to learn new programming languages and frameworks.</p>
+              <BsFillMoonStarsFill className='grow cursor-pointer text-2xl dark:fill-white' onClick={()=>setDarkmode(!darkmode)}/>
+
+              <button 
+                className="grow px-3 py-2  text-teal-200 hover:text-white flex justify-center items-center"
+                onClick={()=>setVisibleMenuList(!visibleMenuList)}
+                >
+                <Image src={menu} alt="menu" className='w-8 h-8'/>
+              </button>
+            </div>
+
+            {visibleMenuList && <div className='flex flex-col z-11 text-right mx-10'>
+                  <ul>
+                    <li>
+                      <Link to='projects' smooth={true} duration={1000} 
+                      className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md" onClick={()=>setVisibleMenuList(!visibleMenuList)}> 
+                        Projects 
+                      </Link>
+                    </li>
+                    <br />
+                    <li>
+                      <Link to='skills' smooth={true} duration={1000} 
+                      className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md" onClick={()=>setVisibleMenuList(!visibleMenuList)}> 
+                        Skills 
+                      </Link>
+                    </li>
+                    <br />
+                    <li>
+                      <Link to='resume' smooth={true} duration={1000} 
+                      className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md" onClick={()=>setVisibleMenuList(!visibleMenuList)}> 
+                        Resume 
+                      </Link>
+                    </li>
+                </ul>
+              </div>}
+          </nav>
+
+          <div className='p-10'>
+            <h2 className='text-4xl text-teal-600 font-medium text-center'>Vladyslav Tsurkanenko</h2>
+            <h3 className='text-2xl py-2 text-center'>Full Stack Web Developer</h3>
+            <p className='text-md py-5 leading-8 text-gray-800 dark:text-white text-center'>Front-end developer with a banking, accounting and political science background. Enjoy writing readable and clean code. Specialised in Javascript, Node, Vue and React, technology I enjoy the most working with, although it is alway exciting to learn new programming languages and frameworks.</p>
           </div>
 
           <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600'>
@@ -179,7 +226,7 @@ export default function Home() {
           <hr />
           <h2 className='text-center mt-20 text-3xl' id='resume'>Resume</h2>
           <div className="flex justify-center flex-col my-5">
-            <button className="w-80 mx-auto mt-5 bg-teal-500 hover:bg-teal-900 text-white font-bold py-2 px-4 rounded text-center" onClick={handleDownload}>
+            <button className="w-60 mx-auto mt-5 bg-teal-500 hover:bg-teal-900 text-white font-bold py-2 px-4 rounded text-center" onClick={handleDownload}>
               {isLoading ? 'Loading...' : 'Download'}
             </button>
           </div>
