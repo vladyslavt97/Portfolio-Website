@@ -94,7 +94,7 @@ export default function Home() {
               </button>
             </div>
 
-            {visibleMenuList && <div className='flex flex-col z-11 text-right mx-10'>
+            {visibleMenuList && <div className='flex flex-col z-11 text-right mx-10 bg-gradient-to-r from-white to-teal-200 p-4 rounded-lg'>
                   <ul>
                     <li>
                       <Link to='projects' smooth={true} duration={1000} 
