@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import Ticker, { FinancialTicker, NewsTicker } from 'nice-react-ticker';
 
 export default function Skills() {
   return (
