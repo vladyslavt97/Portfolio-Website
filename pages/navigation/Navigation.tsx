@@ -16,9 +16,9 @@ export default function Navigation() {
 
             <ul className='flex items-center'>
               <li>
-                <Link to='projects' smooth={true} duration={1000} 
-                className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8 xs:m-2 sm:m-2"> 
-                  Projects 
+                <Link to='contacts' smooth={true} duration={1000} 
+                className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md" onClick={()=>setVisibleMenuList(!visibleMenuList)}> 
+                  Contacts
                 </Link>
               </li>
 
@@ -26,6 +26,13 @@ export default function Navigation() {
                 <Link to='skills' smooth={true} duration={1000} 
                 className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8 xs:m-2 sm:m-2"> 
                   Skills 
+                </Link>
+              </li>
+
+              <li>
+                <Link to='projects' smooth={true} duration={1000} 
+                className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8 xs:m-2 sm:m-2"> 
+                  Projects 
                 </Link>
               </li>
 
@@ -58,16 +65,23 @@ export default function Navigation() {
             className='flex flex-col z-11 text-right mx-10 bg-gradient-to-r via-transparent from-transparent to-teal-200 p-4 rounded-lg'>
                   <ul>
                     <li>
-                      <Link to='projects' smooth={true} duration={1000} 
+                      <Link to='skills' smooth={true} duration={1000} 
                       className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md" onClick={()=>setVisibleMenuList(!visibleMenuList)}> 
-                        Projects 
+                        Skills 
                       </Link>
                     </li>
                     <br />
                     <li>
-                      <Link to='skills' smooth={true} duration={1000} 
+                      <Link to='contacts' smooth={true} duration={1000} 
                       className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md" onClick={()=>setVisibleMenuList(!visibleMenuList)}> 
-                        Skills 
+                        Contacts
+                      </Link>
+                    </li>
+                    <br />
+                    <li>
+                      <Link to='projects' smooth={true} duration={1000} 
+                      className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md" onClick={()=>setVisibleMenuList(!visibleMenuList)}> 
+                        Projects 
                       </Link>
                     </li>
                     <br />

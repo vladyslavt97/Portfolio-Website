@@ -7,6 +7,7 @@ import Projects from './projects/Projects'
 import Skills from './skills/Skills'
 import Navigation from './navigation/Navigation'
 import MyInfo from './myinfo/MyInfo'
+import Contacts from './contacts/Contacts'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -31,7 +32,7 @@ export default function Home() {
         <Navigation />
 
         <MyInfo />
-
+        <Contacts />
         <section>
           <Skills/>
           <Projects />
