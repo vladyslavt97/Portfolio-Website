@@ -6,7 +6,7 @@ import Resume from './resume/Resume'
 import Projects from './projects/Projects'
 import Skills from './skills/Skills'
 import Navigation from './navigation/Navigation'
-// import General from './general/General'
+import MyInfo from './myinfo/MyInfo'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,7 +30,7 @@ export default function Home() {
 
         <Navigation />
 
-        {/* <General /> */}
+        <MyInfo />
 
         <section>
           <Skills/>

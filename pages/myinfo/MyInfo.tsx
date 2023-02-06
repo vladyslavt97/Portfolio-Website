@@ -3,7 +3,7 @@ import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
 import Image from 'next/image'
 import vlad from '../../public/Vlad.png'
 
-export default function General() {
+export default function MyInfo() {
   return (
     <div>
         <div className='p-10'>
