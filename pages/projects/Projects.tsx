@@ -15,7 +15,7 @@ export default function Projects() {
             <div className='text-center shadow-lg my-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 dark:bg-teal-100 basis-1/3 flex-1'>
               <h4 className='text-gray-800 py-1'>Chess</h4>
               <p>The project using Socket.io to establish connection between players.</p>
-              <Image src={chess} alt="chess" className='p-10 rounded-lg'/>
+              <Image src={chess} alt="chess" className='p-10 rounded-lg' />
               <div>
                 <a href="https://github.com/vladyslavt97/chess-ts-project" target="_blank" rel="noopener noreferrer" 
                   className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
