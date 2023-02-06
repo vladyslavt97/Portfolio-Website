@@ -1,38 +1,17 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import {BsFillMoonStarsFill} from 'react-icons/bs'
-import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
-import Image from 'next/image'
-import vlad from '../public/Vlad.png'
-import chess from '../public/chess-project.png'
-import petition from '../public/petition-project.gif'
-import connectfour from '../public/connect-four.gif'
-import resume from '../public/resume.png'
-import VT from '../public/VT.png'
-import menu from '../public/menu.png'
-
-import { Link } from "react-scroll";
 import { useState } from 'react'
+import Resume from './resume/Resume'
+import Projects from './projects/Projects'
+import Skills from './skills/Skills'
+import General from './general/general'
+import Navigation from './navigation/Navigation'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [darkmode, setDarkmode] = useState<boolean>(false); 
-  const [visibleMenuList, setVisibleMenuList] = useState<boolean>(false); 
-
-  // download
-  const [isLoading, setLoading] = useState(false);
-
-  const handleDownload = async () => {
-    setLoading(true);
-    const response = await fetch('../public/CV.pdf');
-    const blob = await response.blob();
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = 'CV-Vladyslav-Tsurkanenko.pdf';
-    link.click();
-    setLoading(false);
-  };
 
   return (
     <div className={darkmode ? 'dark' : ''}>
@@ -43,194 +22,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className=' bg-white lg:px-60 dark:bg-gray-600'>
-        <section className="min-h-screen">
-          <nav className='py-10 mb-12 flex justify-between' id='nav1'>
-            <Image alt='VT' src={VT} className="w-40 px-8"/>
-            <ul className='flex items-center'>
 
-              <li>
-                <BsFillMoonStarsFill className='cursor-pointer text-2xl dark:fill-white' onClick={()=>setDarkmode(!darkmode)}/>
-              </li>
+        <BsFillMoonStarsFill className='cursor-pointer text-2xl dark:fill-white' onClick={()=>setDarkmode(!darkmode)}/>
 
-              <li>
-                <Link to='projects' smooth={true} duration={1000} 
-                className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8 xs:m-2 sm:m-2"> 
-                  Projects 
-                </Link>
-              </li>
+        <Navigation />
 
-              <li>
-                <Link to='skills' smooth={true} duration={1000} 
-                className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8 xs:m-2 sm:m-2"> 
-                  Skills 
-                </Link>
-              </li>
+        <General />
 
-              <li>
-                <Link to='resume' smooth={true} duration={1000} 
-                className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8 xs:m-2 sm:m-2"> 
-                  Resume 
-                </Link>
-              </li>
-            </ul>
-          </nav>
-
-          {/*  */}
-          <nav className="lg:hidden" id='nav2'>
-            <div 
-            // id='nav-div'
-            className='flex justify-center text-center w-screen items-center'
-            >
-              {/* flex justify-center text-center */}
-              <Image alt='VT' src={VT} className="grow w-5 px-20"/>
-
-              <BsFillMoonStarsFill className='grow cursor-pointer text-2xl dark:fill-white' onClick={()=>setDarkmode(!darkmode)}/>
-
-              <button 
-                className="grow px-3 py-2  text-teal-200 hover:text-white flex justify-center items-center"
-                onClick={()=>setVisibleMenuList(!visibleMenuList)}
-                >
-                <Image src={menu} alt="menu" className='w-8 h-8'/>
-              </button>
-            </div>
-
-            {visibleMenuList && <div className='flex flex-col z-11 text-right mx-10 bg-gradient-to-r from-white to-teal-200 p-4 rounded-lg'>
-                  <ul>
-                    <li>
-                      <Link to='projects' smooth={true} duration={1000} 
-                      className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md" onClick={()=>setVisibleMenuList(!visibleMenuList)}> 
-                        Projects 
-                      </Link>
-                    </li>
-                    <br />
-                    <li>
-                      <Link to='skills' smooth={true} duration={1000} 
-                      className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md" onClick={()=>setVisibleMenuList(!visibleMenuList)}> 
-                        Skills 
-                      </Link>
-                    </li>
-                    <br />
-                    <li>
-                      <Link to='resume' smooth={true} duration={1000} 
-                      className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md" onClick={()=>setVisibleMenuList(!visibleMenuList)}> 
-                        Resume 
-                      </Link>
-                    </li>
-                </ul>
-              </div>}
-          </nav>
-
-          <div className='p-10'>
-            <h2 className='text-4xl text-teal-600 font-medium text-center'>Vladyslav Tsurkanenko</h2>
-            <h3 className='text-2xl py-2 text-center'>Full Stack Web Developer</h3>
-            <p className='text-md py-5 leading-8 text-gray-800 dark:text-white text-center'>Front-end developer with a banking, accounting and political science background. Enjoy writing readable and clean code. Specialised in Javascript, Node, Vue and React, technology I enjoy the most working with, although it is alway exciting to learn new programming languages and frameworks.</p>
-          </div>
-
-          <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600'>
-            <a href='https://github.com/vladyslavt97' target="_blank" rel="noopener noreferrer">
-              <AiFillGithub className='dark:fill-white'/>
-            </a>
-            <a href='https://www.linkedin.com/in/vladyslav-tsurkanenko/' target="_blank" rel="noopener noreferrer">
-              <AiFillLinkedin className='dark:fill-white'/>
-            </a>
-          </div>
-
-          <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 m-10 overflow-hidden shadow-2xl'>
-            <Image src={vlad} alt="sometext"/>
-          </div>
-        </section>
-
-        {/* Technologies and projects */}
         <section>
-          <div id='skills'>
-            <h3 className='text-3xl py-1 text-center'>Technologies I know:</h3>
-            <p className="text-md py-2 leading-8 text-gray-800 text-center dark:text-white">Developing web applications for money</p>
-          </div>
-
-          {/* projects! */}
-          <h2 className='py-4 text-teal-600 text-lg font-medium pt-8 pb-2 text-center' id='projects'>My Projects</h2>
-          <div className='lg:flex gap-10 lg:flex-wrap md:flex-wrap'>
-
-            {/* Chess */}
-            <div className='text-center shadow-lg my-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 dark:bg-teal-100 basis-1/3 flex-1'>
-              <h4 className='text-gray-800 py-1'>Chess</h4>
-              <p>The project using Socket.io to establish connection between players.</p>
-              <Image src={chess} alt="chess" className='p-10 rounded-lg'/>
-              <div>
-                <a href="https://github.com/vladyslavt97/chess-ts-project" target="_blank" rel="noopener noreferrer" 
-                  className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
-                  Code
-                </a>
-                <a href="chess-rn1q.onrender.com/" target="_blank" rel="noopener noreferrer" 
-                  className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
-                  Website
-                </a>
-              </div>
-            </div>
-            
-            {/* Social Network */}
-            <div className='text-center shadow-lg my-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 dark:bg-teal-100 basis-1/3 flex-1'>
-              <h4 className='text-gray-800 py-1'>Social Network</h4>
-              <p>Bookface - is a social network to communicate with your friends.</p>
-              <Image src={petition} alt="chess" className='p-10 rounded-lg'/>
-              <a href="https://github.com/vladyslavt97/chess-ts-project" target="_blank" rel="noopener noreferrer" 
-                className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
-                Code
-              </a>
-            </div>
-
-            {/* Imageboard */}
-            <div className='text-center shadow-lg my-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 dark:bg-teal-100 basis-1/3 flex-1'>
-              <h4 className='text-gray-800 py-1'>Imageboard</h4>
-              <p>Upload your images and write comments.</p>
-              <Image src={petition} alt="chess" className='p-10 rounded-lg'/>
-              <a href="https://github.com/vladyslavt97/chess-ts-project" target="_blank" rel="noopener noreferrer" 
-                className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
-                Code
-              </a>
-            </div>
-
-            {/* Petition */}
-            <div className='text-center shadow-lg my-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 dark:bg-teal-100 basis-1/3 flex-1'>
-              <h4 className='text-gray-800 py-1'>Petition</h4>
-              <p>Register and sign the petition to support the cause.</p>
-              <Image src={petition} alt="chess" className='p-10 rounded-lg'/>
-              <a href="https://github.com/vladyslavt97/chess-ts-project" target="_blank" rel="noopener noreferrer" 
-                className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
-                Code
-              </a>
-            </div>
-
-            {/* Connect Four */}
-            <div className='text-center shadow-lg my-10 py-5  bg-slate-100 rounded-lg md:mx-40 lg:mx-10 dark:bg-teal-100 basis-1/3 flex-1'>
-              <h4 className='text-gray-800 py-1'>Connect Four</h4>
-              <p>The classic game of Connect-Four.</p>
-              <Image src={connectfour} alt="chess" className='p-10 rounded-lg'/>
-              <div>
-                <a href="https://github.com/vladyslavt97/chess-ts-project" target="_blank" rel="noopener noreferrer" 
-                  className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
-                  Code
-                </a>
-                <a href="https://brilliant-halva-1a9875.netlify.app/" target="_blank" rel="noopener noreferrer" 
-                  className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
-                  Website
-                </a>
-              </div>
-            </div>
-          </div>
-
-
-
-
-          {/* Resume */}
-          <hr />
-          <h2 className='text-center mt-20 text-3xl' id='resume'>Resume</h2>
-          <div className="flex justify-center flex-col my-5">
-            <button className="w-60 mx-auto mt-5 bg-teal-500 hover:bg-teal-900 text-white font-bold py-2 px-4 rounded text-center" onClick={handleDownload}>
-              {isLoading ? 'Loading...' : 'Download'}
-            </button>
-          </div>
-            <Image src={resume} alt='resume' className='shadow-2xl my-20 p-20'/>
+          <Skills/>
+          <Projects />
+          <Resume />
         </section>
       </main>
     </div>
