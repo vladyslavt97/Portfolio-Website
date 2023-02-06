@@ -15,10 +15,11 @@
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": ".",
+    "typeRoots": ["./pages/types"],
     "paths": {
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/skills/ticker/Ticker.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/skills/ticker/Ticker.tsx", "./pages/types"],
   "exclude": ["node_modules"]
 }
