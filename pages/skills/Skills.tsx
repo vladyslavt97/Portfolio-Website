@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Ticker, { FinancialTicker, NewsTicker } from 'nice-react-ticker';
 
 export default function Skills() {
   return (
@@ -10,7 +11,7 @@ export default function Skills() {
           Here is the list of the technologies I have implemented projects with:
         </p>
           {/* ticker */}
-        <div className='flex flex-row justify-center'>
+        <div className='flex flex-row justify-center bg-transparent'>
           <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="some" width={50} height={50}/>
           <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt="some" width={50} height={50}/>
           <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="some" width={50} height={50}/>
