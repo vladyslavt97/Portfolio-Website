@@ -7,7 +7,8 @@ import portfoliopage from '../../public/portfoliopage.gif'
 
 export default function Projects() {
   return (
-    <div><h2 className='py-4 text-teal-600 text-lg font-medium pt-8 pb-2 text-center' id='projects'>My Projects</h2>
+    <div>
+      <h2 className='mt-32 py-4 text-teal-600 text-lg font-medium pt-8 pb-2 text-center' id='projects'>My Projects</h2>
           <div className='lg:flex gap-10 lg:flex-wrap md:flex-wrap'>
 
             {/* Chess */}
