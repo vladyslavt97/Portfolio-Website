@@ -21,7 +21,7 @@ export default function General() {
         </a>
         </div>
 
-        <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 m-10 overflow-hidden shadow-2xl'>
+        <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 m-10 overflow-hidden shadow-lg'>
         <Image src={vlad} alt="sometext"/>
         </div>
     </div>

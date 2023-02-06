@@ -5,7 +5,7 @@ import { useState } from 'react'
 import Resume from './resume/Resume'
 import Projects from './projects/Projects'
 import Skills from './skills/Skills'
-import General from './general/general'
+import General from './general/General'
 import Navigation from './navigation/Navigation'
 
 const inter = Inter({ subsets: ['latin'] })

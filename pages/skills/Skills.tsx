@@ -1,4 +1,5 @@
 import React from 'react'
+import Ticker from './ticker/Ticker'
 
 export default function Skills() {
   return (
@@ -8,6 +9,7 @@ export default function Skills() {
             <p className="text-md py-2 leading-8 text-gray-800 text-center dark:text-white">
                 Here I list the technologies I have implemented projects with:
                 {/* ticker */}
+                <Ticker />
             </p>
         </div>
     </div>
