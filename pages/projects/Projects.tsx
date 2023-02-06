@@ -21,7 +21,7 @@ export default function Projects() {
                   className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
                   Code
                 </a>
-                <a href="chess-rn1q.onrender.com/" target="_blank" rel="noopener noreferrer" 
+                <a href="https://chess-rn1q.onrender.com/" target="_blank" rel="noopener noreferrer" 
                   className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
                   Website
                 </a>
@@ -33,7 +33,7 @@ export default function Projects() {
               <h4 className='text-gray-800 py-1'>Social Network</h4>
               <p>Bookface - is a social network to communicate with your friends.</p>
               <Image src={petition} alt="chess" className='p-10 rounded-lg'/>
-              <a href="https://github.com/vladyslavt97/chess-ts-project" target="_blank" rel="noopener noreferrer" 
+              <a href="https://github.com/vladyslavt97/Social-Network" target="_blank" rel="noopener noreferrer" 
                 className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
                 Code
               </a>
@@ -44,7 +44,7 @@ export default function Projects() {
               <h4 className='text-gray-800 py-1'>Imageboard</h4>
               <p>Upload your images and write comments.</p>
               <Image src={petition} alt="chess" className='p-10 rounded-lg'/>
-              <a href="https://github.com/vladyslavt97/chess-ts-project" target="_blank" rel="noopener noreferrer" 
+              <a href="https://github.com/vladyslavt97/Imageboard" target="_blank" rel="noopener noreferrer" 
                 className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
                 Code
               </a>
@@ -55,7 +55,7 @@ export default function Projects() {
               <h4 className='text-gray-800 py-1'>Petition</h4>
               <p>Register and sign the petition to support the cause.</p>
               <Image src={petition} alt="chess" className='p-10 rounded-lg'/>
-              <a href="https://github.com/vladyslavt97/chess-ts-project" target="_blank" rel="noopener noreferrer" 
+              <a href="https://github.com/vladyslavt97/Petition" target="_blank" rel="noopener noreferrer" 
                 className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
                 Code
               </a>
@@ -67,7 +67,7 @@ export default function Projects() {
               <p>The classic game of Connect-Four.</p>
               <Image src={connectfour} alt="chess" className='p-10 rounded-lg'/>
               <div>
-                <a href="https://github.com/vladyslavt97/chess-ts-project" target="_blank" rel="noopener noreferrer" 
+                <a href="https://github.com/vladyslavt97/Connect-Four" target="_blank" rel="noopener noreferrer" 
                   className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
                   Code
                 </a>
@@ -88,7 +88,7 @@ export default function Projects() {
                   className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
                   Code
                 </a>
-                <a href="https://portfolio-vladyslavt97.vercel.app/" target="_blank" rel="noopener noreferrer" 
+                <a href="https://portfolio-jade-chi-24.vercel.app/" target="_blank" rel="noopener noreferrer" 
                   className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
                   Website
                 </a>
