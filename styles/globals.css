@@ -120,3 +120,24 @@ a {
   position: absolute;
   top: 10px;
 }
+
+
+/* #ticker{
+  gap: 10px;
+  animation: ticker 40s linear infinite;
+} */
+
+/* @keyframes ticker {
+  0%{
+    transform: translateX(2000px);
+  }
+  100%{
+    transform: translate(-600px);
+  }
+} */
+
+/* @media screen and (max-width: 600px) {
+  #ticker {
+      flex: wrap;
+    }
+} */
