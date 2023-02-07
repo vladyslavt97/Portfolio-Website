@@ -122,8 +122,8 @@ a {
 }
 
 @screen sm {
-  body{
-    color: black;
+  .text-white {
+    color: white;
   }
 }
 
