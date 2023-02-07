@@ -35,7 +35,7 @@ export default function Navigation() {
                   Projects 
                 </Link>
               </li>
-
+    {/* last change */}
               <li>
                 <Link to='resume' smooth={true} duration={1000} 
                 className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8 xs:m-2 sm:m-2"> 
