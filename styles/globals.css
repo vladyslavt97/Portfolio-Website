@@ -142,3 +142,6 @@ a {
       flex: wrap;
     }
 } */
+#ticker{
+  flex-wrap: wrap;
+}
