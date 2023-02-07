@@ -137,11 +137,15 @@ a {
   }
 } */
 
-/* @media screen and (max-width: 600px) {
-  #ticker {
-      flex: wrap;
-    }
-} */
+@media screen and (max-width: 500px) {
+  #img12{
+    width: 55px;
+  }
+  #img13{
+    width: 90px;
+  }
+}
 #ticker{
   flex-wrap: wrap;
 }
+
