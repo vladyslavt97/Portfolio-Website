@@ -5,7 +5,7 @@ export default function Skills() {
   return (
     <div>
       <div id='skills'>
-        <h3 className='mt-32 text-3xl py-1 text-center'>Skills:</h3>
+        <h3 className='mt-32 text-3xl py-1 text-center text-black'>Skills:</h3>
         <p className="text-md py-2 leading-8 text-gray-800 text-center dark:text-white">
           Here is the list of the technologies I have implemented projects with:
         </p>
