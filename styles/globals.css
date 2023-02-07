@@ -121,6 +121,11 @@ a {
   top: 10px;
 }
 
+@screen sm {
+  body{
+    color: black;
+  }
+}
 
 /* #ticker{
   gap: 10px;
