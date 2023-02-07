@@ -17,7 +17,7 @@ export default function Navigation() {
             <ul className='flex items-center'>
               <li>
                 <Link to='contacts' smooth={true} duration={1000} 
-                className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md" onClick={()=>setVisibleMenuList(!visibleMenuList)}> 
+                className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8 xs:m-2 sm:m-2" onClick={()=>setVisibleMenuList(!visibleMenuList)}> 
                   Contacts
                 </Link>
               </li>
