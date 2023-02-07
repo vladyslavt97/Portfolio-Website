@@ -14,7 +14,7 @@ export default function Resume() {
             >Download</a>
 
           </div>
-            <Image src={resume} alt='resume' className='shadow-2xl my-20 p-20'/>
+            <Image src={resume} alt='resume' className='shadow-2xl my-20 p-20 lg:p-50  dark:bg-white'/>
     </div>
 
 }

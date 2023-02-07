@@ -12,8 +12,8 @@ export default function Projects() {
           <div className='lg:flex gap-10 lg:flex-wrap md:flex-wrap'>
 
             {/* Chess */}
-            <div className='text-center shadow-lg my-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 dark:bg-teal-100 basis-1/3 flex-1'>
-              <h4 className='text-gray-800 py-1'>Chess</h4>
+            <div className='text-center shadow-lg my-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1'>
+              <h4 className='text-gray-800 py-1 text-xl font-bold'>Chess</h4>
               <p className='text-black'>The project using Socket.io to establish connection between players.</p>
               <Image src={chess} alt="chess" className='p-10 rounded-lg' />
               <div>
@@ -29,8 +29,8 @@ export default function Projects() {
             </div>
             
             {/* Social Network */}
-            <div className='text-center shadow-lg my-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 dark:bg-teal-100 basis-1/3 flex-1'>
-              <h4 className='text-gray-800 py-1'>Social Network</h4>
+            <div className='text-center shadow-lg my-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1'>
+              <h4 className='text-gray-800 py-1 text-xl font-bold'>Social Network</h4>
               <p className='text-black'>Bookface - is a social network to communicate with your friends.</p>
               <Image src={petition} alt="chess" className='p-10 rounded-lg'/>
               <a href="https://github.com/vladyslavt97/Social-Network" target="_blank" rel="noopener noreferrer" 
@@ -40,8 +40,8 @@ export default function Projects() {
             </div>
 
             {/* Imageboard */}
-            <div className='text-center shadow-lg my-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 dark:bg-teal-100 basis-1/3 flex-1'>
-              <h4 className='text-gray-800 py-1'>Imageboard</h4>
+            <div className='text-center shadow-lg my-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1'>
+              <h4 className='text-gray-800 py-1 text-xl font-bold'>Imageboard</h4>
               <p className='text-black'>Upload your images and write comments.</p>
               <Image src={petition} alt="chess" className='p-10 rounded-lg'/>
               <a href="https://github.com/vladyslavt97/Imageboard" target="_blank" rel="noopener noreferrer" 
@@ -51,8 +51,8 @@ export default function Projects() {
             </div>
 
             {/* Petition */}
-            <div className='text-center shadow-lg my-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 dark:bg-teal-100 basis-1/3 flex-1'>
-              <h4 className='text-gray-800 py-1'>Petition</h4>
+            <div className='text-center shadow-lg my-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1'>
+              <h4 className='text-gray-800 py-1 text-xl font-bold'>Petition</h4>
               <p className='text-black'>Register and sign the petition to support the cause.</p>
               <Image src={petition} alt="chess" className='p-10 rounded-lg'/>
               <a href="https://github.com/vladyslavt97/Petition" target="_blank" rel="noopener noreferrer" 
@@ -62,8 +62,8 @@ export default function Projects() {
             </div>
 
             {/* Connect Four */}
-            <div className='text-center shadow-lg my-10 py-5  bg-slate-100 rounded-lg md:mx-40 lg:mx-10 dark:bg-teal-100 basis-1/3 flex-1'>
-              <h4 className='text-gray-800 py-1'>Connect Four</h4>
+            <div className='text-center shadow-lg my-10 py-5  bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1'>
+              <h4 className='text-gray-800 py-1 text-xl font-bold'>Connect Four</h4>
               <p className='text-black'>The classic game of Connect-Four.</p>
               <Image src={connectfour} alt="chess" className='p-10 rounded-lg'/>
               <div>
@@ -79,8 +79,8 @@ export default function Projects() {
             </div>
 
             {/* Portfolio Page*/}
-            <div className='text-center shadow-lg my-10 py-5  bg-slate-100 rounded-lg md:mx-40 lg:mx-10 dark:bg-teal-100 basis-1/3 flex-1'>
-              <h4 className='text-gray-800 py-1'>Portfolio Page</h4>
+            <div className='text-center shadow-lg my-10 py-5  bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1'>
+              <h4 className='text-gray-800 py-1 text-xl font-bold'>Portfolio Page</h4>
               <p className='text-black'>The current page and the code.</p>
               <Image src={portfoliopage} alt="portfolio" className='p-10 rounded-lg'/>
               <div>
