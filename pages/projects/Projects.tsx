@@ -1,11 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
-import chess from '../../public/chess-project.png'
+import chess from '../../public/checkmate.gif'
+import socialnetwork from '../../public/chat_sn.gif'
+import imageboard from '../../public/imageboard-comment.gif'
 import petition from '../../public/petition-project.gif'
 import connectfour from '../../public/connect-four.gif'
 import portfoliopage from '../../public/portfoliopage.gif'
 
 export default function Projects() {
+
   return (
     <div>
       <h2 className='mt-32 py-4 text-teal-600 text-lg font-medium pt-8 pb-2 text-center' id='projects'>My Projects</h2>
@@ -32,7 +35,7 @@ export default function Projects() {
             <div className='text-center shadow-lg my-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1'>
               <h4 className='text-gray-800 py-1 text-xl font-bold'>Social Network</h4>
               <p className='text-black'>Bookface - is a social network to communicate with your friends.</p>
-              <Image src={petition} alt="chess" className='p-10 rounded-lg'/>
+              <Image src={socialnetwork} alt="chess" className='p-10 rounded-lg'/>
               <a href="https://github.com/vladyslavt97/Social-Network" target="_blank" rel="noopener noreferrer" 
                 className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
                 Code
@@ -43,7 +46,7 @@ export default function Projects() {
             <div className='text-center shadow-lg my-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1'>
               <h4 className='text-gray-800 py-1 text-xl font-bold'>Imageboard</h4>
               <p className='text-black'>Upload your images and write comments.</p>
-              <Image src={petition} alt="chess" className='p-10 rounded-lg'/>
+              <Image src={imageboard} alt="chess" className='p-10 rounded-lg'/>
               <a href="https://github.com/vladyslavt97/Imageboard" target="_blank" rel="noopener noreferrer" 
                 className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
                 Code
