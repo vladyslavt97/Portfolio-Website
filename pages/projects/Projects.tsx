@@ -3,7 +3,7 @@ import Image from 'next/image'
 import chess from '../../public/checkmate.gif'
 import socialnetwork from '../../public/chat_sn.gif'
 import imageboard from '../../public/imageboard-comment.gif'
-import petition from '../../public/petition-project.gif'
+import petition from '../../public/petition.gif'
 import connectfour from '../../public/connect-four.gif'
 import portfoliopage from '../../public/portfoliopage.gif'
 
