@@ -44,21 +44,21 @@ export default function SendEmailToMe(){
     <form ref={form} onSubmit={sendEmail} 
     className=" bg-gradient-to-r from-cyan-500 to-teal-500 flex justify-center mt-10 mx-0 flex-col items-center rounded-2xl"
     id="sendemail">
-      <label>Name</label>
+      <label className=" text-lg text-black mt-5">Name</label>
       <br />
       <input className="rounded-lg" 
         type="text" name="user_name" 
         onChange={handleChangeUserName}
         value={userName}/>
       <br />
-      <label>Email</label>
+      <label className=" text-lg text-black">Email</label>
       <br />
       <input className="rounded-lg"  
         type="email" name="email" 
         onChange={handleChangeEmail}
         value={emailState}/>
       <br />
-      <label>Message</label>
+      <label className=" text-lg text-black">Message</label>
       <br />
       <textarea className="rounded-lg"  
         name="message" 
