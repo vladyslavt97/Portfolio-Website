@@ -41,27 +41,33 @@ export default function SendEmailToMe(){
     };
 
   return (
-    <form ref={form} onSubmit={sendEmail} className="bg-slate-500 flex justify-center my-10 flex-col items-center">
+    <form ref={form} onSubmit={sendEmail} 
+    className=" bg-gradient-to-r from-cyan-500 to-teal-500 flex justify-center mt-10 mx-0 flex-col items-center rounded-2xl"
+    id="sendemail">
       <label>Name</label>
       <br />
-      <input type="text" name="user_name" 
+      <input className="rounded-lg" 
+        type="text" name="user_name" 
         onChange={handleChangeUserName}
         value={userName}/>
       <br />
       <label>Email</label>
       <br />
-      <input type="email" name="email" 
+      <input className="rounded-lg"  
+        type="email" name="email" 
         onChange={handleChangeEmail}
         value={emailState}/>
       <br />
       <label>Message</label>
       <br />
-      <textarea name="message" 
+      <textarea className="rounded-lg"  
+        name="message" 
         onChange={handleChangeMessage}
         value={messageState}
         />
       <br />
-      <input type="submit" value="Send" />
+      <input type="submit" value="Send" 
+      className=" cursor-pointer bg-white px-8 py4 mb-10 rounded-lg"/>
     </form>
   );
 };
