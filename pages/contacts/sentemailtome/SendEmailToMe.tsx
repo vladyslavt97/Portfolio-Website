@@ -1,26 +1,24 @@
-import React, { FormEvent, useRef } from "react";
+import React, { FormEvent, useRef, useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 export default function SendEmailToMe(){
   const form = useRef<HTMLFormElement>(null);
-
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    if(form.current) {
+    if(form.current && process.env.NEXT_PUBLIC_YOUR_SERVICE_ID && process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID && process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY) {
         emailjs
         .sendForm(
-            "YOUR_SERVICE_ID",
-            "YOUR_TEMPLATE_ID",
+            process.env.NEXT_PUBLIC_YOUR_SERVICE_ID,
+            process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID,
             form.current,
-            "YOUR_PUBLIC_KEY"
+            process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY
         )
         .then(
             (result) => {
-            alert(result.text);
+            console.log(result.text);
             },
             (error) => {
-            alert(error.text);
+            console.log(error.text);
             }
         );
     }
