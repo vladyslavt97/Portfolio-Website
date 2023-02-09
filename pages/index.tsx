@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
-import {BsFillMoonStarsFill} from 'react-icons/bs'
 import { useState } from 'react'
 import Resume from './resume/Resume'
 import Projects from './projects/Projects'

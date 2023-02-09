@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import codewars from '../../public/codewars.png'
 
 export default function Skills() {
   return (
@@ -24,6 +25,10 @@ export default function Skills() {
           <Image id="img11" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original-wordmark.svg" alt="some" width={50} height={50}/>
           <Image id="img12" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/handlebars/handlebars-original-wordmark.svg" alt="some" width={80} height={80}/>
           <Image id="img13" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" alt="some" width={100} height={100}/>
+        </div>
+        <div className='flex flex-row justify-center items-center gap-4 py-9'>
+          <h4 className='text-black'>My page on Codewars: </h4>
+          <a href="https://www.codewars.com/users/vladyslavt97"><Image id="img13" src={codewars} alt="some" width={60} height={60}/></a>
         </div>
       </div>
     </div>
