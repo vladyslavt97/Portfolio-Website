@@ -26,8 +26,8 @@ export default function Home() {
       <main className=' bg-white lg:px-60 dark:bg-gray-600'>
 
         <div className='flex justify-center md:absolute md:right-40 sm:right-40 sm:absolute lg:right-10'>
-          <BsFillMoonStarsFill className='absolute top-11 cursor-pointer text-3xl dark:fill-white' 
-                              onClick={()=>setDarkmode(!darkmode)}/>
+          <div className='absolute top-11 cursor-pointer text-4xl dark:fill-white' 
+                              onClick={()=>setDarkmode(!darkmode)}>🌜</div>
         </div>
 
         <Navigation />
