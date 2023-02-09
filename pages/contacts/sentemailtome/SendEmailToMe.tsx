@@ -60,34 +60,34 @@ export default function SendEmailToMe(){
             <h2 className=" text-2xl text-black">Sending...</h2>
           </div>
         }
-        {!sending &&
-        <form ref={form} onSubmit={sendEmail} 
-        className=" bg-gradient-to-r from-cyan-500 to-teal-500 flex justify-center mt-10 mx-0 flex-col items-center rounded-tl-2xl rounded-tr-2xl"
-        id="sendemail">
-          <label className=" text-lg text-black mt-5">Name</label>
-          <br />
-          <input className="rounded-lg bg-white text-black" 
-            type="text" name="user_name" 
-            onChange={handleChangeUserName}
-            value={userName}/>
-          <br />
-          <label className=" text-lg text-black">Email</label>
-          <br />
-          <input className="rounded-lg bg-white text-black"  
-            type="email" name="email" 
-            onChange={handleChangeEmail}
-            value={emailState}/>
-          <br />
-          <label className=" text-lg text-black">Message</label>
-          <br />
-          <textarea className="rounded-lg bg-white text-black"  
-            name="message" 
-            onChange={handleChangeMessage}
-            value={messageState}
-            />
-          <br />
-          <input type="submit" value="Send" 
-          className=" cursor-pointer bg-white px-8 py4 mb-10 rounded-lg text-black"/>
-        </form>}
+        {!sending && !sent &&
+          <form ref={form} onSubmit={sendEmail} 
+          className=" bg-gradient-to-r from-cyan-500 to-teal-500 flex justify-center mt-10 mx-0 flex-col items-center rounded-tl-2xl rounded-tr-2xl"
+          id="sendemail">
+            <label className=" text-lg text-black mt-5">Name</label>
+            <br />
+            <input className="rounded-lg bg-white text-black" 
+              type="text" name="user_name" 
+              onChange={handleChangeUserName}
+              value={userName}/>
+            <br />
+            <label className=" text-lg text-black">Email</label>
+            <br />
+            <input className="rounded-lg bg-white text-black"  
+              type="email" name="email" 
+              onChange={handleChangeEmail}
+              value={emailState}/>
+            <br />
+            <label className=" text-lg text-black">Message</label>
+            <br />
+            <textarea className="rounded-lg bg-white text-black"  
+              name="message" 
+              onChange={handleChangeMessage}
+              value={messageState}
+              />
+            <br />
+            <input type="submit" value="Send" 
+            className=" cursor-pointer bg-white px-8 py4 mb-10 rounded-lg text-black"/>
+          </form>}
       </div>
 };
