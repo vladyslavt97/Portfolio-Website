@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-scroll";
 
 export default function Contacts() {
+  
   return (
     <div className='flex flex-col items-center text-center' id='contacts'>
         <h3 className='text-2xl text-black'>Get in Touch</h3>

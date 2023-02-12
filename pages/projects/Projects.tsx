@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import chess from '../../public/checkmate.gif'
 import socialnetwork from '../../public/chat_sn.gif'
+import chatgpt from '../../public/chatgpt.gif'
 import imageboard from '../../public/imageboard-comment.gif'
 import petition from '../../public/petition.gif'
 import connectfour from '../../public/connect-four.gif'
@@ -12,7 +13,7 @@ export default function Projects() {
   return (
     <div>
       <h2 className='mt-32 py-4 text-teal-600 text-lg font-medium pt-8 pb-2 text-center' id='projects'>My Projects</h2>
-          <div className='lg:flex gap-10 lg:flex-wrap md:flex-wrap'>
+          <div className='lg:flex gap-10 md:flex-wrap'>
 
             {/* Chess */}
             <div className='text-center shadow-lg my-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1'>
@@ -40,6 +41,21 @@ export default function Projects() {
                 className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
                 Code
               </a>
+            </div>
+            
+            {/* ChatGPT clone */}
+            <div className='text-center shadow-lg my-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1'>
+              <h4 className='text-gray-800 py-1 text-xl font-bold'>ChatGPT (clone)</h4>
+              <p className='text-black'>The application recreates the famous platform.</p>
+              <Image src={chatgpt} alt="chess" className='p-10 rounded-lg' width={1000}/>
+              <a href="https://github.com/vladyslavt97/ChatGPT-clone" target="_blank" rel="noopener noreferrer" 
+                className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
+                Code
+              </a>
+              <a href="https://chat-gpt-ochre.vercel.app/" target="_blank" rel="noopener noreferrer" 
+                  className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
+                  Website
+                </a>
             </div>
 
             {/* Imageboard */}

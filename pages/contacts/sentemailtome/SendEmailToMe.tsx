@@ -1,6 +1,7 @@
 import React, { FormEvent, useRef, useState, ChangeEvent } from "react";
 import emailjs from "@emailjs/browser";
 
+
 export default function SendEmailToMe(){
     const [userName, setUserName] = useState<string>('');
     const [emailState, setEmailState] = useState<string>('');
@@ -8,7 +9,7 @@ export default function SendEmailToMe(){
     const [sending, setSending] = useState<boolean>()
     const [sent, setSent] = useState<boolean>()
     const form = useRef<HTMLFormElement>(null);
-
+  
     const handleChangeUserName = (event: ChangeEvent<HTMLInputElement>) => {
         setUserName(event.target.value);
     }
@@ -18,9 +19,9 @@ export default function SendEmailToMe(){
     const handleChangeMessage = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         setMessageState(event.target.value);
     }
-    const sendEmail = (e: FormEvent<HTMLFormElement>) => {
-        setSending(true);
-        e.preventDefault();
+    const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
+      setSending(true);
+      e.preventDefault();
         if(form.current && process.env.NEXT_PUBLIC_YOUR_SERVICE_ID && process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID && process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY) {
             emailjs
             .sendForm(
@@ -47,6 +48,18 @@ export default function SendEmailToMe(){
                 }
             );
         }
+
+
+      // const res = await fetch('/api/sendemail', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify({ user_name: userName, email: emailState, message: messageState}),
+      // });
+
+      // const data = await res.json();
+      // console.log('data : ', data);
     };
 
   return <div>
