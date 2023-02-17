@@ -9,7 +9,8 @@ export default function MyInfo() {
         <div className='p-10'>
         <h2 className='text-4xl text-teal-600 font-medium text-center'>Vladyslav Tsurkanenko</h2>
         <h3 className='text-2xl py-2 text-center text-gray-800'>Full Stack Web Developer</h3>
-        <p className='text-md py-5 leading-8 text-gray-800 dark:text-white text-center'>Front-end developer with a banking, accounting and political science background. Enjoy writing readable and clean code. Specialised in Javascript, Node, Vue and React, technology I enjoy the most working with, although it is alway exciting to learn new programming languages and frameworks.</p>
+        <p className='text-md py-5 leading-8 text-gray-800 dark:text-white text-center'>I recently graduated from Spiced Academy. I am looking for possibility to learn and improve my skills with Typescript, Javascript, as well as advance my knowledge of FrontEnd and BackEnd development. I believe that my experience in banking, finance, and the skills such as: teamwork, taking initiative, and my analytical skills will help me in a new 
+        environment. I am very motivated to contribute to your projects and learn the process very quickly.</p>
         </div>
 
         <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600'>
