@@ -98,7 +98,7 @@ export default function Projects() {
             </div>
 
             {/* Portfolio Page*/}
-            <div className='text-center shadow-lg my-10 py-5  bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1'>
+            <div className='text-center shadow-lg my-10 py-5  bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1  md:col-span-1 '>
               <h4 className='text-gray-800 py-1 text-xl font-bold'>Portfolio Page</h4>
               <p className='text-black'>The current page and the code.</p>
               <Image src={portfoliopage} alt="portfolio" className='p-10 rounded-lg'/>
