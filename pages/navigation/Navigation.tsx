@@ -3,6 +3,7 @@ import Image from 'next/image'
 import VT from '../../public/VT.png'
 import { Link } from "react-scroll";
 import menu from '../../public/menu.png'
+import { motion } from "framer-motion"
 
 export default function Navigation() {
   const [visibleMenuList, setVisibleMenuList] = useState<boolean>(false); 
@@ -15,33 +16,45 @@ export default function Navigation() {
             <Image alt='VT' src={VT} className="w-40 px-8"/>
 
             <ul className='flex items-center'>
-              <li>
+              <motion.li
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              >
                 <Link to='contacts' smooth={true} duration={1000} 
                 className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8 xs:m-2 sm:m-2" onClick={()=>setVisibleMenuList(!visibleMenuList)}> 
                   Contacts
                 </Link>
-              </li>
+              </motion.li>
 
-              <li>
+              <motion.li
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              >
                 <Link to='skills' smooth={true} duration={1000} 
                 className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8 xs:m-2 sm:m-2"> 
                   Skills 
                 </Link>
-              </li>
+              </motion.li>
 
-              <li>
+              <motion.li
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              >
                 <Link to='projects' smooth={true} duration={1000} 
                 className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8 xs:m-2 sm:m-2"> 
                   Projects 
                 </Link>
-              </li>
+              </motion.li>
     {/* last change */}
-              <li>
+              <motion.li
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              >
                 <Link to='resume' smooth={true} duration={1000} 
                 className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8 xs:m-2 sm:m-2"> 
                   Resume 
                 </Link>
-              </li>
+              </motion.li>
             </ul>
           </nav>
 

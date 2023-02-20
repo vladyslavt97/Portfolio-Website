@@ -4,7 +4,7 @@ import resume from '../../public/resume.png'
 
 export default function Resume() {
 
-  return <div>
+  return <div className='flex justify-center flex-col items-center'>
           <h2 className='text-center mt-20 text-3xl text-black' id='resume'>Resume</h2>
           <div className="flex justify-center flex-col my-5">
             <a href="https://drive.google.com/file/d/1JD_OtunqnWTPIblIqNl9xPvxcwk32q-c/view?usp=sharing" 
