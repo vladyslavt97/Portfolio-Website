@@ -26,14 +26,14 @@ export default function Navigation() {
 
             <Image alt="menu" src={menu}
             onClick={e=>setIsOpen(!isOpen)}
-            className={!isOpen ? "w-10 h-10 mx-5 my-3" : "hidden"}/>
+            className={!isOpen ? "w-10 h-10 mx-5 my-3 md:hidden" : "hidden"}/>
 
             <Image alt="close" src={close}
             onClick={e=>setIsOpen(!isOpen)}
-            className={isOpen ? "w-10 h-10 mx-5 my-3 z-10" : "hidden"}/>
+            className={isOpen ? "w-10 h-10 mx-5 my-3 z-10 md:hidden" : "hidden"}/>
             
             <div className={isOpen ? 'absolute h-screen opacity w-screen bg-black top-0 opacity-75 overflow-y-hidden' : "hidden"} onClick={e=>setIsOpen(!isOpen)}></div>
-            <ul className={!isOpen ? "hidden" : 'absolute right-0 top-[100px] flex justify-end items-end md:items-right flex-col md:flex-row z-10'} >
+            <ul className={!isOpen ? "hidden md:flex md:items-right flex-col md:flex-row z-10" : 'absolute right-0 top-[100px] flex justify-end items-end md:items-right flex-col md:flex-row z-10'} >
               <motion.li
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
