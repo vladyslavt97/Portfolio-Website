@@ -24,7 +24,7 @@ export default function Home() {
       </Head>
       <main className=' bg-white lg:px-60 dark:bg-gray-600'>
 
-        <div className='flex justify-center md:absolute md:right-40 sm:right-40 sm:absolute lg:right-10'>
+        <div className='flex justify-center sm:justify-left sm:absolute sm:left-[200px]'>
           <div className='absolute top-11 cursor-pointer text-4xl dark:fill-white z-10' 
             onClick={()=>setDarkmode(!darkmode)}>🌜</div>
         </div>

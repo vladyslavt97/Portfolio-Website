@@ -12,11 +12,11 @@ export default function Skills() {
           Here is the list of the technologies I have implemented projects with:
         </p>
         
-        <div className='flex flex-row justify-center bg-transparent' id='ticker'>
+        <div className='flex flex-row justify-center bg-transparent flex-wrap' id='ticker'>
           <motion.img 
             initial={{
                 opacity: 0,
-                rotate: "45deg",
+                rotate: "15deg",
             }}
             transition={{
                 duration: 0.9,
@@ -114,7 +114,7 @@ export default function Skills() {
           <motion.img 
             initial={{
                 opacity: 0,
-                rotate: "45deg",
+                rotate: "15deg",
             }}
             transition={{
                 duration: 2.3,
@@ -143,7 +143,7 @@ export default function Skills() {
           <motion.img 
             initial={{
                 opacity: 0,
-                rotate: "-85deg",
+                rotate: "-35deg",
             }}
             transition={{
                 duration: 2.7,
@@ -185,7 +185,7 @@ export default function Skills() {
           <motion.img 
             initial={{
                 opacity: 0,
-                rotate: "-36deg",
+                rotate: "-16deg",
             }}
             transition={{
                 duration: 3.3,
@@ -195,11 +195,22 @@ export default function Skills() {
                 rotate: "0deg",
             }}
             viewport={{once: true}}
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" alt="some" width={100} height={100}/>
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" alt="some" width={90} height={100}/>
         </div>
         <div className='flex flex-row justify-center items-center gap-4 py-9'>
           <h4 className='text-black'>My page on Codewars: </h4>
-          <a href="https://www.codewars.com/users/vladyslavt97"><Image id="img13" src={codewars} alt="some" width={60} height={60}/></a>
+          <motion.a 
+          animate={{
+            scale: [1, 1.1, 1.1, 1, 1],
+            rotate: [0, 0, 70, 70, 0],
+            borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+          }}
+          whileInView={{
+              scale: [1, 1.1, 1.1, 1, 1],
+              rotate: [0, 0, 70, 70, 0],
+              borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+            }}
+          href="https://www.codewars.com/users/vladyslavt97"><Image id="img13" src={codewars} alt="some" width={60} height={60}/></motion.a>
         </div>
       </div>
     </div>
