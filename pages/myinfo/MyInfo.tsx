@@ -66,7 +66,9 @@ export default function MyInfo() {
                 opacity: 1
             }}
             viewport={{once: true}}
-            src='/Vlad.png' alt="sometext" />
+            src='/Vlad.png' alt="sometext" 
+            className='rounded-dull'
+            />
         </div>
     </div>
   )
