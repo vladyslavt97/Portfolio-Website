@@ -58,12 +58,14 @@ export default function MyInfo() {
         <motion.img 
             initial={{
                 opacity: 0,
+                borderRadius: "100%",
             }}
             transition={{
                 duration: 1.5,
             }}
             whileInView={{
-                opacity: 1
+                opacity: 1,
+                borderRadius: "100%",
             }}
             viewport={{once: true}}
             src='/Vlad.png' alt="sometext" 
