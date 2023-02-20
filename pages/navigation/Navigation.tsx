@@ -11,7 +11,14 @@ export default function Navigation() {
   return (
     <div>
       <section>
-          <nav className='py-9 mb-12 flex justify-between' id='nav1'>
+          <motion.nav 
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{
+                duration: 2.5,
+            }}
+            viewport={{once: true}}
+            className='py-9 mb-12 flex justify-between' id='nav1'>
 
             <Image alt='VT' src={VT} className="w-40 px-8"/>
 
@@ -56,10 +63,17 @@ export default function Navigation() {
                 </Link>
               </motion.li>
             </ul>
-          </nav>
+          </motion.nav>
 
           {/*  */}
-          <nav className="lg:hidden" id='nav2'>
+          <motion.nav 
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{
+                duration: 2.5,
+            }}
+            viewport={{once: true}}
+            className="lg:hidden" id='nav2'>
             <div className='grid grid-cols-3 gap-4 w-screen px-10 py-7'>
 
               <Image alt='VT' src={VT} className="w-20"/>
@@ -75,38 +89,54 @@ export default function Navigation() {
             </div>
 
             {visibleMenuList && <div 
-            className='flex flex-col z-11 text-right mx-10 bg-gradient-to-r via-transparent from-transparent to-teal-200 p-4 rounded-lg'>
+            className='flex flex-col z-11 text-right mr-10 rounded-lg'>
                   <ul>
-                    <li>
+                    <motion.li
+              whileHover={{ scale: 0.9 }}
+              whileTap={{ scale: 0.9 }}
+              >
                       <Link to='skills' smooth={true} duration={1000} 
                       className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md" onClick={()=>setVisibleMenuList(!visibleMenuList)}> 
                         Skills 
                       </Link>
-                    </li>
+                    </motion.li>
+
                     <br />
-                    <li>
+                    <motion.li
+              whileHover={{ scale: 0.9 }}
+              whileTap={{ scale: 0.9 }}
+              >
                       <Link to='contacts' smooth={true} duration={1000} 
                       className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md" onClick={()=>setVisibleMenuList(!visibleMenuList)}> 
                         Contacts
                       </Link>
-                    </li>
+                    </motion.li>
+
                     <br />
-                    <li>
+                    <motion.li
+              whileHover={{ scale: 0.9 }}
+              whileTap={{ scale: 0.9 }}
+              >
                       <Link to='projects' smooth={true} duration={1000} 
                       className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md" onClick={()=>setVisibleMenuList(!visibleMenuList)}> 
                         Projects 
                       </Link>
-                    </li>
+                    </motion.li>
+
                     <br />
-                    <li>
+                    <motion.li
+             whileHover={{ scale: 0.9 }}
+              whileTap={{ scale: 0.9 }}
+              >
                       <Link to='resume' smooth={true} duration={1000} 
                       className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md" onClick={()=>setVisibleMenuList(!visibleMenuList)}> 
                         Resume 
                       </Link>
-                    </li>
+                    </motion.li>
+
                 </ul>
               </div>}
-          </nav>
+          </motion.nav>
         </section>
       </div>
   )
