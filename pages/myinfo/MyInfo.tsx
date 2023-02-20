@@ -56,6 +56,7 @@ export default function MyInfo() {
 
         <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 m-10 overflow-hidden shadow-lg'>
         <motion.img 
+          className='rounded-dull'
             initial={{
                 opacity: 0,
                 borderRadius: "100%",
@@ -69,7 +70,6 @@ export default function MyInfo() {
             }}
             viewport={{once: true}}
             src='/Vlad.png' alt="sometext" 
-            className='rounded-dull'
             />
         </div>
     </div>
