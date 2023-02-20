@@ -57,14 +57,12 @@ export default function MyInfo() {
         <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 m-10 overflow-hidden shadow-lg'>
         <motion.img 
             initial={{
-                x: -100,
                 opacity: 0,
             }}
             transition={{
                 duration: 1.5,
             }}
             whileInView={{
-                x: 0,
                 opacity: 1
             }}
             viewport={{once: true}}
