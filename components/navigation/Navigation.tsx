@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import VT from '../../public/VT.png'
 // import { Link } from "react-scroll";
 import Link from 'next/link';
 import menu from '../../public/menu.png'
@@ -9,6 +8,7 @@ import { useDispatch, useSelector} from 'react-redux';
 import { changeOpenerStatus } from '../redux/menuOpened';
 import { RootState } from '../redux/store';
 import { changeModeDark } from '../redux/darkModed';
+import Logo from './Logo';
 
 export default function Navigation() {
   const darkmode = useSelector((state: RootState) => state.darkMode.darkModeVal);
@@ -29,8 +29,8 @@ export default function Navigation() {
                 duration: 1.5,
             }}
             className='py-9 flex justify-between'>
-
-            <Image alt='VT' src={VT} className="w-40 h-12 px-8"/>
+            
+            <Logo />
 
             <Image alt="menu" src={menu}
             onClick={e => setIsOpen(true)}

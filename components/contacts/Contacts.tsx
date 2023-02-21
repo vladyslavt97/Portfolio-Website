@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from "react-scroll";
 import { motion } from "framer-motion"
+import Link from 'next/link'
 
 export default function Contacts() {
   
@@ -15,7 +15,7 @@ export default function Contacts() {
               whileTap={{ scale: 0.9 }}
               className="rounded-lg"
               >
-                <Link to='sendemail' smooth={true} duration={1000} 
+                <Link href='#sendemail'
                 className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-lg" 
                 > Send email 📨</Link>
             </motion.button>
