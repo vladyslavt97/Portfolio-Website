@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
+import darmodeSlice from './darkModed';
 import openerSlice from './menuOpened';
 
 
 export const store = configureStore({
     reducer: { 
         openerState: openerSlice,
+        darkMode: darmodeSlice,
     }
 });
 

@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import { useState } from 'react'
 import Resume from '../components/resume/Resume'
@@ -10,11 +11,14 @@ import Contacts from '../components/contacts/Contacts'
 import SendEmailToMe from '../components/contacts/sentemailtome/SendEmailToMe'
 import { useSelector} from "react-redux";
 import { RootState} from "../components/redux/store";
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const [darkmode, setDarkmode] = useState<boolean>(false); 
+  const darkmode = useSelector((state: RootState) => state.darkMode.darkModeVal);
+  console.log('darkmode:', darkmode);
+  
   const isOpen = useSelector((state: RootState) => state.openerState.openValue);
   
   return (
@@ -29,12 +33,9 @@ export default function Home() {
       <main className={isOpen ? ' bg-white lg:px-60 dark:bg-gray-600 overflow-hidden' 
                           : 'bg-white lg:px-60 dark:bg-gray-600 overflow-scroll h-[100vh]'}>
 
-        <div className='flex justify-center sm:justify-left sm:absolute sm:left-[200px]'>
-          <div className='absolute top-11 cursor-pointer text-4xl dark:fill-white z-10' 
-            onClick={()=>setDarkmode(!darkmode)}>🌜</div>
+        <div id='start'>
+          <Navigation/>
         </div>
-
-        <Navigation />
 
         <MyInfo />
 
@@ -46,6 +47,13 @@ export default function Home() {
           <Resume />
         </section>
         <SendEmailToMe />
+
+        <Link href="#start">
+          <div className='absolute bottom-5 right-5 w-full cursor-pointer opacity-50 flex items-end justify-end animate-bounce'>
+            <Image src="/arr.png" alt="arrow" width={100} height={100}
+            className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer'/>
+          </div>
+      </Link>
       </main>
     </div>
   )

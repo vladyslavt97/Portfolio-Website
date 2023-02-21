@@ -8,8 +8,10 @@ import { motion } from "framer-motion"
 import { useDispatch, useSelector} from 'react-redux';
 import { changeOpenerStatus } from '../redux/menuOpened';
 import { RootState } from '../redux/store';
+import { changeModeDark } from '../redux/darkModed';
 
 export default function Navigation() {
+  const darkmode = useSelector((state: RootState) => state.darkMode.darkModeVal);
   const isOpen = useSelector((state: RootState) => state.openerState.openValue);
   const dispatch = useDispatch();
 
@@ -49,7 +51,7 @@ export default function Navigation() {
             className={isOpen ? 'absolute h-screen opacity w-screen bg-black top-0 opacity-75 md:hidden' : "hidden"} onClick={e=>setIsOpen(false)}></motion.div>
             
             {/* list of menu options */}
-            <ul className={!isOpen ? "hidden md:flex md:items-right flex-col md:flex-row" : 'absolute right-0 top-[100px] flex justify-end items-end md:items-right flex-col md:flex-row z-10'} >
+            <ul className={!isOpen ? "hidden md:flex md:items-right flex-col md:flex-row justify-center" : 'absolute right-0 top-[100px] flex justify-end items-end md:items-right flex-col md:flex-row z-10'} >
               <motion.li
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -93,6 +95,7 @@ export default function Navigation() {
                   Projects 
                 </Link>
               </motion.li>
+
               <motion.li
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -106,6 +109,18 @@ export default function Navigation() {
                 > 
                   Resume 
                 </Link>
+              </motion.li>
+
+              <motion.li
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="m-4"
+              >
+              {!darkmode ? <h1 className='text-lg cursor-pointer'
+                  onClick={()=>dispatch(changeModeDark(true))}>🌜
+                </h1> : <h1 className='text-lg cursor-pointer'
+                  onClick={()=>dispatch(changeModeDark(false))}>🌞
+                </h1>}
               </motion.li>
             </ul>
           </motion.nav>
