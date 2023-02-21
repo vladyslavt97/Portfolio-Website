@@ -1,15 +1,15 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import { useState } from 'react'
-import Resume from './resume/Resume'
-import Projects from './projects/Projects'
-import Skills from './skills/Skills'
-import Navigation from './navigation/Navigation'
-import MyInfo from './myinfo/MyInfo'
-import Contacts from './contacts/Contacts'
-import SendEmailToMe from './contacts/sentemailtome/SendEmailToMe'
+import Resume from '../components/resume/Resume'
+import Projects from '../components/projects/Projects'
+import Skills from '../components/skills/Skills'
+import Navigation from '../components/navigation/Navigation'
+import MyInfo from '../components/myinfo/MyInfo'
+import Contacts from '../components/contacts/Contacts'
+import SendEmailToMe from '../components/contacts/sentemailtome/SendEmailToMe'
 import { useSelector} from "react-redux";
-import { RootState} from "./redux/store";
+import { RootState} from "../components/redux/store";
 
 const inter = Inter({ subsets: ['latin'] })
 
