@@ -37,7 +37,9 @@ export default function Home() {
         <Navigation />
 
         <MyInfo />
+
         <Contacts />
+
         <section>
           <Skills/>
           <Projects />

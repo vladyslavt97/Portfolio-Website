@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import VT from '../../public/VT.png'
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
+import Link from 'next/link';
 import menu from '../../public/menu.png'
 import close from '../../public/close.png'
 import { motion } from "framer-motion"
@@ -12,8 +13,8 @@ export default function Navigation() {
   const isOpen = useSelector((state: RootState) => state.openerState.openValue);
   const dispatch = useDispatch();
 
-  const setIsOpen = () => {
-    dispatch(changeOpenerStatus(!isOpen))
+  const setIsOpen = (open: boolean) => {
+    dispatch(changeOpenerStatus(open))
   }
 
   return (
@@ -30,12 +31,12 @@ export default function Navigation() {
             <Image alt='VT' src={VT} className="w-40 h-12 px-8"/>
 
             <Image alt="menu" src={menu}
-            onClick={e => setIsOpen()}
-            className={!isOpen ? "w-10 h-10 mx-5 my-3 md:hidden" : "hidden"}/>
+            onClick={e => setIsOpen(true)}
+            className={!isOpen ? "md:hidden w-10 h-10 mx-5 my-3 " : "hidden"}/>
 
             <Image alt="close" src={close}
-            onClick={e=>setIsOpen()}
-            className={isOpen ? "w-10 h-10 mx-5 my-3 z-10 md:hidden" : "hidden"}/>
+            onClick={e=>setIsOpen(false)}
+            className={isOpen ? "md:hidden w-10 h-10 mx-5 my-3 z-10 " : "hidden"}/>
             
             {/* backdrop */}
             <motion.div 
@@ -45,7 +46,7 @@ export default function Navigation() {
                 duration: 0.5,
             }}
             viewport={{once: true}}
-            className={isOpen ? 'absolute h-screen opacity w-screen bg-black top-0 opacity-75 md:hidden' : "hidden"} onClick={e=>setIsOpen()}></motion.div>
+            className={isOpen ? 'absolute h-screen opacity w-screen bg-black top-0 opacity-75 md:hidden' : "hidden"} onClick={e=>setIsOpen(false)}></motion.div>
             
             {/* list of menu options */}
             <ul className={!isOpen ? "hidden md:flex md:items-right flex-col md:flex-row" : 'absolute right-0 top-[100px] flex justify-end items-end md:items-right flex-col md:flex-row z-10'} >
@@ -54,9 +55,10 @@ export default function Navigation() {
               whileTap={{ scale: 0.9 }}
               className="m-4"
               >
-                <Link to='contacts' smooth={true} duration={1000} 
+                <Link href='#contacts' 
+                // smooth={true} duration={1000} 
                 className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-2" 
-                onClick={()=>setIsOpen()}
+                onClick={()=>setIsOpen(false)}
                 > 
                   Contacts
                 </Link>
@@ -67,9 +69,11 @@ export default function Navigation() {
               whileTap={{ scale: 0.9 }}
               className="m-4"
               >
-                <Link to='skills' smooth={true} duration={1000} 
+                <Link 
+                href='#skills' 
+                // smooth={true} duration={1000} 
                 className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-2"
-                onClick={()=>setIsOpen()}
+                onClick={()=>setIsOpen(false)}
                 > 
                   Skills 
                 </Link>
@@ -80,9 +84,11 @@ export default function Navigation() {
               whileTap={{ scale: 0.9 }}
               className="m-4"
               >
-                <Link to='projects' smooth={true} duration={1000} 
+                <Link 
+                href='#projects' 
+                // smooth={true} duration={1000} 
                 className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-2"
-                onClick={()=>setIsOpen()}
+                onClick={()=>setIsOpen(false)}
                 > 
                   Projects 
                 </Link>
@@ -92,9 +98,11 @@ export default function Navigation() {
               whileTap={{ scale: 0.9 }}
               className="m-4"
               >
-                <Link to='resume' smooth={true} duration={1000} 
+                <Link 
+                href='#resume'
+                // smooth={true} duration={1000} 
                 className="cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-2"
-                onClick={()=>setIsOpen()}
+                onClick={()=>setIsOpen(false)}
                 > 
                   Resume 
                 </Link>
