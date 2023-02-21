@@ -55,10 +55,7 @@ export default function MyInfo() {
         </motion.a>
         </div>
 
-        <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 m-10 overflow-hidden shadow-lg'>
-        
-        <motion.div
-          className='rounded-full'
+        <motion.div className='relative mx-auto bg-gradient-to-b from-teal-500 w-60 h-60 m-10 overflow-hidden shadow-lg rounded-full'
           initial={{
                 opacity: 0,
                 borderRadius: "100%",
@@ -71,14 +68,13 @@ export default function MyInfo() {
                 borderRadius: "100%",
             }}
             viewport={{once: true}}
-        >
+          >
           <Image
             className='rounded-full'
             src='/Vlad.png' alt="sometext"
             width={200} height={200}
             />
-          </motion.div>
-        </div>
+        </motion.div>
     </div>
   )
 }
