@@ -30,6 +30,7 @@ export default function Navigation() {
             onClick={e=>setIsOpen(!isOpen)}
             className={isOpen ? "w-10 h-10 mx-5 my-3 z-10 md:hidden" : "hidden"}/>
             
+            {/* backdrop */}
             <motion.div 
             initial={{opacity: 0}}
             whileInView={{opacity: 0.75}}
@@ -37,9 +38,10 @@ export default function Navigation() {
                 duration: 0.5,
             }}
             viewport={{once: true}}
-            className={isOpen ? 'absolute h-screen opacity w-screen bg-black top-0 opacity-75 overflow-y-hidden' : "hidden"} onClick={e=>setIsOpen(!isOpen)}></motion.div>
+            className={isOpen ? 'absolute h-screen opacity w-screen bg-black top-0 opacity-75 md:hidden' : "hidden"} onClick={e=>setIsOpen(!isOpen)}></motion.div>
             
-            <ul className={!isOpen ? "hidden md:flex md:items-right flex-col md:flex-row z-10" : 'absolute right-0 top-[100px] flex justify-end items-end md:items-right flex-col md:flex-row z-10'} >
+            {/* list of menu options */}
+            <ul className={!isOpen ? "hidden md:flex md:items-right flex-col md:flex-row" : 'absolute right-0 top-[100px] flex justify-end items-end md:items-right flex-col md:flex-row z-10'} >
               <motion.li
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
