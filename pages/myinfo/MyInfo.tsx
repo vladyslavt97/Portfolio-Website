@@ -1,6 +1,7 @@
 import React from 'react'
 import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
 import { motion } from "framer-motion"
+import Image from 'next/image'
 
 export default function MyInfo() {
   return (
@@ -55,9 +56,9 @@ export default function MyInfo() {
         </div>
 
         <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 m-10 overflow-hidden shadow-lg'>
-        <motion.img 
-          className='rounded-dull'
-            initial={{
+        
+        <motion.div
+        initial={{
                 opacity: 0,
                 borderRadius: "100%",
             }}
@@ -69,8 +70,13 @@ export default function MyInfo() {
                 borderRadius: "100%",
             }}
             viewport={{once: true}}
-            src='/Vlad.png' alt="sometext" 
+        >
+          <Image
+            className='rounded-full'
+            src='/Vlad.png' alt="sometext"
+            width={200} height={200}
             />
+          </motion.div>
         </div>
     </div>
   )
