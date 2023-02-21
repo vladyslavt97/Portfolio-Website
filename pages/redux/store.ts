@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import checkMateSlice from './menuOpened';
+import openerSlice from './menuOpened';
 
 
 export const store = configureStore({
     reducer: { 
-        checkMate: checkMateSlice,
+        openerState: openerSlice,
     }
 });
 
