@@ -8,11 +8,11 @@ export default function Skills() {
     <>
       <div id='skills'>
         <h3 className='mt-32 text-3xl py-1 text-center text-black'>Skills:</h3>
-        <p className="text-md py-2 leading-8 text-gray-800 text-center dark:text-white">
+        <p className="text-sm py-2 leading-8 text-gray-800 text-center dark:text-white mx-3">
           Here is the list of the technologies I have implemented projects with:
         </p>
         
-        <div className='flex flex-row justify-center bg-transparent flex-wrap' id='ticker'>
+        <div className='flex flex-row justify-center bg-transparent flex-wrap mx-3' id='ticker'>
           <motion.div
           initial={{
                 opacity: 0,
@@ -23,6 +23,7 @@ export default function Skills() {
             whileInView={{
                 opacity: 1,
             }}
+            whileHover={{ scale: 1.5 }}
             viewport={{once: true}}
           >
           <Image
@@ -39,6 +40,7 @@ export default function Skills() {
             whileInView={{
                 opacity: 1,
             }}
+            whileHover={{ scale: 1.5 }}
             viewport={{once: true}}
           >
             <Image
@@ -55,6 +57,7 @@ export default function Skills() {
               whileInView={{
                   opacity: 1,
               }}
+              whileHover={{ scale: 1.5 }}
               viewport={{once: true}}
             >
             <Image
@@ -71,6 +74,7 @@ export default function Skills() {
               whileInView={{
                   opacity: 1,
               }}
+              whileHover={{ scale: 1.5 }}
               viewport={{once: true}}
             >
             <Image
@@ -87,6 +91,7 @@ export default function Skills() {
               whileInView={{
                   opacity: 1,
               }}
+              whileHover={{ scale: 1.5 }}
               viewport={{once: true}}
             >
             <Image
@@ -103,6 +108,7 @@ export default function Skills() {
               whileInView={{
                   opacity: 1,
               }}
+              whileHover={{ scale: 1.5 }}
               viewport={{once: true}}
             >
             <Image
@@ -119,6 +125,7 @@ export default function Skills() {
               whileInView={{
                   opacity: 1,
               }}
+              whileHover={{ scale: 1.5 }}
               viewport={{once: true}}
             >
             <Image
@@ -135,6 +142,7 @@ export default function Skills() {
               whileInView={{
                   opacity: 1,
               }}
+              whileHover={{ scale: 1.5 }}
               viewport={{once: true}}
             >
             <Image
@@ -151,6 +159,7 @@ export default function Skills() {
               whileInView={{
                   opacity: 1,
               }}
+              whileHover={{ scale: 1.5 }}
               viewport={{once: true}}
             >
             <Image
@@ -167,6 +176,7 @@ export default function Skills() {
               whileInView={{
                   opacity: 1,
               }}
+              whileHover={{ scale: 1.5 }}
               viewport={{once: true}}
             >
             <Image
@@ -183,6 +193,7 @@ export default function Skills() {
               whileInView={{
                   opacity: 1,
               }}
+              whileHover={{ scale: 1.5 }}
               viewport={{once: true}}
             >
             <Image
@@ -199,6 +210,7 @@ export default function Skills() {
               whileInView={{
                   opacity: 1,
               }}
+              whileHover={{ scale: 1.5 }}
               viewport={{once: true}}
             >
             <Image
@@ -215,6 +227,7 @@ export default function Skills() {
               whileInView={{
                   opacity: 1,
               }}
+              whileHover={{ scale: 1.5 }}
               viewport={{once: true}}
             >
             <Image
@@ -230,6 +243,7 @@ export default function Skills() {
             rotate: [0, 0, 70, 70, 0],
             borderRadius: ["20%", "20%", "50%", "50%", "20%"],
           }}
+          whileHover={{ scale: 1.5 }}
           whileInView={{
               scale: [1, 1.1, 1.1, 1, 1],
               rotate: [0, 0, 70, 70, 0],

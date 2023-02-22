@@ -6,7 +6,7 @@ type Props = {}
 export default function Logo({}: Props) {
   return (
     <div>
-        <Image alt='VT' src={VT} className="w-40 h-12 px-8"/>
+        <Image alt='VT' src={VT} className="w-[120px] h-[40px] px-8"/>
     </div>
   )
 }

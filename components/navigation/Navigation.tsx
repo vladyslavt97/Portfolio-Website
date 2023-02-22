@@ -112,11 +112,11 @@ export default function Navigation() {
               </motion.li>
 
               <motion.li
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.5 }}
               whileTap={{ scale: 0.9 }}
               className="m-4"
               >
-              {!darkmode ? <h1 className='text-lg cursor-pointer'
+              {!darkmode ? <h1 className='text-2xl cursor-pointer'
                   onClick={()=>dispatch(changeModeDark(true))}>🌜
                 </h1> : <h1 className='text-lg cursor-pointer'
                   onClick={()=>dispatch(changeModeDark(false))}>🌞
