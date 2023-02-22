@@ -5,12 +5,12 @@ import { motion } from 'framer-motion'
 
 export default function Resume() {
 
-  return <div className='flex justify-center flex-col items-center'>
+  return <div className='flex justify-center flex-col items-center max-w-[700px] mx-auto'>
           <h2 className='text-center mt-20 text-3xl text-black' id='resume'>Resume</h2>
           <motion.div
           transition={{duration: 1}}
           whileHover={{ scale: 1.1 }}
-          className="flex justify-center flex-col my-5">
+          className="flex justify-center flex-col my-2">
             <a href="https://drive.google.com/file/d/1JD_OtunqnWTPIblIqNl9xPvxcwk32q-c/view?usp=sharing" 
             target="_blank" 
             rel="noopener noreferrer"
@@ -18,7 +18,7 @@ export default function Resume() {
             >Download</a>
 
           </motion.div>
-            <Image src={resume} alt='resume' className='shadow-2xl my-20 p-20 lg:p-50  dark:bg-white'/>
+            <Image src={resume} alt='resume' className='shadow-2xl my-10 p-20 lg:p-50  dark:bg-white'/>
     </div>
 
 }
