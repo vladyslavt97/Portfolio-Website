@@ -17,8 +17,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const darkmode = useSelector((state: RootState) => state.darkMode.darkModeVal);
-  console.log('darkmode:', darkmode);
-  
+  console.log('Welcome to my portfolio website!🎉')
   const isOpen = useSelector((state: RootState) => state.openerState.openValue);
   
   return (
