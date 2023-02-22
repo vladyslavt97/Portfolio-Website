@@ -150,7 +150,7 @@ export default function Projects() {
               opacity: 1
             }}
             whileHover={{ scale: 1.1 }}
-            className='text-center shadow-lg my-10 mx-10 py-5  bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1'>
+            className='text-center shadow-lg my-10 mx-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1'>
               <h4 className='text-gray-800 py-1 text-xl font-bold'>Connect Four</h4>
               <p className='text-black'>The classic game of Connect-Four.</p>
               <Image src={connectfour} alt="chess" className='p-10 rounded-lg'/>
@@ -178,7 +178,7 @@ export default function Projects() {
               opacity: 1
             }}
             whileHover={{ scale: 1.1 }}
-            className='text-center shadow-lg my-10 mx-10 py-5  bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1  md:col-span-1 '>
+            className='text-center shadow-lg my-10 mx-auto py-5  bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1  md:col-span-1 md:max-w-[470px]'>
               <h4 className='text-gray-800 py-1 text-xl font-bold'>Portfolio Page</h4>
               <p className='text-black'>The current page and the code.</p>
               <Image src={portfoliopage} alt="portfolio" className='p-10 rounded-lg'/>
