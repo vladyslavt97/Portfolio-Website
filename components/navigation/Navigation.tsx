@@ -43,17 +43,17 @@ export default function Navigation() {
             <div onClick={!isOpen ? e => setIsOpen(true) : e => setIsOpen(false)} className="md:hidden cursor-pointer z-50">
                 <motion.div 
                 animate={{rotate: isOpen ? -45 : 0}}
-                className={isOpen ? 'h-[2px] w-[40px] bg-red-500 m-2' : "h-[2px] w-[40px] bg-black m-2"}></motion.div>
+                className={isOpen ? 'h-[2px] w-[40px] bg-red-500 m-2' : "h-[2px] w-[40px] bg-green-900 m-2"}></motion.div>
                 <motion.div 
                 animate={{opacity: isOpen ? 0 : 1}}
                 transition={{ duration: 0.1 }}
-                className={isOpen ? 'h-[2px] w-[40px] bg-red-500 m-2' : "h-[2px] w-[40px] bg-black m-2"}></motion.div>
+                className={isOpen ? 'h-[2px] w-[40px] bg-red-500 m-2' : "h-[2px] w-[40px] bg-green-900 m-2"}></motion.div>
                 <motion.div 
                 animate={{
                     rotate: isOpen ? 45 : 0,
                     y: isOpen ? -19.5 : 0,
                 }}
-                className={isOpen ? 'h-[2px] w-[40px] bg-red-500 m-2' : "h-[2px] w-[40px] bg-black m-2"}></motion.div>
+                className={isOpen ? 'h-[2px] w-[40px] bg-red-500 m-2' : "h-[2px] w-[40px] bg-green-900 m-2"}></motion.div>
             </div>
             
             {/* backdrop */}
