@@ -167,7 +167,7 @@ export default function Projects() {
             </motion.div>
 
             {/* Portfolio Page*/}
-            <motion.div 
+            {/* <motion.div 
             initial={{
               rotateZ: 2,
               opacity: 0.5
@@ -192,7 +192,7 @@ export default function Projects() {
                   Website
                 </a>
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
     </div>
   )
