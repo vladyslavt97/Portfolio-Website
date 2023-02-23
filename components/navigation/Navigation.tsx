@@ -42,7 +42,11 @@ export default function Navigation() {
 
             <div onClick={!isOpen ? e => setIsOpen(true) : e => setIsOpen(false)} className="md:hidden cursor-pointer z-50">
                 <motion.div 
-                animate={{rotate: isOpen ? -45 : 0}}
+                animate={{
+                  rotate: isOpen ? -45 : 0,
+                  y: isOpen ? 9.7 : 0,
+                  x: isOpen ? -10 : 0
+                }}
                 className={isOpen ? 'h-[2px] w-[40px] bg-red-500 m-2' : "h-[2px] w-[40px] bg-green-900 m-2"}></motion.div>
                 <motion.div 
                 animate={{opacity: isOpen ? 0 : 1}}
@@ -51,7 +55,8 @@ export default function Navigation() {
                 <motion.div 
                 animate={{
                     rotate: isOpen ? 45 : 0,
-                    y: isOpen ? -19.5 : 0,
+                    y: isOpen ? -9.7 : 0,
+                    x: isOpen ? -10 : 0
                 }}
                 className={isOpen ? 'h-[2px] w-[40px] bg-red-500 m-2' : "h-[2px] w-[40px] bg-green-900 m-2"}></motion.div>
             </div>
@@ -61,9 +66,8 @@ export default function Navigation() {
             initial={{opacity: 0}}
             whileInView={{opacity: 0.75}}
             transition={{
-                duration: 0.5,
+                duration: 0.75,
             }}
-            viewport={{once: true}}
             className={isOpen ? 'absolute h-screen opacity w-screen bg-black top-0 opacity-75 md:hidden' : "hidden"} onClick={e=>setIsOpen(false)}></motion.div>
             
             {/* list of menu options */}
