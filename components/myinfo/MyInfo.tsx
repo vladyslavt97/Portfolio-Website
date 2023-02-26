@@ -1,9 +1,17 @@
-import React from 'react'
 import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
 import { motion } from "framer-motion"
 import Image from 'next/image'
+import { Cursor, useTypewriter } from 'react-simple-typewriter'
 
 export default function MyInfo() {
+    const [text, count] = useTypewriter({
+        words: ["Full Stack Web Developer",
+    ],
+    loop: true,
+    delaySpeed: 2000,
+    });
+
+
   return (
     <div>
         <div className='p-10'>
@@ -22,7 +30,10 @@ export default function MyInfo() {
                 duration: 2,
             }}
             viewport={{once: true}}
-            className='text-2xl py-2 text-center text-gray-800'>Full Stack Web Developer</motion.h3>
+            className='text-2xl py-2 text-center text-gray-500'>{text}
+            <Cursor cursorColor='#F7AB0A'/>
+            </motion.h3>
+
         <motion.p 
         initial={{opacity: 0}}
             animate={{opacity: 1}}
