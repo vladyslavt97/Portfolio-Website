@@ -1,8 +1,4 @@
-import Image from 'next/image'
-// import { Link } from "react-scroll";
 import Link from 'next/link';
-import menu from '../../public/menu.png'
-import close from '../../public/close.png'
 import { motion } from "framer-motion"
 import { useDispatch, useSelector} from 'react-redux';
 import { changeOpenerStatus } from '../redux/menuOpened';
@@ -32,14 +28,6 @@ export default function Navigation() {
             
             <Logo />
 
-            {/* <Image alt="menu" src={menu}
-            onClick={e => setIsOpen(true)}
-            className={!isOpen ? "md:hidden w-10 h-10 mx-5 my-3 " : "hidden"}/>
-
-            <Image alt="close" src={close}
-            onClick={e=>setIsOpen(false)}
-            className={isOpen ? "md:hidden w-10 h-10 mx-5 my-3 z-10 " : "hidden"}/> */}
-
             <div onClick={!isOpen ? e => setIsOpen(true) : e => setIsOpen(false)} className="md:hidden cursor-pointer z-50">
                 <motion.div 
                 animate={{
@@ -47,18 +35,18 @@ export default function Navigation() {
                   y: isOpen ? 9.7 : 0,
                   x: isOpen ? -10 : 0
                 }}
-                className={isOpen ? 'h-[2px] w-[40px] bg-red-500 m-2' : "h-[2px] w-[40px] bg-green-900 m-2"}></motion.div>
+                className={isOpen ? 'h-[2px] w-[40px] bg-red-500 m-2' : "h-[2px] w-[40px] bg-teal-600 m-2"}></motion.div>
                 <motion.div 
                 animate={{opacity: isOpen ? 0 : 1}}
                 transition={{ duration: 0.1 }}
-                className={isOpen ? 'h-[2px] w-[40px] bg-red-500 m-2' : "h-[2px] w-[40px] bg-green-900 m-2"}></motion.div>
+                className={isOpen ? 'h-[2px] w-[40px] bg-red-500 m-2' : "h-[2px] w-[40px] bg-teal-600 m-2"}></motion.div>
                 <motion.div 
                 animate={{
                     rotate: isOpen ? 45 : 0,
                     y: isOpen ? -9.7 : 0,
                     x: isOpen ? -10 : 0
                 }}
-                className={isOpen ? 'h-[2px] w-[40px] bg-red-500 m-2' : "h-[2px] w-[40px] bg-green-900 m-2"}></motion.div>
+                className={isOpen ? 'h-[2px] w-[40px] bg-red-500 m-2' : "h-[2px] w-[40px] bg-teal-600 m-2"}></motion.div>
             </div>
             
             {/* backdrop */}

@@ -7,7 +7,21 @@ export default function Skills() {
   return (
     <>
       <div id='skills'>
-        <h3 className='mt-32 text-3xl py-1 text-center text-black'>Skills:</h3>
+        <motion.h3 
+        initial={{
+          opacity: 0,
+          rotate: 15,
+          y: -50
+        }}
+        whileInView={{
+          opacity: 1,
+          rotate: 0,
+          y: 0
+        }}
+        transition={{
+          duration: 1
+        }}
+        className='mt-32 text-3xl py-1 text-center text-teal-500'>Skills:</motion.h3>
         <p className="text-sm py-2 leading-8 text-gray-800 text-center dark:text-white mx-3">
           Here is the list of the technologies I have implemented projects with:
         </p>

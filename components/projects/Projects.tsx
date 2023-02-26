@@ -13,7 +13,7 @@ export default function Projects() {
 
   return (
     <div>
-      <h2 className='mt-32 py-4 text-teal-600 text-lg font-medium pt-8 pb-2 text-center' id='projects'>My Projects</h2>
+      <h2 className='mt-32 py-4 text-teal-500 text-3xl pt-8 pb-2 text-center' id='projects'>My Projects</h2>
           <div className='lg:flex gap-10 md:flex-wrap'>
 
             {/* Chess */}

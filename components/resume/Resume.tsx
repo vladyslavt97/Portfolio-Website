@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 export default function Resume() {
 
   return <div className='flex justify-center flex-col items-center max-w-[700px] mx-auto'>
-          <h2 className='text-center mt-20 text-3xl text-black' id='resume'>Resume</h2>
+          <h2 className='text-center mt-20 text-3xl text-teal-500' id='resume'>Resume</h2>
           <motion.div
           transition={{duration: 1}}
           whileHover={{ scale: 1.1 }}
