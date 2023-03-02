@@ -9,7 +9,7 @@ export default function Contacts() {
         <motion.h3 
         initial={{
           opacity: 0,
-          rotate: 15,
+          rotate: 5,
           y: -50
         }}
         whileInView={{
@@ -18,7 +18,7 @@ export default function Contacts() {
           y: 0
         }}
         transition={{
-          duration: 1
+          duration: 2
         }}
         className='text-3xl text-teal-500'>Get in Touch</motion.h3>
         <div className='p-3'>
