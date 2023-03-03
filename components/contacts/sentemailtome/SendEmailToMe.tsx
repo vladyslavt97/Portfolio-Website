@@ -20,8 +20,8 @@ export default function SendEmailToMe(){
         setMessageState(event.target.value);
     }
     const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
-      setSending(true);
       e.preventDefault();
+      setSending(true);
         if(form.current && process.env.NEXT_PUBLIC_YOUR_SERVICE_ID && process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID && process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY) {
             emailjs
             .sendForm(
@@ -62,14 +62,14 @@ export default function SendEmailToMe(){
       // console.log('data : ', data);
     };
 
-  return <div>
+  return <div className="">
         {sent && <div 
-        className=" bg-gradient-to-r from-cyan-500 to-teal-500 flex justify-center mt-10 mx-0 flex-col items-center rounded-tl-2xl rounded-tr-2xl" id="sending">
+        className=" bg-gradient-to-r from-cyan-500 to-teal-500 flex justify-center mt-10 mx-0 flex-col items-center rounded-tl-2xl rounded-tr-2xl h-[400px]" id="sending">
             <h2 className=" text-2xl text-black">Sent 🎉</h2>
           </div>
         }
         {sending && <div 
-        className=" bg-gradient-to-r from-cyan-500 to-teal-500 flex justify-center mt-10 mx-0 flex-col items-center rounded-tl-2xl rounded-tr-2xl" id="sending">
+        className=" bg-gradient-to-r from-cyan-500 to-teal-500 flex justify-center mt-10 mx-0 flex-col items-center rounded-tl-2xl rounded-tr-2xl h-[400px]" id="sending">
             <h2 className=" text-2xl text-black">Sending...</h2>
           </div>
         }
@@ -99,8 +99,7 @@ export default function SendEmailToMe(){
               value={messageState}
               />
             <br />
-            <input type="submit" value="Send" 
-            className=" cursor-pointer bg-white px-8 py4 mb-10 rounded-lg text-black"/>
+            <button type="submit" className=" cursor-pointer bg-white px-8 py4 mb-10 rounded-lg text-black">SEND</button>
           </form>}
       </div>
 };
