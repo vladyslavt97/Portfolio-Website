@@ -75,7 +75,7 @@ export default function SendEmailToMe(){
         }
         {!sending && !sent &&
           <form ref={form} onSubmit={sendEmail} 
-          className=" bg-gradient-to-r from-cyan-500 to-teal-500 flex justify-center mt-10 mx-0 flex-col items-center rounded-tl-2xl rounded-tr-2xl"
+          className=" bg-gradient-to-r from-cyan-500 to-teal-500 flex justify-center mt-10 mx-0 flex-col items-center rounded-tl-2xl rounded-tr-2xl pb-20"
           id="sendemail">
             <label className=" text-lg text-black mt-5">Name</label>
             <br />
