@@ -41,7 +41,7 @@ export default function MyInfo() {
                 duration: 2,
             }}
             viewport={{once: true}} 
-        className='text-md py-5 leading-8 text-gray-800 dark:text-white text-center'>I recently graduated from Spiced Academy. I am looking for possibility to learn and improve my skills with Typescript, Javascript, as well as advance my knowledge of FrontEnd and BackEnd development. I believe that my experience in banking, finance, and the skills such as: teamwork, taking initiative, and my analytical skills will help me in a new 
+        className='text-md py-5 leading-8 text-gray-800 dark:text-white text-center lg:mx-80'>I recently graduated from Spiced Academy. I am looking for possibility to learn and improve my skills with Typescript, Javascript, as well as advance my knowledge of FrontEnd and BackEnd development. I believe that my experience in banking, finance, and the skills such as: teamwork, taking initiative, and my analytical skills will help me in a new 
         environment. I am very motivated to contribute to your projects and learn the process very quickly.</motion.p>
         </div>
 
