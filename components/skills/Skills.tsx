@@ -383,7 +383,7 @@ export default function Skills() {
         </div>
 
         <div className='flex flex-row justify-center items-center gap-4 py-9'>
-          <h4 className='text-black'>My page on Codewars: </h4>
+          <h4 className='text-black font-medium'>My page on Codewars: </h4>
           <motion.a 
           animate={{
             scale: [1, 1.1, 1.1, 1, 1],
