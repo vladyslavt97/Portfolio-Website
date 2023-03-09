@@ -14,7 +14,7 @@ export default function Projects() {
   return (
     <div>
       <h2 className='mt-32 py-4 text-teal-500 text-3xl pt-8 pb-2 text-center' id='projects'>My Projects</h2>
-          <div className='lg:grid-cols-3 lg:grid gap-10 md:flex-wrap'>
+          <div className='lg:grid-cols-3 lg:grid gap-10 md:flex-wrap xl:mx-40 lg:mx-10'>
 
             {/* Chess */}
             <motion.div 
