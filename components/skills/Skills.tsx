@@ -228,7 +228,7 @@ export default function Skills() {
               viewport={{once: true}}
             >
             <Image
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/handlebars/handlebars-original-wordmark.svg" alt="some" width={80} height={80}/>
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/handlebars/handlebars-original-wordmark.svg" alt="some" width={60} height={80}/>
           </motion.div>
             
           <motion.div
@@ -245,7 +245,140 @@ export default function Skills() {
               viewport={{once: true}}
             >
             <Image
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" alt="some" width={90} height={100}/>
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" alt="some" width={80} height={80}/>
+          </motion.div>
+              &nbsp;&nbsp;
+          <motion.div
+            initial={{
+                  opacity: 0,
+              }}
+              transition={{
+                  duration: 3.3,
+              }}
+              whileInView={{
+                  opacity: 1,
+              }}
+              whileHover={{ scale: 1.5 }}
+              viewport={{once: true}}
+            >
+            <Image
+            src="/framer.png" alt="some" width={50} height={60}/>
+          </motion.div>
+              &nbsp;&nbsp;&nbsp;
+          {/* new */}
+          <motion.div
+            initial={{
+                  opacity: 0,
+              }}
+              transition={{
+                  duration: 3.3,
+              }}
+              whileInView={{
+                  opacity: 1,
+              }}
+              whileHover={{ scale: 1.5 }}
+              viewport={{once: true}}
+            >
+            <Image
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg" alt="some" width={60} height={100}/>
+          </motion.div>
+          <motion.div
+            initial={{
+                  opacity: 0,
+              }}
+              transition={{
+                  duration: 3.3,
+              }}
+              whileInView={{
+                  opacity: 1,
+              }}
+              whileHover={{ scale: 1.5 }}
+              viewport={{once: true}}
+            >
+            <Image
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg" alt="some" width={60} height={100}/>
+          </motion.div>
+          <motion.div
+            initial={{
+                  opacity: 0,
+              }}
+              transition={{
+                  duration: 3.3,
+              }}
+              whileInView={{
+                  opacity: 1,
+              }}
+              whileHover={{ scale: 1.5 }}
+              viewport={{once: true}}
+            >
+            <Image
+            src="/zustand.png" alt="some" width={90} height={100}/>
+          </motion.div>
+          <motion.div
+            initial={{
+                  opacity: 0,
+              }}
+              transition={{
+                  duration: 3.3,
+              }}
+              whileInView={{
+                  opacity: 1,
+              }}
+              whileHover={{ scale: 1.5 }}
+              viewport={{once: true}}
+            >
+            <Image
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain-wordmark.svg" alt="some" width={60} height={100}/>
+          </motion.div>
+          &nbsp;&nbsp;
+          <motion.div
+            initial={{
+                  opacity: 0,
+              }}
+              transition={{
+                  duration: 3.3,
+              }}
+              whileInView={{
+                  opacity: 1,
+              }}
+              whileHover={{ scale: 1.5 }}
+              viewport={{once: true}}
+            >
+            <Image
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original-wordmark.svg" alt="some" width={65} height={100}/>
+          </motion.div>
+          <motion.div
+            initial={{
+                  opacity: 0,
+              }}
+              transition={{
+                  duration: 3.3,
+              }}
+              whileInView={{
+                  opacity: 1,
+              }}
+              whileHover={{ scale: 1.5 }}
+              viewport={{once: true}}
+            >
+            <Image
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg" alt="some" width={60} height={100}/>
+          </motion.div>
+          &nbsp;&nbsp;
+          <motion.div
+            initial={{
+                  opacity: 0,
+              }}
+              transition={{
+                  duration: 3.3,
+              }}
+              whileInView={{
+                  opacity: 1,
+              }}
+              whileHover={{ scale: 1.5 }}
+              viewport={{once: true}}
+            >
+            <Image
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg" alt="some" width={60} height={100}/>
           </motion.div>
         </div>
 
