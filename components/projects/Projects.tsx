@@ -6,7 +6,7 @@ import chatgpt from '../../public/chatgpt.gif'
 import imageboard from '../../public/imageboard-comment.gif'
 import petition from '../../public/petition.gif'
 import connectfour from '../../public/connect-four.gif'
-import portfoliopage from '../../public/portfoliopage.gif'
+// import portfoliopage from '../../public/portfoliopage.gif'
 import { motion } from "framer-motion"
 
 export default function Projects() {
