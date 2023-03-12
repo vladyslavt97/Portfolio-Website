@@ -30,7 +30,7 @@ export default function Home() {
       </Head>
 
       <main className={isOpen ? ' bg-white dark:bg-gray-600 overflow-hidden' 
-                          : 'bg-white dark:bg-gray-600 overflow-scroll h-[100vh]'}>
+                          : 'bg-green-100 dark:bg-gray-600 overflow-scroll h-[100vh]'}>
 
         <div id='start'>
           <Navigation/>

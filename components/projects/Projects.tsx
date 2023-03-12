@@ -1,12 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
 import chess from '../../public/checkmate.gif'
+import mr from '../../public/mr.gif'
 import socialnetwork from '../../public/chat_sn.gif'
 import chatgpt from '../../public/chatgpt.gif'
 import imageboard from '../../public/imageboard-comment.gif'
 import petition from '../../public/petition.gif'
 import connectfour from '../../public/connect-four.gif'
-// import portfoliopage from '../../public/portfoliopage.gif'
+import portfoliopage from '../../public/portfoliopage.gif'
 import { motion } from "framer-motion"
 
 export default function Projects() {
@@ -15,6 +16,34 @@ export default function Projects() {
     <div>
       <h2 className='mt-32 py-4 text-teal-500 text-3xl pt-8 pb-2 text-center' id='projects'>My Projects</h2>
           <div className='lg:grid-cols-3 lg:grid gap-10 md:flex-wrap xl:mx-40 lg:mx-10'>
+
+            {/* MR */}
+            <motion.div 
+            initial={{
+              rotateZ: 2,
+              opacity: 0.5
+            }}
+            transition={{duration: 1}}
+            whileInView={{
+              rotateZ: 0,
+              opacity: 1
+            }}
+            whileHover={{ scale: 1.1 }}
+            className='text-center drop-shadow-2xl my-10 mx-10 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1 flex items-center justify-center flex-col'>
+              <h4 className='text-gray-800 py-1 text-xl font-bold'>Musician Webpage</h4>
+              <p className='text-black'>This project is built for a famous musician Maxim Rysanov. We are happy to share the structure of this build.</p>
+              <Image src={mr} alt="chess" className='m-5 rounded-lg' />
+              <div>
+                <a href="https://github.com/vladyslavt97/Maxim-Rysanov" target="_blank" rel="noopener noreferrer" 
+                  className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
+                  Code
+                </a>
+                <a href="maxim-rysanov.vercel.app" target="_blank" rel="noopener noreferrer" 
+                  className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
+                  Website
+                </a>
+              </div>
+            </motion.div>
 
             {/* Chess */}
             <motion.div 
@@ -28,7 +57,7 @@ export default function Projects() {
               opacity: 1
             }}
             whileHover={{ scale: 1.1 }}
-            className='text-center shadow-lg my-10 mx-10 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1 flex items-center justify-center flex-col'>
+            className='text-center drop-shadow-2xl my-10 mx-10 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1 flex items-center justify-center flex-col'>
               <h4 className='text-gray-800 py-1 text-xl font-bold'>Chess</h4>
               <p className='text-black'>The project using Socket.io to establish connection between players.</p>
               <Image src={chess} alt="chess" className='m-5 rounded-lg' />
@@ -56,7 +85,7 @@ export default function Projects() {
               opacity: 1
             }}
             whileHover={{ scale: 1.1 }}
-            className='text-center shadow-lg my-10 mx-10 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1 flex items-center justify-center flex-col'>
+            className='text-center drop-shadow-2xl my-10 mx-10 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1 flex items-center justify-center flex-col'>
               <h4 className='text-gray-800 py-1 text-xl font-bold'>Social Network</h4>
               <p className='text-black'>Bookface - is a social network to communicate with your friends.</p>
               <Image src={socialnetwork} alt="chess" className='m-5 rounded-lg' />
@@ -78,7 +107,7 @@ export default function Projects() {
               opacity: 1
             }}
             whileHover={{ scale: 1.1 }}
-            className='text-center shadow-lg my-10  mx-10 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1 flex items-center justify-center flex-col'>
+            className='text-center drop-shadow-2xl my-10  mx-10 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1 flex items-center justify-center flex-col'>
               <h4 className='text-gray-800 py-1 text-xl font-bold'>ChatGPT (clone)</h4>
               <p className='text-black'>The application recreates the famous platform.</p>
               <Image src={chatgpt} alt="chess" className='m-5 rounded-lg' width={1000}/>
@@ -107,7 +136,7 @@ export default function Projects() {
               opacity: 1
             }}
             whileHover={{ scale: 1.1 }}
-            className='text-center shadow-lg my-10 mx-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1 flex items-center justify-center flex-col'>
+            className='text-center drop-shadow-2xl my-10 mx-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1 flex items-center justify-center flex-col'>
               <h4 className='text-gray-800 py-1 text-xl font-bold'>Imageboard</h4>
               <p className='text-black'>Upload your images and write comments.</p>
               <Image src={imageboard} alt="chess" className='m-5 rounded-lg' />
@@ -130,7 +159,7 @@ export default function Projects() {
               opacity: 1
             }}
             whileHover={{ scale: 1.1 }}
-            className='text-center shadow-lg my-10 mx-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1 flex items-center justify-center flex-col'>
+            className='text-center drop-shadow-2xl my-10 mx-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1 flex items-center justify-center flex-col'>
               <h4 className='text-gray-800 py-1 text-xl font-bold'>Petition</h4>
               <p className='text-black'>Register and sign the petition to support the cause.</p>
               <Image src={petition} alt="chess" className='m-5 rounded-lg' />
@@ -152,7 +181,7 @@ export default function Projects() {
               opacity: 1
             }}
             whileHover={{ scale: 1.1 }}
-            className='text-center shadow-lg my-10 mx-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1 flex items-center justify-center flex-col'>
+            className='text-center drop-shadow-2xl my-10 mx-10 py-5 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1 flex items-center justify-center flex-col'>
               <h4 className='text-gray-800 py-1 text-xl font-bold'>Connect Four</h4>
               <p className='text-black'>The classic game of Connect-Four.</p>
               <Image src={connectfour} alt="chess" className='m-5 rounded-lg' />
@@ -169,7 +198,7 @@ export default function Projects() {
             </motion.div>
 
             {/* Portfolio Page*/}
-            {/* <motion.div 
+            <motion.div 
             initial={{
               rotateZ: 2,
               opacity: 0.5
@@ -180,7 +209,7 @@ export default function Projects() {
               opacity: 1
             }}
             whileHover={{ scale: 1.1 }}
-            className='text-center shadow-lg my-10 mx-auto py-5  bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1  md:col-span-1 md:max-w-[470px]'>
+            className='text-center drop-shadow-2xl my-10 mx-auto py-5  bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1  md:col-span-1 md:max-w-[470px]'>
               <h4 className='text-gray-800 py-1 text-xl font-bold'>Portfolio Page</h4>
               <p className='text-black'>The current page and the code.</p>
               <Image src={portfoliopage} alt="portfolio" className='p-10 rounded-lg'/>
@@ -194,7 +223,7 @@ export default function Projects() {
                   Website
                 </a>
               </div>
-            </motion.div> */}
+            </motion.div>
           </div>
     </div>
   )
