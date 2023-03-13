@@ -29,7 +29,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={isOpen ? ' bg-white dark:bg-gray-600 overflow-hidden' 
+      <main className={isOpen ? ' bg-green-100 dark:bg-gray-600 overflow-hidden' 
                           : 'bg-green-100 dark:bg-gray-600 overflow-scroll h-[100vh]'}>
 
         <div id='start'>

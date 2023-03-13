@@ -32,7 +32,7 @@ export default function Projects() {
             className='text-center drop-shadow-2xl my-10 mx-10 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1 flex items-center justify-center flex-col'>
               <h4 className='text-gray-800 py-1 text-xl font-bold'>Musician Webpage</h4>
               <p className='text-black'>This project is built for a famous musician Maxim Rysanov. We are happy to share the structure of this build.</p>
-              <Image src={mr} alt="chess" className='m-5 rounded-lg' />
+              <Image src={mr} alt="mr" className='m-5 rounded-lg' />
               <div>
                 <a href="https://github.com/vladyslavt97/Maxim-Rysanov" target="_blank" rel="noopener noreferrer" 
                   className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
