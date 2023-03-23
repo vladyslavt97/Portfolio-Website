@@ -14,6 +14,9 @@ module.exports = {
       fontFamily: {
         burtons: 'burtons',
       },
+      backgroundImage: {
+        'tele': "url('../public/telegram.jpg')",
+      }
     },
   },
   plugins: [],

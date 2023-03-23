@@ -107,10 +107,10 @@ export default function Projects() {
               opacity: 1
             }}
             whileHover={{ scale: 1.1 }}
-            className='text-center drop-shadow-2xl my-10  mx-10 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1 flex items-center justify-center flex-col'>
+            className='text-center drop-shadow-2xl mx-10 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1 flex items-center justify-center flex-col'>
               <h4 className='text-gray-800 py-1 text-xl font-bold'>ChatGPT (clone)</h4>
               <p className='text-black'>The application recreates the famous platform.</p>
-              <Image src={chatgpt} alt="chess" className='m-5 rounded-lg' width={1000}/>
+              <Image src={chatgpt} alt="chess" className='m-10 px-10 rounded-lg' width={1000}/>
               <div>
                 <a href="https://github.com/vladyslavt97/ChatGPT-clone" target="_blank" rel="noopener noreferrer" 
                   className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
@@ -209,7 +209,7 @@ export default function Projects() {
               opacity: 1
             }}
             whileHover={{ scale: 1.1 }}
-            className='text-center drop-shadow-2xl my-10 mx-auto py-5  bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1  md:col-span-1 md:max-w-[470px]'>
+            className='text-center drop-shadow-2xl my-10 mx-10 py-5  bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1  md:col-span-1 md:max-w-[470px]'>
               <h4 className='text-gray-800 py-1 text-xl font-bold'>Portfolio Page</h4>
               <p className='text-black'>The current page and the code.</p>
               <Image src={portfoliopage} alt="portfolio" className='p-10 rounded-lg'/>

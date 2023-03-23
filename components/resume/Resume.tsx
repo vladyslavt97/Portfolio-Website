@@ -17,7 +17,7 @@ export default function Resume() {
       className="w-60 mx-auto mt-5 bg-teal-500 hover:bg-teal-900 text-white font-bold py-2 px-4 rounded text-center"
       >Download</a>
     </motion.div>
-    <Image src={resume} alt='resume' className='shadow-2xl my-10 p-20 lg:p-50  dark:bg-white'/>
+    <Image src={resume} alt='resume' className='shadow-4xl my-10 p-20 lg:p-50  dark:bg-white'/>
   </div>
 
 }
