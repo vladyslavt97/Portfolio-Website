@@ -16,6 +16,7 @@ module.exports = {
       },
       backgroundImage: {
         'tele': "url('../public/telegram.jpg')",
+        'tele2': "url('../public/telegram2.png')",
       }
     },
   },
