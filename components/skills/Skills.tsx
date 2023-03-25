@@ -390,7 +390,7 @@ export default function Skills() {
             rotate: [0, 0, 70, 70, 0],
             borderRadius: ["20%", "20%", "50%", "50%", "20%"],
           }}
-          whileHover={{ scale: 1.5 }}
+          whileHover={{ scale: 1.2 }}
           whileInView={{
               scale: [1, 1.1, 1.1, 1, 1],
               rotate: [0, 0, 70, 70, 0],

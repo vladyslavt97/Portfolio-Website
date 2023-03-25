@@ -79,22 +79,22 @@ export default function SendEmailToMe(){
           id="sendemail">
             <label className=" text-lg text-black mt-5">Name</label>
             <br />
-            <input className="rounded-lg bg-white text-black" 
-              type="text" name="user_name" 
+            <input className="rounded-lg bg-white text-black p-2" 
+              type="text" name="user_name"  placeholder="your name"
               onChange={handleChangeUserName}
               value={userName}/>
             <br />
             <label className=" text-lg text-black">Email</label>
             <br />
-            <input className="rounded-lg bg-white text-black"  
-              type="email" name="email" 
+            <input className="rounded-lg bg-white text-black p-2"  
+              type="email" name="email" placeholder="email"
               onChange={handleChangeEmail}
               value={emailState}/>
             <br />
             <label className=" text-lg text-black">Message</label>
             <br />
-            <textarea className="rounded-lg bg-white text-black"  
-              name="message" 
+            <textarea className="rounded-lg bg-white text-black p-2"  
+              name="message" placeholder="message"
               onChange={handleChangeMessage}
               value={messageState}
               />

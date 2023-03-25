@@ -111,3 +111,24 @@ a {
     color-scheme: dark;
   }
 }
+
+@layer components {
+  .projectimages {
+    @apply m-5 rounded-lg w-[80%];
+  }
+  .projectdivs {
+    @apply text-center drop-shadow-2xl my-10 p-5 mx-10 bg-slate-100 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1 flex items-center justify-center flex-col;
+  }
+  .projectcode {
+    @apply bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8;
+  }
+  .projectwebsite {
+    @apply bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8;
+  }
+  .projecttextheader {
+    @apply text-gray-800 py-1 text-xl font-bold;
+  }
+  .projecttext {
+    @apply text-black;
+  }
+}

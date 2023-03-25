@@ -5,8 +5,6 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body>
-        {/* add bg */}
-        {/* <Image className='absolute z-[0]' src="/telegram.jpg" alt="bg" width={100} height={100}/> */}
         <Main />
         <NextScript />
       </body>
