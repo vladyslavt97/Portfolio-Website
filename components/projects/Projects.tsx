@@ -218,7 +218,7 @@ export default function Projects() {
                   className='projectcode'>
                   Code
                 </a>
-                <a href="https://portfolio-jade-chi-24.vercel.app/" target="_blank" rel="noopener noreferrer" 
+                <a href="https://portfolio-vt.vercel.app/" target="_blank" rel="noopener noreferrer" 
                   className='projectwebsite'>
                   Website
                 </a>
