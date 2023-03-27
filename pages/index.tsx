@@ -30,7 +30,7 @@ export default function Home() {
       </Head>
 
       <main className={isOpen ? ' bg-tele bg-no-repeat bg-cover md:bg-gradient-to-tr from-yellow-200/50 to-lime-500/80 dark:bg-gray-600 dark:bg-none overflow-hidden h-[100vh]' 
-                          : ' bg-tele bg-no-repeat bg-cover md:bg-gradient-to-tr from-yellow-200/50 to-lime-500/80  dark:bg-gray-600 dark:bg-none  overflow-scroll h-[100vh]'}>
+                          : ' bg-tele bg-no-repeat bg-cover md:bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-orange-300 via-lime-200 to-emerald-200 dark:bg-gray-600 dark:bg-none  overflow-scroll h-[100vh]'}>
         <div id='start'>
           <Navigation/>
         </div>
