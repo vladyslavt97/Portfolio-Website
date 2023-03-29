@@ -14,7 +14,7 @@ export default function MyInfo() {
 
   return (
     <div>
-        <div className='p-10'>
+        <div className='p-5'>
         <motion.h2 
         initial={{opacity: 0}}
             animate={{opacity: 1}}
