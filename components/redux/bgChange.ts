@@ -6,7 +6,7 @@ export interface bgColorInterface {
 }
 
 const initialState: bgColorInterface = {
-    bgColorValue: 1
+    bgColorValue: 3
 };
 
 export const bgColorSlice = createSlice({

@@ -18,6 +18,7 @@ export default function BgColor({}: Props) {
 
   return (
     <div className="hidden md:block md:mx-5 md:my-2">
+        {/* <div className='wweerrr'></div> */}
         {bgColorRedux === 1 && <div onClick={e=>setOpened(!opened)} className="rounded-full w-10 h-10 border-white border-2 bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-pink-300 via-purple-300 to-indigo-400"></div>}
         {bgColorRedux === 2 && <div onClick={e=>setOpened(!opened)} className="rounded-full w-10 h-10 border-white border-2 bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500"></div>}
         {bgColorRedux === 3 && <div onClick={e=>setOpened(!opened)} className="rounded-full w-10 h-10 border-white border-2 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-orange-300 via-lime-200 to-emerald-200"></div>}

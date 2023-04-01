@@ -1,3 +1,5 @@
+'use client'
+
 import Head from 'next/head'
 import Image from 'next/image'
 import Resume from '../components/resume/Resume'
@@ -21,7 +23,7 @@ export default function Home() {
   const bgColorRedux = useSelector((state: RootState) => state.bgColor.bgColorValue);
     console.log(bgColorRedux);
 
-  // const [color, setColor] = useState(bgColorRedux);
+  // const [color, setColor] = useState('');
   // useEffect(()=>{
   //   console.log('here');
     
@@ -35,6 +37,8 @@ export default function Home() {
   // console.log(color);
 // console.log('color', color);
 
+  console.log(colors[bgColorRedux-1]);
+
   
   return (
     <div className={darkmode ? 'dark' : ''}>
@@ -46,10 +50,12 @@ export default function Home() {
       </Head>
 
       <main className={isOpen ? ' bg-tele bg-no-repeat bg-cover md:bg-gradient-to-tr from-yellow-200/50 to-lime-500/80 dark:bg-gray-600 dark:bg-none overflow-hidden h-[100vh]' 
-                          : ` bg-tele bg-no-repeat bg-cover md:${colors[bgColorRedux-1]} dark:bg-gray-600 dark:bg-none  overflow-scroll h-[100vh]`}>
+                          : ` bg-tele bg-no-repeat bg-cover md:bg-none dark:bg-gray-600 dark:bg-none  overflow-scroll h-[100vh]`}
+                          >
         <div id='start'>
           <Navigation/>
         </div>
+        <div className={`${colors[bgColorRedux-1]} w-screen h-screen wweerrr`}></div>
 
         <MyInfo />
 
@@ -70,6 +76,7 @@ export default function Home() {
           </div>
         </Link>
       </main>
+      
     </div>
   )
 }
