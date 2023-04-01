@@ -20,6 +20,9 @@ export default function Home() {
   console.log('Welcome to my portfolio website!🎉')
   const isOpen = useSelector((state: RootState) => state.openerState.openValue);
   
+
+  const bgColorRedux = useSelector((state: RootState) => state.bgColor.bgColorValue);
+    console.log(bgColorRedux);
   return (
     <div className={darkmode ? 'dark' : ''}>
       <Head>

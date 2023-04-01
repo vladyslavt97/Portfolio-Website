@@ -5,6 +5,7 @@ import { changeOpenerStatus } from '../redux/menuOpened';
 import { RootState } from '../redux/store';
 import { changeModeDark } from '../redux/darkModed';
 import Logo from './Logo';
+import BgColor from '../bgColor/BgColor';
 
 export default function Navigation() {
   const darkmode = useSelector((state: RootState) => state.darkMode.darkModeVal);
@@ -130,6 +131,9 @@ export default function Navigation() {
                   onClick={()=>dispatch(changeModeDark(false))}>🌞
                 </h1>}
               </motion.li>
+
+              
+              <BgColor />
             </ul>
           </motion.nav>
         </section>
