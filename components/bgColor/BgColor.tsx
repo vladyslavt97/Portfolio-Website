@@ -8,7 +8,6 @@ type Props = {}
 export default function BgColor({}: Props) {
     const [opened, setOpened] = useState(false);
     const bgColorRedux = useSelector((state: RootState) => state.bgColor.bgColorValue);
-    console.log(bgColorRedux);
     
   const dispatch = useDispatch();
 

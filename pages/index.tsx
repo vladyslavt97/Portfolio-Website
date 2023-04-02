@@ -12,34 +12,21 @@ import SendEmailToMe from '../components/contacts/sentemailtome/SendEmailToMe'
 import { useSelector} from "react-redux";
 import { RootState} from "../components/redux/store";
 import Link from 'next/link'
+import { useEffect } from 'react'
 
 const colors = ["bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-pink-300 via-purple-300 to-indigo-400", "bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500", "bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-orange-300 via-lime-200 to-emerald-200"]
 
 
 export default function Home() {
   const darkmode = useSelector((state: RootState) => state.darkMode.darkModeVal);
-  console.log('Welcome to my portfolio website!🎉')
+  
   const isOpen = useSelector((state: RootState) => state.openerState.openValue);
   const bgColorRedux = useSelector((state: RootState) => state.bgColor.bgColorValue);
-    console.log(bgColorRedux);
-
-  // const [color, setColor] = useState('');
-  // useEffect(()=>{
-  //   console.log('here');
-    
-  //   if(bgColorRedux === 1){
-  //     setColor(colors[1])
-  //   } else if (bgColorRedux === 2){
-  //     setColor(colors[0])
-  //   }
-
-  // }, [bgColorRedux])
-  // console.log(color);
-// console.log('color', color);
-
-  console.log(colors[bgColorRedux-1]);
-
   
+  useEffect(()=>{
+    console.log('Welcome to my portfolio website!🎉')
+  }, [])
+
   return (
     <div className={darkmode ? 'dark' : ''}>
       <Head>
