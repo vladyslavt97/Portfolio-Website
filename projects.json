@@ -1,0 +1,66 @@
+
+// import chess from '../../public/checkmate.gif'
+// import socialnetwork from '../../public/chat_sn.gif'
+// import chatgpt from '../../public/chatgpt.gif'
+// import imageboard from '../../public/imageboard-comment.gif'
+// import petition from '../../public/petition.gif'
+// import connectfour from '../../public/connect-four.gif'
+// import portfoliopage from '../../public/portfoliopage.gif'
+[
+    {
+        "name": "MR",
+        "title": "Musician Webpage",
+        "description": "This project is built for a famous musician Maxim Rysanov. We are happy to share the structure of this build.",
+        "image": "../../public/mr.gif",
+        "code": "https://github.com/vladyslavt97/Maxim-Rysanov",
+        "website": "https://maxim-rysanov.vercel.app"
+    },
+    {
+        "name": "MR",
+        "title": "Musician Webpage",
+        "description": "This project is built for a famous musician Maxim Rysanov. We are happy to share the structure of this build.",
+        "image": "../../public/mr.gif",
+        "code": "https://github.com/vladyslavt97/Maxim-Rysanov",
+        "website": "https://maxim-rysanov.vercel.app"
+    },
+    {
+        "name": "MR",
+        "title": "Musician Webpage",
+        "description": "This project is built for a famous musician Maxim Rysanov. We are happy to share the structure of this build.",
+        "image": "../../public/mr.gif",
+        "code": "https://github.com/vladyslavt97/Maxim-Rysanov",
+        "website": "https://maxim-rysanov.vercel.app"
+    },
+    {
+        "name": "MR",
+        "title": "Musician Webpage",
+        "description": "This project is built for a famous musician Maxim Rysanov. We are happy to share the structure of this build.",
+        "image": "../../public/mr.gif",
+        "code": "https://github.com/vladyslavt97/Maxim-Rysanov",
+        "website": "https://maxim-rysanov.vercel.app"
+    },
+    {
+        "name": "MR",
+        "title": "Musician Webpage",
+        "description": "This project is built for a famous musician Maxim Rysanov. We are happy to share the structure of this build.",
+        "image": "../../public/mr.gif",
+        "code": "https://github.com/vladyslavt97/Maxim-Rysanov",
+        "website": "https://maxim-rysanov.vercel.app"
+    },
+    {
+        "name": "MR",
+        "title": "Musician Webpage",
+        "description": "This project is built for a famous musician Maxim Rysanov. We are happy to share the structure of this build.",
+        "image": "../../public/mr.gif",
+        "code": "https://github.com/vladyslavt97/Maxim-Rysanov",
+        "website": "https://maxim-rysanov.vercel.app"
+    },
+    {
+        "name": "MR",
+        "title": "Musician Webpage",
+        "description": "This project is built for a famous musician Maxim Rysanov. We are happy to share the structure of this build.",
+        "image": "../../public/mr.gif",
+        "code": "https://github.com/vladyslavt97/Maxim-Rysanov",
+        "website": "https://maxim-rysanov.vercel.app"
+    },
+]

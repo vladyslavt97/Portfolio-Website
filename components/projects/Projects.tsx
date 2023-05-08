@@ -32,7 +32,7 @@ export default function Projects() {
             className='projectdivs'>
               <h4 className='projecttextheader'>Musician Webpage</h4>
               <p className='projecttext'>This project is built for a famous musician Maxim Rysanov. We are happy to share the structure of this build.</p>
-              <Image src={mr} alt="mr" className='projectimages' />
+              <Image src={mr} alt="mr" className='projectimages' priority={true}/>
               <div>
                 <a href="https://github.com/vladyslavt97/Maxim-Rysanov" target="_blank" rel="noopener noreferrer" 
                   className='projectcode'>
@@ -60,7 +60,7 @@ export default function Projects() {
             className='projectdivs'>
               <h4 className='projecttextheader'>Chess</h4>
               <p className='projecttext'>The project using Socket.io to establish connection between players.</p>
-              <Image src={chess} alt="chess" className='projectimages' />
+              <Image src={chess} alt="chess" className='projectimages' priority={true}/>
               <div>
                 <a href="https://github.com/vladyslavt97/chess-ts-project" target="_blank" rel="noopener noreferrer" 
                   className='projectcode'>
@@ -88,7 +88,7 @@ export default function Projects() {
             className='projectdivs'>
               <h4 className='projecttextheader'>Social Network</h4>
               <p className='projecttext'>Bookface - is a social network to communicate with your friends.</p>
-              <Image src={socialnetwork} alt="socialnetwork" className='projectimages' />
+              <Image src={socialnetwork} alt="socialnetwork" className='projectimages' priority={true} />
               <a href="https://github.com/vladyslavt97/Social-Network" target="_blank" rel="noopener noreferrer" 
                 className='projectcode'>
                 Code
@@ -110,7 +110,7 @@ export default function Projects() {
             className='projectdivs'>
               <h4 className='projecttextheader'>ChatGPT (clone)</h4>
               <p className='projecttext'>The application recreates the famous platform.</p>
-              <Image src={chatgpt} alt="chess" className='projectimages'/>
+              <Image src={chatgpt} alt="chess" className='projectimages' priority={true}/>
               <div>
                 <a href="https://github.com/vladyslavt97/ChatGPT-clone" target="_blank" rel="noopener noreferrer" 
                   className='projectcode'>
@@ -139,7 +139,7 @@ export default function Projects() {
             className='projectdivs'>
               <h4 className='projecttextheader'>Imageboard</h4>
               <p className='projecttext'>Upload your images and write comments.</p>
-              <Image src={imageboard} alt="chess" className='projectimages' />
+              <Image src={imageboard} alt="chess" className='projectimages' priority={true}/>
               <a href="https://github.com/vladyslavt97/Imageboard" target="_blank" rel="noopener noreferrer" 
                 className='projectcode'>
                 Code
@@ -162,7 +162,7 @@ export default function Projects() {
             className='projectdivs'>
               <h4 className='projecttextheader'>Petition</h4>
               <p className='projecttext'>Register and sign the petition to support the cause.</p>
-              <Image src={petition} alt="chess" className='projectimages' />
+              <Image src={petition} alt="chess" className='projectimages' priority={true}/>
               <a href="https://github.com/vladyslavt97/Petition" target="_blank" rel="noopener noreferrer" 
                 className='projectcode'>
                 Code
@@ -184,7 +184,7 @@ export default function Projects() {
             className='projectdivs'>
               <h4 className='projecttextheader'>Connect Four</h4>
               <p className='projecttext'>The classic game of Connect-Four.</p>
-              <Image src={connectfour} alt="chess" className='projectimages' />
+              <Image src={connectfour} alt="chess" className='projectimages' priority={true}/>
               <div>
                 <a href="https://github.com/vladyslavt97/Connect-Four" target="_blank" rel="noopener noreferrer" 
                   className='projectcode'>
@@ -212,7 +212,7 @@ export default function Projects() {
             className='projectdivs'>
               <h4 className='projecttextheader'>Portfolio Page</h4>
               <p className='projecttext'>The current page and the code.</p>
-              <Image src={portfoliopage} alt="portfolio" className='projectimages' />
+              <Image src={portfoliopage} alt="portfolio" className='projectimages' priority={true}/>
               <div>
                 <a href="https://github.com/vladyslavt97/Portfolio-Website" target="_blank" rel="noopener noreferrer" 
                   className='projectcode'>
