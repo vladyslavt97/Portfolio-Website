@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import projects from "../../projects.json"
 
 export default function Projects() {
-  
+
   return (
     <div>
       <h2 className='mt-32 py-4 text-teal-500 text-3xl pt-8 pb-2 text-center' id='projects'>My Projects</h2>
@@ -25,7 +25,7 @@ export default function Projects() {
               className='projectdivs'>
                 <h4 className='projecttextheader'>{project.title}</h4>
                 <p className='projecttext'>{project.description}</p>
-                <Image src={project.image} alt={project.title} className='projectimages' priority={true} width={1000} height={1000}/>
+                <Image src={project.image} alt={project.title} className='projectimages' priority={true} width={500} height={500}/>
                   <div>
                     <a href={project.code} target="_blank" rel="noopener noreferrer" 
                       className='projectcode'>
