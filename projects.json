@@ -1,14 +1,5 @@
-
-// import chess from '../../public/checkmate.gif'
-// import socialnetwork from '../../public/chat_sn.gif'
-// import chatgpt from '../../public/chatgpt.gif'
-// import imageboard from '../../public/imageboard-comment.gif'
-// import petition from '../../public/petition.gif'
-// import connectfour from '../../public/connect-four.gif'
-// import portfoliopage from '../../public/portfoliopage.gif'
 [
     {
-        "name": "MR",
         "title": "Musician Webpage",
         "description": "This project is built for a famous musician Maxim Rysanov. We are happy to share the structure of this build.",
         "image": "../../public/mr.gif",
@@ -16,51 +7,52 @@
         "website": "https://maxim-rysanov.vercel.app"
     },
     {
-        "name": "MR",
-        "title": "Musician Webpage",
-        "description": "This project is built for a famous musician Maxim Rysanov. We are happy to share the structure of this build.",
-        "image": "../../public/mr.gif",
-        "code": "https://github.com/vladyslavt97/Maxim-Rysanov",
-        "website": "https://maxim-rysanov.vercel.app"
+        "title": "Chess",
+        "description": "The project using Socket.io to establish connection between players.",
+        "image": "../../public/checkmate.gif",
+        "code": "https://github.com/vladyslavt97/chess-ts-project",
+        "website": ""
+    },       
+    {
+        "title": "Social Network",
+        "description": "Bookface - is a social network to communicate with your friends.",
+        "image": "../../public/chat_sn.gif",
+        "code": "https://github.com/vladyslavt97/Social-Network",
+        "website": ""
     },
     {
-        "name": "MR",
-        "title": "Musician Webpage",
-        "description": "This project is built for a famous musician Maxim Rysanov. We are happy to share the structure of this build.",
-        "image": "../../public/mr.gif",
-        "code": "https://github.com/vladyslavt97/Maxim-Rysanov",
-        "website": "https://maxim-rysanov.vercel.app"
+        "title": "ChatGPT (clone)",
+        "description": "The application recreates the famous platform.",
+        "image": "../../public/chatgpt.gif",
+        "code": "https://github.com/vladyslavt97/ChatGPT-clone",
+        "website": ""
     },
     {
-        "name": "MR",
-        "title": "Musician Webpage",
-        "description": "This project is built for a famous musician Maxim Rysanov. We are happy to share the structure of this build.",
-        "image": "../../public/mr.gif",
-        "code": "https://github.com/vladyslavt97/Maxim-Rysanov",
-        "website": "https://maxim-rysanov.vercel.app"
+        "title": "Imageboard",
+        "description": "Upload your images and write comments.",
+        "image": "../../public/imageboard-comment.gif",
+        "code": "https://github.com/vladyslavt97/Imageboard",
+        "website": ""
     },
     {
-        "name": "MR",
-        "title": "Musician Webpage",
-        "description": "This project is built for a famous musician Maxim Rysanov. We are happy to share the structure of this build.",
-        "image": "../../public/mr.gif",
-        "code": "https://github.com/vladyslavt97/Maxim-Rysanov",
-        "website": "https://maxim-rysanov.vercel.app"
+        "title": "Petition",
+        "description": "Register and sign the petition to support the cause.",
+        "image": "../../public/petition.gif",
+        "code": "https://github.com/vladyslavt97/Petition",
+        "website": ""
     },
     {
-        "name": "MR",
-        "title": "Musician Webpage",
-        "description": "This project is built for a famous musician Maxim Rysanov. We are happy to share the structure of this build.",
-        "image": "../../public/mr.gif",
-        "code": "https://github.com/vladyslavt97/Maxim-Rysanov",
-        "website": "https://maxim-rysanov.vercel.app"
+        "title": "Connect Four",
+        "description": "The classic game of Connect-Four.",
+        "image": "../../public/connect-four.gif",
+        "code": "https://github.com/vladyslavt97/Connect-Four",
+        "website": "https://brilliant-halva-1a9875.netlify.app/"
     },
     {
-        "name": "MR",
-        "title": "Musician Webpage",
-        "description": "This project is built for a famous musician Maxim Rysanov. We are happy to share the structure of this build.",
-        "image": "../../public/mr.gif",
-        "code": "https://github.com/vladyslavt97/Maxim-Rysanov",
-        "website": "https://maxim-rysanov.vercel.app"
-    },
+        "title": "Portfolio Page",
+        "description": "The current page and the code.",
+        "image": "../../public/portfoliopage.gif",
+        "code": "https://github.com/vladyslavt97/Portfolio-Website",
+        "website": "https://portfolio-vt.vercel.app/"
+    }
 ]
