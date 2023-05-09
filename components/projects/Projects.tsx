@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import projects from "../../projects.json"
 
 export default function Projects() {
+  
   return (
     <div>
       <h2 className='mt-32 py-4 text-teal-500 text-3xl pt-8 pb-2 text-center' id='projects'>My Projects</h2>
