@@ -1,14 +1,14 @@
-import React from 'react'
 import Image from 'next/image'
-import chess from '../../public/checkmate.gif'
+// import chess from '../../public/checkmate.gif'
 import mr from '../../public/mr.gif'
-import socialnetwork from '../../public/chat_sn.gif'
-import chatgpt from '../../public/chatgpt.gif'
-import imageboard from '../../public/imageboard-comment.gif'
-import petition from '../../public/petition.gif'
-import connectfour from '../../public/connect-four.gif'
-import portfoliopage from '../../public/portfoliopage.gif'
+// import socialnetwork from '../../public/chat_sn.gif'
+// import chatgpt from '../../public/chatgpt.gif'
+// import imageboard from '../../public/imageboard-comment.gif'
+// import petition from '../../public/petition.gif'
+// import connectfour from '../../public/connect-four.gif'
+// import portfoliopage from '../../public/portfoliopage.gif'
 import { motion } from "framer-motion"
+import projects from "../../projects.json"
 
 export default function Projects() {
 
@@ -17,8 +17,38 @@ export default function Projects() {
       <h2 className='mt-32 py-4 text-teal-500 text-3xl pt-8 pb-2 text-center' id='projects'>My Projects</h2>
           <div className='lg:grid-cols-3 lg:grid gap-10 md:flex-wrap xl:mx-40 lg:mx-10'>
 
+            {projects.map((project, index) => (
+              <motion.div 
+              initial={{
+                rotateZ: 2,
+                opacity: 0.5
+              }}
+              transition={{duration: 1}}
+              whileInView={{
+                rotateZ: 0,
+                opacity: 1
+              }}
+              whileHover={{ scale: 1.1 }}
+              key={index}
+              className='projectdivs'>
+                <h4 className='projecttextheader'>Musician Webpage</h4>
+                <p className='projecttext'>This project is built for a famous musician Maxim Rysanov. We are happy to share the structure of this build.</p>
+                <Image src={mr} alt="mr" className='projectimages' priority={true}/>
+                  <div>
+                    <a href="https://github.com/vladyslavt97/Maxim-Rysanov" target="_blank" rel="noopener noreferrer" 
+                      className='projectcode'>
+                      Code
+                    </a>
+                    <a href="https://maxim-rysanov.vercel.app" target="_blank" rel="noopener noreferrer" 
+                      className='projectwebsite'>
+                      Website
+                    </a>
+                  </div>
+              </motion.div>
+              ))}
+
             {/* MR */}
-            <motion.div 
+            {/* <motion.div 
             initial={{
               rotateZ: 2,
               opacity: 0.5
@@ -43,10 +73,10 @@ export default function Projects() {
                   Website
                 </a>
               </div>
-            </motion.div>
+            </motion.div> */}
 
             {/* Chess */}
-            <motion.div 
+            {/* <motion.div 
             initial={{
               rotateZ: 2,
               opacity: 0.5
@@ -71,10 +101,10 @@ export default function Projects() {
                   Website
                 </a>
               </div>
-            </motion.div>
+            </motion.div> */}
             
             {/* Social Network */}
-            <motion.div 
+            {/* <motion.div 
             initial={{
               rotateZ: 2,
               opacity: 0.5
@@ -93,10 +123,10 @@ export default function Projects() {
                 className='projectcode'>
                 Code
               </a>
-            </motion.div>
+            </motion.div> */}
             
             {/* ChatGPT clone */}
-            <motion.div 
+            {/* <motion.div 
             initial={{
               rotateZ: 2,
               opacity: 0.5
@@ -116,16 +146,12 @@ export default function Projects() {
                   className='projectcode'>
                   Code
                 </a>
-                {/* <a href="https://chat-gpt-ochre.vercel.app/" target="_blank" rel="noopener noreferrer" 
-                    className='projectwebsite'>
-                    Website
-                  </a> */}
               </div>
-            </motion.div>
+            </motion.div> */}
 
 
             {/* Imageboard */}
-            <motion.div 
+            {/* <motion.div 
             initial={{
               rotateZ: 2,
               opacity: 0.5
@@ -144,11 +170,11 @@ export default function Projects() {
                 className='projectcode'>
                 Code
               </a>
-            </motion.div>
+            </motion.div> */}
 
 
             {/* Petition */}
-            <motion.div 
+            {/* <motion.div 
             initial={{
               rotateZ: 2,
               opacity: 0.5
@@ -167,10 +193,10 @@ export default function Projects() {
                 className='projectcode'>
                 Code
               </a>
-            </motion.div>
+            </motion.div> */}
 
             {/* Connect Four */}
-            <motion.div 
+            {/* <motion.div 
             initial={{
               rotateZ: 2,
               opacity: 0.5
@@ -195,10 +221,10 @@ export default function Projects() {
                   Website
                 </a>
               </div>
-            </motion.div>
+            </motion.div> */}
 
             {/* Portfolio Page*/}
-            <motion.div 
+            {/* <motion.div 
             initial={{
               rotateZ: 2,
               opacity: 0.5
@@ -223,7 +249,7 @@ export default function Projects() {
                   Website
                 </a>
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
     </div>
   )
