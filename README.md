@@ -5,5 +5,3 @@ You can find my contact information there and write me an email directly from th
 
 The technologies I used to implement this page are: Next.js, TailwindCSS, TypeScript, Framer Motion and Emailjs!
 <img src="./public/portfoliopage.gif" width="500px"/>
-
-Thank you for reading!!!
