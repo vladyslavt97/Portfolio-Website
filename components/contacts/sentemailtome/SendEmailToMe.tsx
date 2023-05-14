@@ -22,6 +22,8 @@ export default function SendEmailToMe(){
     const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       setSending(true);
+      console.log('fsdfsf', form.current);
+      
         if(form.current && process.env.NEXT_PUBLIC_YOUR_SERVICE_ID && process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID && process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY) {
             emailjs
             .sendForm(
