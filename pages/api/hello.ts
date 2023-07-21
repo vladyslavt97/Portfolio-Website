@@ -1,13 +1,29 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 type Data = {
-  name: string
+  numOfProjects: number;
+  numOfFollowers: number
 }
 
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ name: 'John Doe' })
+
+    // repos
+    const url2 = "https://api.github.com/users/vladyslavt97/repos"
+    const response2 = await fetch(url2)
+    const json2 = await response2.json()
+    console.log(json2);
+    
+    const numProjects = Object.keys(json2).length;
+    console.log(numProjects);
+
+    // repos
+    const url = "https://api.github.com/users/vladyslavt97/followers"
+    const response = await fetch(url)
+    const json = await response.json()
+    const numFollwers = Object.keys(json).length
+    
+  res.status(200).json({ numOfProjects: numProjects, numOfFollowers: numFollwers })
 }

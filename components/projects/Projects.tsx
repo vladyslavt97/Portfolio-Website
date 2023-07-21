@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { motion } from "framer-motion"
 import projects from "../../projects.json"
 import { useState } from 'react'
+import GitHubStats from '../GitHubStats'
 
 export default function Projects() {
   const [showMore, setShowMore] = useState(false)
@@ -9,7 +10,9 @@ export default function Projects() {
   return (
     <div>
       <h2 className='mt-32 py-4 text-teal-500 text-3xl pt-8 pb-2 text-center' id='projects'>My Projects</h2>
+            <GitHubStats/>
           <div className='lg:grid-cols-3 lg:grid gap-10 md:flex-wrap xl:mx-40 lg:mx-10'>
+
 
             {projects.map((project, index) => (
               <motion.div 
