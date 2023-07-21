@@ -1,8 +1,10 @@
 import Image from 'next/image'
 import { motion } from "framer-motion"
 import projects from "../../projects.json"
+import { useState } from 'react'
 
 export default function Projects() {
+  const [showMore, setShowMore] = useState(false)
 
   return (
     <div>
@@ -22,7 +24,7 @@ export default function Projects() {
               }}
               whileHover={{ scale: 1.1 }}
               key={index}
-              className='text-center shadow-2xl my-10 p-5 mx-10 bg-white/50 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1 flex items-center justify-center flex-col'>
+              className={`${index > 2 && !showMore ? "hidden" : "text-center shadow-2xl my-10 p-5 mx-10 bg-white/50 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1 flex items-center justify-center flex-col"}`}>
                 <h4 className='text-gray-800 py-1 text-xl font-bold'>{project.title}</h4>
                 <p className='text-black'>{project.description}</p>
                 <Image src={project.image} alt={project.title} className='m-5 rounded-lg w-[80%]' priority={true} width={500} height={500}/>
@@ -38,6 +40,9 @@ export default function Projects() {
                   </div>
               </motion.div>
               ))}
+          </div>
+          <div className='flex justify-center items-center w-full'>
+            <button onClick={e => setShowMore(!showMore)} className='bg-green-500 px-2 rounded-xl drop-shadow-lg hover:bg-green-300'>{showMore ? "Show Less" : "Show more"}</button>
           </div>
     </div>
   )
