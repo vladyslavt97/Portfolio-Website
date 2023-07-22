@@ -18,20 +18,20 @@ useEffect(() => {
 }, [])
     
   return (
-    <div className="flex justify-center w-full text-center">
+    <div className="flex justify-center w-full text-center" >
         {/* github */}
-        <div className="border-2 border-black flex flex-col">
-            <h1 className="border-2 border-b-black text-xl bg-slate-200">GitHub Stats</h1> 
+        <div className="flex flex-col">
+            <h1 className="text-xl bg-slate-400 rounded-full">GitHub Stats</h1> 
 
             {/* github columns*/}
-            <div className="border-1 border-b-black flex flex-row">
-                <div className="border-1 border-black">
-                    <h1 className="px-2 border-2 border-r-black">Public Repos</h1>
-                    <h1 className="px-5 py-2 border-2 border-t-black border-r-black">{repos}</h1>
+            <div className="flex flex-row gap-3">
+                <div className="m-2">
+                    <h1 className="mb-2 px-2 bg-slate-300 rounded-full">Public Repos</h1>
+                    <h1 className="px-5 py-2 bg-slate-100 rounded-full">{repos}</h1>
                 </div>
-                <div className="border-1 border-black">
-                    <h1 className="px-2 border-2">My Followers</h1>
-                    <h1 className="px-5 py-2 border-2 border-t-black">{followers}</h1>
+                <div className="m-2">
+                    <h1 className="mb-2 px-2 bg-slate-300 rounded-full">My Followers</h1>
+                    <h1 className="px-5 py-2 bg-slate-100 rounded-full">{followers}</h1>
                 </div>
             </div>
         </div>
