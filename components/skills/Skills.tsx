@@ -363,7 +363,7 @@ export default function Skills() {
             <Image
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg" alt="some" width={60} height={100}/>
           </motion.div>
-          &nbsp;&nbsp;
+          {/* &nbsp;&nbsp;
           <motion.div
             initial={{
                   opacity: 0,
@@ -379,7 +379,7 @@ export default function Skills() {
             >
             <Image
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg" alt="some" width={60} height={100}/>
-          </motion.div>
+          </motion.div> */}
         </div>
 
         <div className='flex flex-row justify-center items-center gap-4 py-9'>

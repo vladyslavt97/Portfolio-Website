@@ -7,6 +7,7 @@ import Projects from '../components/projects/Projects'
 import Skills from '../components/skills/Skills'
 import Navigation from '../components/navigation/Navigation'
 import MyInfo from '../components/myinfo/MyInfo'
+import Collaboration from '../components/Collaboration'
 import Contacts from '../components/contacts/Contacts'
 import SendEmailToMe from '../components/contacts/sentemailtome/SendEmailToMe'
 import { useSelector} from "react-redux";
@@ -39,7 +40,7 @@ export default function Home() {
       <main className={isOpen ? 'bg-gradient-to-tr from-yellow-200/50 to-lime-500/50 dark:bg-gray-600 dark:bg-none overflow-x-hidden h-[100vh]' 
                           : `bg-none dark:bg-gray-600 dark:bg-none overflow-x-hidden overflow-y-scroll h-[100vh]`}
                           >
-        <div id='start' className='relative top-0 right-3'>
+        <div id='start' className=''>
           <Navigation/>
         </div>
         <div className={`${colors[bgColorRedux-1]} w-screen h-screen wweerrr`}></div>
@@ -51,6 +52,7 @@ export default function Home() {
         <section>
           <Skills/>
           <Projects />
+          <Collaboration/>
           <Resume />
         </section>
 
