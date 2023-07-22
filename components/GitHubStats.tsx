@@ -6,7 +6,7 @@ export default function GitHubStats({}: Props) {
     const[repos, setRepos] = useState(0);
     const[followers, setFollowers] = useState(0);
 useEffect(() => {
-    fetch('/api/hello')
+    fetch('/api/github')
         .then(response => response.json())
         .then(data => {
             setRepos(data.numOfProjects)
@@ -16,8 +16,6 @@ useEffect(() => {
             console.error(error);
         });
 }, [])
-    console.log(repos);
-    console.log(followers);
     
   return (
     <div className="flex justify-center w-full text-center">
