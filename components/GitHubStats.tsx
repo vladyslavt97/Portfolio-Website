@@ -21,21 +21,20 @@ export default function GitHubStats({}: Props) {
     <div className="flex justify-center w-full text-center" >
         {/* github */}
         <div className="flex flex-col">
-            <h1 className="text-xl bg-slate-400 rounded-full">GitHub Stats</h1> 
+            <h1 className="text-xl bg-green-400 rounded-full">GitHub Stats</h1> 
 
             {/* github columns*/}
             <div className="flex flex-row gap-3">
                 <div className="m-2">
-                    <h1 className="mb-2 px-2 bg-slate-300 rounded-full">Public Repos</h1>
-                    <h1 className="px-5 py-2 bg-slate-100 rounded-full">{repos}</h1>
+                    <h1 className="mb-2 px-2 bg-green-300 rounded-full">Public Repos</h1>
+                    <h1 className="px-5 py-2 bg-green-100 rounded-full">{repos}</h1>
                 </div>
                 <div className="m-2">
-                    <h1 className="mb-2 px-2 bg-slate-300 rounded-full">My Followers</h1>
-                    <h1 className="px-5 py-2 bg-slate-100 rounded-full">{followers}</h1>
+                    <h1 className="mb-2 px-2 bg-green-300 rounded-full">My Followers</h1>
+                    <h1 className="px-5 py-2 bg-green-100 rounded-full">{followers}</h1>
                 </div>
             </div>
         </div>
-
     </div>
   )
 }

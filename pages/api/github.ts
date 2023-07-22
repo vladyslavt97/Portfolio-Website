@@ -16,10 +16,7 @@ export default async function handler(
     const url2 = "https://api.github.com/users/vladyslavt97/repos"
     const response2 = await fetch(url2, { "headers": headers })
     const json2 = await response2.json()
-    console.log(json2);
-    
     const numProjects = Object.keys(json2).length;
-    console.log(numProjects);
 
     // repos
     const url = "https://api.github.com/users/vladyslavt97/followers"

@@ -36,10 +36,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={isOpen ? ' bg-tele bg-no-repeat bg-cover md:bg-gradient-to-tr from-yellow-200/50 to-lime-500/80 dark:bg-gray-600 dark:bg-none overflow-x-hidden h-[100vh]' 
-                          : ` bg-tele bg-no-repeat bg-cover md:bg-none dark:bg-gray-600 dark:bg-none overflow-x-hidden overflow-y-scroll h-[100vh]`}
+      <main className={isOpen ? 'bg-gradient-to-tr from-yellow-200/50 to-lime-500/50 dark:bg-gray-600 dark:bg-none overflow-x-hidden h-[100vh]' 
+                          : `bg-none dark:bg-gray-600 dark:bg-none overflow-x-hidden overflow-y-scroll h-[100vh]`}
                           >
-        <div id='start'>
+        <div id='start' className='relative top-0 right-3'>
           <Navigation/>
         </div>
         <div className={`${colors[bgColorRedux-1]} w-screen h-screen wweerrr`}></div>
