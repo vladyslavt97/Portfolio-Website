@@ -5,17 +5,17 @@ type Props = {}
 export default function GitHubStats({}: Props) {
     const[repos, setRepos] = useState(0);
     const[followers, setFollowers] = useState(0);
-useEffect(() => {
-    fetch('/api/github')
-        .then(response => response.json())
-        .then(data => {
-            setRepos(data.numOfProjects)
-            setFollowers(data.numOfFollowers)
-        })
-        .catch(error => {
-            console.error(error);
-        });
-}, [])
+    useEffect(() => {
+        fetch('/api/github')
+            .then(response => response.json())
+            .then(data => {
+                setRepos(data.numOfProjects)
+                setFollowers(data.numOfFollowers)
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }, [])
     
   return (
     <div className="flex justify-center w-full text-center" >
