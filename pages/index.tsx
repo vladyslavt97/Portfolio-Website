@@ -56,7 +56,9 @@ export default function Home() {
           <Resume />
         </section>
 
-        <SendEmailToMe />
+        <section id="form">
+          <SendEmailToMe />
+        </section>
 
         <Link href="#start">
           <div className='absolute bottom-5 right-5 w-10 cursor-pointer opacity-50 flex items-end justify-end animate-bounce'>
