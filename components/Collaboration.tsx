@@ -5,7 +5,7 @@ import Email from './email';
 
 export default function Collaboration({}: Props) {
   return (
-    <div className="px-10 pt-10 font-serif text-center">
+    <div className="px-10 pt-10 font-serif text-center text-black">
        <p className=" ">Would you like a custom website for a reasonable price and delivered quickly?
         Feel free to reach out to me via the email <Email/>
           
