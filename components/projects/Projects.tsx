@@ -27,7 +27,7 @@ export default function Projects() {
               }}
               whileHover={{ scale: 1.1 }}
               key={index}
-              className={`${index > 2 && !showMore ? "hidden" : "text-center shadow-2xl my-10 p-5 mx-10 bg-white/50 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1 flex items-center justify-center flex-col"}`}>
+              className={`${index > 2 && !showMore ? "hidden" : "text-center shadow-2xl my-10 p-5 mx-10 bg-white/30 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1 flex items-center justify-center flex-col"}`}>
                 <h4 className='text-gray-800 py-1 text-xl font-bold'>{project.title}</h4>
                 <p className='text-black'>{project.description}</p>
                 <Image src={project.image} alt={project.title} className='m-5 rounded-lg w-[80%]' priority={true} width={500} height={500}/>
