@@ -312,7 +312,7 @@ export default function Skills() {
               viewport={{once: true}}
             >
             <Image
-            src="/zustand.png" alt="some" width={90} height={100}/>
+            src="/zustand.png" alt="some" width={90} height={100} />
           </motion.div>
           <motion.div
             initial={{

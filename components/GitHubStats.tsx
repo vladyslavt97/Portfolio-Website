@@ -21,7 +21,7 @@ export default function GitHubStats({}: Props) {
     <div className="flex justify-center w-full text-center text-green-900" >
         {/* github */}
         <div className="flex flex-col">
-            <h1 className="text-xl bg-green-400 rounded-full flex flex-row justify-center items-center gap-4">GitHub Stats <b className="text-red-600 animate-pulse text-sm">Live</b><div className="bg-red-600 animate-pulse w-4 h-4 rounded-full"></div></h1> 
+            <h1 className="text-xl bg-green-400 rounded-full flex flex-row justify-center items-center gap-4">GitHub Stats <b className="text-red-600 animate-pulse text-sm">Live</b><span className="bg-red-600 animate-pulse w-4 h-4 rounded-full"></span></h1> 
 
             {/* github columns*/}
             <div className="flex flex-row gap-3">

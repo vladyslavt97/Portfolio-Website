@@ -31,7 +31,6 @@ export default function Projects() {
                 <h4 className='text-gray-800 py-1 text-xl font-bold'>{project.title}</h4>
                 <p className='text-black'>{project.description}</p>
                 <Image src={project.image} alt={project.title} className='m-5 rounded-lg w-[80%]' priority={true} width={500} height={500}/>
-                  <div>
                     <a href={project.code} target="_blank" rel="noopener noreferrer" 
                       className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
                       Code
@@ -40,7 +39,6 @@ export default function Projects() {
                       className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-8'>
                       Website
                     </a>}
-                  </div>
               </motion.div>
               ))}
           </div>
