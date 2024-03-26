@@ -2,7 +2,7 @@ import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import TextAnimation from "../TextAnimation";
+// import TextAnimation from "../TextAnimation";
 
 export default function MyInfo() {
     const [text, count] = useTypewriter({
@@ -14,7 +14,17 @@ export default function MyInfo() {
     return (
         <div>
             <div className="p-5">
-                <TextAnimation />
+                <div className="container">
+                    <motion.h2
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1 }}
+                        viewport={{ once: true }}
+                        className="text-4xl text-teal-600 font-medium text-center text"
+                    >
+                        Vladyslav Tsurkanenko
+                    </motion.h2>
+                </div>
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -27,7 +37,6 @@ export default function MyInfo() {
                     {text}
                     <Cursor cursorColor="#F7AB0A" />
                 </motion.div>
-
                 <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
