@@ -1,91 +1,72 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 
-type Props = {};
-
-export default function TextAnimation({}: Props) {
-    // State for the scrambled text
+const TextAnimation = () => {
     const [scrambledText, setScrambledText] = useState("");
+    const textRef = useRef<any>(null);
+    const [frameRequest, setFrameRequest] = useState(0);
+    const [frame, setFrame] = useState(0);
+    const [queue, setQueue] = useState<any>([]);
+    const [resolve, setResolve] = useState<any>(() => {});
 
-    // TextScramble class
+    const chars = "!<>-_\\/[]{}—=+*^?#________";
+
     useEffect(() => {
-        class TextScramble {
-            el: HTMLElement | null;
-            chars: string;
-            frameRequest: number;
-            frame: number;
-            queue: any[];
-            resolve: () => void;
-
-            constructor(el: HTMLElement | null) {
-                this.el = el;
-                this.chars = "!<>-_\\/[]{}—=+*^?#________";
-                this.frameRequest = 0;
-                this.frame = 0;
-                this.queue = [];
-                this.resolve = () => {};
-                this.update = this.update.bind(this);
+        const setText = (newText: any) => {
+            const oldText = textRef.current.innerText || "";
+            const length = Math.max(oldText.length, newText.length);
+            const promise = new Promise((resolve) => setResolve(resolve));
+            const newQueue = [];
+            for (let i = 0; i < length; i++) {
+                const from = oldText[i] || "";
+                const to = newText[i] || "";
+                const start = Math.floor(Math.random() * 40);
+                const end = start + Math.floor(Math.random() * 40);
+                newQueue.push({ from, to, start, end });
             }
+            cancelAnimationFrame(frameRequest);
+            setFrame(0);
+            setQueue(newQueue);
+            update();
+            return promise;
+        };
 
-            setText(newText: any) {
-                const oldText = this?.el?.innerText || "";
-                const length = Math.max(oldText.length, newText.length);
-                const promise = new Promise(
-                    (resolve) => (this.resolve = resolve)
-                );
-                this.queue = [];
-                for (let i = 0; i < length; i++) {
-                    const from = oldText[i] || "";
-                    const to = newText[i] || "";
-                    const start = Math.floor(Math.random() * 40);
-                    const end = start + Math.floor(Math.random() * 40);
-                    this.queue.push({ from, to, start, end });
-                }
-                cancelAnimationFrame(this.frameRequest);
-                this.frame = 0;
-                this.update();
-                return promise;
-            }
-            update() {
-                let output = "";
-                let complete = 0;
-                for (let i = 0, n = this.queue.length; i < n; i++) {
-                    let { from, to, start, end, char } = this.queue[i];
-                    if (this.frame >= end) {
-                        complete++;
-                        output += to;
-                    } else if (this.frame >= start) {
-                        if (!char || Math.random() < 0.28) {
-                            char = this.randomChar();
-                            this.queue[i].char = char;
-                        }
-                        output += `<span class="dud">${char}</span>`;
-                    } else {
-                        output += from;
+        const update = () => {
+            let output = "";
+            let complete = 0;
+            for (let i = 0, n = queue.length; i < n; i++) {
+                let { from, to, start, end, char } = queue[i];
+                if (frame >= end) {
+                    complete++;
+                    output += to;
+                } else if (frame >= start) {
+                    if (!char || Math.random() < 0.28) {
+                        char = randomChar();
+                        queue[i].char = char;
                     }
-                }
-                this.el.innerHTML = output;
-                if (complete === this.queue.length) {
-                    this.resolve();
+                    output += `<span class="dud">${char}</span>`;
                 } else {
-                    this.frameRequest = requestAnimationFrame(this.update);
-                    this.frame++;
+                    output += from;
                 }
             }
-            randomChar() {
-                return this.chars[
-                    Math.floor(Math.random() * this.chars.length)
-                ];
+            textRef.current.innerHTML = output;
+            if (complete === queue.length) {
+                resolve();
+            } else {
+                const newFrameRequest = requestAnimationFrame(update);
+                setFrameRequest(newFrameRequest);
+                setFrame(frame + 1);
             }
-        }
+        };
+
+        const randomChar = () => {
+            return chars[Math.floor(Math.random() * chars.length)];
+        };
 
         const phrases = ["Vladyslav", "Tsurkanenko"];
-        const el = document.querySelector(".text");
-        const fx = new TextScramble(el);
-
         let counter = 0;
         const next = () => {
-            fx.setText(phrases[counter]).then(() => {
+            setText(phrases[counter]).then(() => {
                 setTimeout(next, 2000);
             });
             counter = (counter + 1) % phrases.length;
@@ -94,21 +75,22 @@ export default function TextAnimation({}: Props) {
         next();
 
         return () => {
-            cancelAnimationFrame(fx.frameRequest);
+            cancelAnimationFrame(frameRequest);
         };
-    }, []);
+    }, [frame, frameRequest, queue, resolve]);
 
     return (
         <div className="container">
             <motion.h2
+                ref={textRef}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{
-                    duration: 1,
-                }}
+                transition={{ duration: 1 }}
                 viewport={{ once: true }}
                 className="text-4xl text-teal-600 font-medium text-center text"
             ></motion.h2>
         </div>
     );
-}
+};
+
+export default TextAnimation;
