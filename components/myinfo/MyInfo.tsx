@@ -14,7 +14,7 @@ export default function MyInfo() {
     return (
         <div>
             <div className="p-5">
-                {/* <TextAnimation/> */}
+                <TextAnimation />
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
