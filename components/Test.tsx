@@ -53,8 +53,8 @@ export default function Test({}: Props) {
                 viewport={{ once: true }}
                 className={`${
                     value1 !== "Vladyslav Tsurkanenko"
-                        ? "text-gray-400 text-4xl font-extralight font-mono text-center"
-                        : "text-green-600 text-4xl font-medium font-mono text-center"
+                        ? "text-gray-400 text-3xl font-extralight font-mono text-center"
+                        : "text-green-600 text-3xl font-medium font-mono text-center"
                 }`}
             >
                 {value1}
