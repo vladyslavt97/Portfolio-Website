@@ -15,7 +15,7 @@ export default function MyInfo() {
     return (
         <div>
             <div className="p-5">
-                <div className="container">
+                {/* <div className="container">
                     <motion.h2
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -25,8 +25,8 @@ export default function MyInfo() {
                     >
                         Vladyslav Tsurkanenko
                     </motion.h2>
-                </div>
-                <Test/>
+                </div> */}
+                <Test />
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}

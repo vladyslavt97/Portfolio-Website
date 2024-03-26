@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 type Props = {};
 
 export default function Test({}: Props) {
-    const [value1, setValue1] = useState("my work");
+    const [value1, setValue1] = useState("Vladyslav Tsurkanenko");
     const [scrambling, setScrambling] = useState(false);
 
     const randomInt = (max: any) => Math.floor(Math.random() * max);
@@ -32,16 +33,32 @@ export default function Test({}: Props) {
     useEffect(() => {
         const timeout = setTimeout(() => {
             setScrambling((prevScrambling) => {
-                setValue1("my work"); // Reset value1
+                setValue1("Vladyslav Tsurkanenko"); // Reset value1
                 return !prevScrambling; // Toggle scrambling state
             });
         }, 2000);
 
         return () => {
             clearTimeout(timeout);
-            setValue1("my work"); // Reset value1 when interval is cleared
+            setValue1("Vladyslav Tsurkanenko"); // Reset value1 when interval is cleared
         };
     }, [scrambling]);
 
-    return <div>{value1}</div>;
+    return (
+        <div>
+            <motion.h2
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true }}
+                className={`${
+                    value1 !== "Vladyslav Tsurkanenko"
+                        ? "text-gray-400 text-4xl font-extralight font-mono text-center"
+                        : "text-green-600 text-4xl font-medium font-mono text-center"
+                }`}
+            >
+                {value1}
+            </motion.h2>
+        </div>
+    );
 }
