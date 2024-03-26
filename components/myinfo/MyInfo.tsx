@@ -2,6 +2,7 @@ import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
+import Test from "../Test";
 // import TextAnimation from "../TextAnimation";
 
 export default function MyInfo() {
@@ -25,6 +26,7 @@ export default function MyInfo() {
                         Vladyslav Tsurkanenko
                     </motion.h2>
                 </div>
+                <Test/>
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
