@@ -121,3 +121,22 @@ a {
 body {
   font-family: 'Instrument Sans', sans-serif;
 }
+
+/* new */
+.container{
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.text {
+  font-weight: 100;
+  font-size: 28px;
+  color: #6a6a6a;
+}
+
+.dud {
+  color: #757575;
+}
