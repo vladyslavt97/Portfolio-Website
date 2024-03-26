@@ -2,7 +2,7 @@ import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import TextAnimation from "../textAnimation";
+import TextAnimation from "../TextAnimation";
 
 export default function MyInfo() {
     const [text, count] = useTypewriter({
