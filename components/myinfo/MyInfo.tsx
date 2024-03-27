@@ -3,9 +3,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import Test from "../Test";
+import TextScramble from "../TextScramble";
 // import TextAnimation from "../TextAnimation";
 
 export default function MyInfo() {
+    const phrases = ["Vladyslav", "Tsurkanenko"];
     const [text, count] = useTypewriter({
         words: ["Full Stack Web Developer"],
         loop: true,
@@ -26,7 +28,8 @@ export default function MyInfo() {
                         Vladyslav Tsurkanenko
                     </motion.h2>
                 </div> */}
-                <Test />
+                {/* <Test /> */}
+                <TextScramble phrases={phrases} />
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}

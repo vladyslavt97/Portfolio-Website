@@ -124,20 +124,19 @@ body {
 
 /* new */
 .container{
-  height: 100%;
+  height: 100px;
   width: 100%;
   justify-content: center;
   align-items: center;
   display: flex;
 }
-
-.text {
+.text{
   font-weight: 100;
   font-size: 28px;
-  color: #388e4b;
-}
-
-.dud {
-  color: #969696;
+  color: #00930c;
+  }
+.dud{
+  font-family: 'Courier New', Courier, monospace;
   font-weight: 10;
+  color: #757575;
 }
