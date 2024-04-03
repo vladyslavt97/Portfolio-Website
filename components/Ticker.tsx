@@ -3,7 +3,6 @@ import Image from "next/image";
 import Skills from "skills.json";
 
 function MyComponent() {
-    console.log(Skills);
     const [newArray, setNewArray] = useState(Skills);
     const [screenWidth, setScreenWidth] = useState<number | null>(null);
 
@@ -50,18 +49,12 @@ function MyComponent() {
             observer.disconnect();
         };
     }, []);
-    console.log(isVisible);
 
     return (
         <div>
-            Screen Width: {screenWidth}
-            <div ref={targetRef}>
-                {/* Render your content here */}
-                {isVisible ? "In viewport" : "Out of viewport"}
-            </div>
-            <div className="moving-element flex flex-row">
+            <div className="flex flex-row w-full">
                 {newArray.map((n: any, i: any) => (
-                    <div key={i}>
+                    <div key={i} className="moving-element" ref={targetRef}>
                         <Image src={n.src} alt="some" width={50} height={50} />
                     </div>
                 ))}
