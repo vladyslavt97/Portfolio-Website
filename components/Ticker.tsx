@@ -4,6 +4,9 @@ import Skills from "skills.json";
 
 function MyComponent() {
     const [newArray, setNewArray] = useState(Skills);
+    const [outOfViewportIndexes, setOutOfViewportIndexes] = useState<number[]>(
+        []
+    );
     const [screenWidth, setScreenWidth] = useState<number | null>(null);
 
     useEffect(() => {
@@ -21,15 +24,20 @@ function MyComponent() {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    //
-    const targetRef = useRef(null);
-    const [isVisible, setIsVisible] = useState(false);
+    const targetRefs = useRef<Array<HTMLDivElement | null>>(
+        newArray.map(() => null)
+    );
 
     useEffect(() => {
         const observer = new IntersectionObserver(
-            ([entry]) => {
-                // Update isVisible state based on whether the target element is intersecting with the viewport
-                setIsVisible(entry.isIntersecting);
+            (entries) => {
+                const outOfViewportIndexes: number[] = [];
+                entries.forEach((entry, index) => {
+                    if (!entry.isIntersecting) {
+                        outOfViewportIndexes.push(index);
+                    }
+                });
+                setOutOfViewportIndexes(outOfViewportIndexes);
             },
             {
                 // Set root to null to observe the viewport
@@ -39,25 +47,37 @@ function MyComponent() {
             }
         );
 
-        // Start observing the target element
-        if (targetRef.current) {
-            observer.observe(targetRef.current);
-        }
+        // Start observing the target elements
+        targetRefs.current.forEach((targetRef) => {
+            if (targetRef) {
+                observer.observe(targetRef);
+            }
+        });
 
         // Cleanup function to disconnect the observer when component unmounts
         return () => {
             observer.disconnect();
         };
-    }, []);
+    }, [newArray]);
 
     return (
         <div>
             <div className="flex flex-row w-full">
-                {newArray.map((n: any, i: any) => (
-                    <div key={i} className="moving-element" ref={targetRef}>
+                {newArray.map((n: any, i: number) => (
+                    <div
+                        key={i}
+                        className="moving-element"
+                        ref={(el) => (targetRefs.current[i] = el)}
+                    >
                         <Image src={n.src} alt="some" width={50} height={50} />
                     </div>
                 ))}
+            </div>
+            <div>
+                <p>
+                    Indexes of elements out of viewport:{" "}
+                    {outOfViewportIndexes.join(", ")}
+                </p>
             </div>
         </div>
     );
