@@ -6,14 +6,14 @@ import Image from "next/image";
 const Ticker = () => {
     
   return (
-    <div className='mt-[200px]'>
-    <Marquee autoFill speed={50}>
+    <div className=''>
+    <Marquee autoFill speed={30}>
       {Skills.map((item, index) => (
-        <div key={index} className='mr-2 text-white w-[200px]'>
+        <div key={index} className=' text-white w-16'>
             <Image
                 src={item.src}
                 alt={item.src}
-                width={item.width}
+                width={item.width/2}
                 height={item.height}
             />
         </div>
