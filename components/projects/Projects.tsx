@@ -13,7 +13,6 @@ export default function Projects() {
             <GitHubStats/>
           <div className='lg:grid-cols-3 lg:grid gap-10 md:flex-wrap xl:mx-40 lg:mx-10'>
 
-
             {projects.map((project, index) => (
               <motion.div 
               initial={{

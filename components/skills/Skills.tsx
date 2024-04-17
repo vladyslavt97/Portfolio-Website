@@ -7,7 +7,6 @@ import Ticker from "../Ticker";
 export default function Skills() {
     return (
         <>
-
             <div id="skills">
                 <motion.div
                     initial={{
@@ -27,11 +26,7 @@ export default function Skills() {
                     >
                     Skills:
                 </motion.div>
-                <p className="text-sm py-2 leading-8 text-gray-800 text-center dark:text-white mx-3 font-semibold">
-                    Here is the list of the technologies I have implemented
-                    projects with:
-                </p>
-                    <Ticker/>
+                <Ticker/>
 
                 {/* <div
                     className="flex flex-row justify-center bg-transparent flex-wrap mx-3"
