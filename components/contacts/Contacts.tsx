@@ -24,9 +24,9 @@ export default function Contacts() {
                 Get in Touch
             </motion.div>
             <div className="p-3">
-                <h5 className="p-1 text-black">vladyslavt97@gmail.com</h5>
+                <h5 className="p-1 text-black italic">vladyslavt97@gmail.com</h5>
                 <h5 className="p-1 text-black mb-10">
-                    +491621616242, +380950174826
+                    +491735709062, +380950174826
                 </h5>
                 <motion.button
                     initial={{
