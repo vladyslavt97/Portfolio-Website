@@ -51,17 +51,6 @@ export default function SendEmailToMe(){
             );
         }
 
-
-      // const res = await fetch('/api/sendemail', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify({ user_name: userName, email: emailState, message: messageState}),
-      // });
-
-      // const data = await res.json();
-      // console.log('data : ', data);
     };
 
   return <div className="">
