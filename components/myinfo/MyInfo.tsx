@@ -72,7 +72,7 @@ export default function MyInfo() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <AiFillGithub className="dark:fill-white animate-pulse" />
+                    <AiFillGithub className="dark:fill-white animate-pulse" color="black"/>
                 </motion.a>
                 <motion.a
                     initial={{ opacity: 0 }}
@@ -85,7 +85,7 @@ export default function MyInfo() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <AiFillLinkedin className="dark:fill-white animate-pulse" />
+                    <AiFillLinkedin className="dark:fill-white animate-pulse" color="darkblue"/>
                 </motion.a>
             </div>
 
