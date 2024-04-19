@@ -1,5 +1,6 @@
 import React, { FormEvent, useRef, useState, ChangeEvent } from "react";
 import emailjs from "@emailjs/browser";
+import Footer from "@/components/Footer";
 
 
 export default function SendEmailToMe(){
@@ -92,5 +93,6 @@ export default function SendEmailToMe(){
             <br />
             <button type="submit" className=" cursor-pointer bg-white px-8 py4 mb-10 rounded-lg text-black">SEND</button>
           </form>}
+          <Footer/>
       </div>
 };
