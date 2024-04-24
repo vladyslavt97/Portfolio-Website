@@ -49,7 +49,7 @@ export default function MyInfo() {
                     viewport={{ once: true }}
                     className="text-md py-5 leading-8 text-gray-800 dark:text-white text-center lg:mx-80"
                 >
-                    I recently graduated from Spiced Academy. I am looking for
+                    I am an IAM Developer & Technical Consultant at SITS. I have graduated from Spiced Academy a year ago, where I studied WebDevelopment. I am looking for
                     possibility to learn and improve my skills with Typescript,
                     Javascript, as well as advance my knowledge of FrontEnd and
                     BackEnd development. I believe that my experience in
