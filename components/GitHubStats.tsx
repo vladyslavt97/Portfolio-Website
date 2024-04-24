@@ -21,14 +21,14 @@ export default function GitHubStats({}: Props) {
     <div className="flex justify-center w-full text-center text-green-900" >
         {/* github */}
         <div className="flex flex-col">
-            <h1 className="text-xl bg-green-400 rounded-full flex flex-row justify-center items-center gap-4 shadow-xl">GitHub Stats <b className="text-red-600 animate-pulse text-sm shadow-xl">Live</b><span className="bg-red-600 animate-pulse w-4 h-4 rounded-full"></span></h1> 
+            <h1 className="text-xl bg-green-600 rounded-full flex flex-row justify-center items-center gap-4 shadow-xl text-black">GitHub Stats <b className="text-green-400 animate-pulse text-sm shadow-xl">Live</b><span className="bg-green-400 animate-pulse w-4 h-4 rounded-full"></span></h1> 
 
             {/* github columns*/}
             <div className="flex flex-row gap-3">
                 <div className="m-2">
                     <h1 className="mb-2 px-2 bg-green-300 rounded-full shadow-xl">Public Repos</h1>
                     
-                    <h1 className="px-5 py-2 bg-green-100 rounded-full flex justify-center shadow-xl">
+                    <h1 className="px-5 bg-green-100 rounded-full flex justify-center shadow-xl">
                         {repos === 0 ? 
                             <Circles
                                 height="30"
@@ -45,7 +45,7 @@ export default function GitHubStats({}: Props) {
                 </div>
                 <div className="m-2">
                     <h1 className="mb-2 px-2 bg-green-300 rounded-full shadow-xl">My Followers</h1>
-                    <h1 className="px-5 py-2 bg-green-100 rounded-full flex justify-center shadow-xl">{followers === 0 ? 
+                    <h1 className="px-5 bg-green-100 rounded-full flex justify-center shadow-xl">{followers === 0 ? 
                             <Circles
                                 height="30"
                                 width="30"
