@@ -158,3 +158,10 @@ body {
       height: 50px;
       animation: moveRight 20s linear infinite; /* Adjust duration and timing function as needed */
     }
+
+
+.qwe{
+  /* Semi-transparent shadow */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: yellow
+}
