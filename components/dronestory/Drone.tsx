@@ -2,7 +2,8 @@ import Image from 'next/image'
 import React from 'react'
 import Gallery from './Gallery'
 import { IoClose  } from "react-icons/io5";
-import DroneVideos from './dronevideos';
+import DroneVideos from './DroneVideos';
+
 
 type Props = {}
 
