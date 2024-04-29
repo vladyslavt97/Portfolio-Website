@@ -6,7 +6,7 @@ import { IoCloseOutline } from "react-icons/io5";
 type Props = {};
 
 export default function Gallery({}: Props) {
-    let imagesLen: any = Array.from({ length: 24 }, (_, index) => index + 1);
+    let imagesLen: any = Array.from({ length: 25 }, (_, index) => index + 1);
     const [count, setCount] = useState(0);
     const [openPreview, setOpenPreview] = useState("");
 

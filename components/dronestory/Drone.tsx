@@ -37,7 +37,12 @@ export default function Drone({}: Props) {
         <h1 className='text-center mt-10 font-bold text-xl'>Videos</h1>
         <DroneVideos/>
 
-        {/* <Image src="/drone/IMG_6630-PANO.jpg" alt='manyimages' width={2000} height={2000} className='w-full'/> */}
+        <Image src="/drone/IMG_6630-PANO.jpg" alt='manyimages' width={2000} height={2000} className='w-full'/>
+
+        <h1 className='text-center mt-10 font-bold text-xl'>My FPV path...</h1>
+        <Image src="/drone/fpv/1.jpg" alt='manyimages' width={1000} height={1000} className='w-full'/>
+
+
     </div>
   )
 }
