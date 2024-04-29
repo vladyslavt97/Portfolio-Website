@@ -6,14 +6,14 @@ import { IoCloseOutline } from "react-icons/io5";
 type Props = {};
 
 export default function Gallery({}: Props) {
-    const images = ["/drone/mr1.jpg", "/drone/mr2.jpg", "/drone/mr3.jpg","/drone/mr4.jpg", "/drone/mr5.jpg", "/drone/mr6.jpg","/drone/mr7.jpg", "/drone/mr8.jpg", "/drone/mr9.jpg"];
+    let imagesLen: any = Array.from({ length: 24 }, (_, index) => index + 1);
     const [count, setCount] = useState(0);
     const [openPreview, setOpenPreview] = useState("");
 
     const countUp = () => {
-        console.log(count, images.length - 1);
+        console.log(count, imagesLen - 1);
 
-        if (count < images.length - 1) {
+        if (count < imagesLen.length - 1) {
             setCount(count + 1);
         } else {
             console.log("stop");
@@ -35,17 +35,18 @@ export default function Gallery({}: Props) {
                         <FaChevronLeft size={30} color="white" />
                     </div>
                     <Image
-                        src={images[count]}
+                        src={`/drone/${imagesLen[count]}.jpg`}
                         alt="images"
-                        width={300}
-                        height={300}
+                        width={1000}
+                        height={1000}
                         loading="eager"
-                        className=" object-cover h-[350px] w-[350px] object-top rounded shadow-black shadow-lg"
-                        onClick={(e) => setOpenPreview(images[count])}
+                        className=" object-cover h-[350px] md:h-[550px] w-[650px] md:w-[950px] object-top rounded shadow-black shadow-lg"
+                        onClick={(e) => setOpenPreview(imagesLen[count])}
                     />
                     <div className="hover:scale-125" onClick={countUp}>
                         <FaChevronRight size={30} color="white" />
                     </div>
+
                     {openPreview !== "" && (
                         <div>
                             <div
@@ -54,14 +55,14 @@ export default function Gallery({}: Props) {
                             />
                             <div className="">
                                 <Image
-                                    src={images[count]}
+                                    src={`/drone/${imagesLen[count]}.jpg`}
                                     alt="images"
-                                    width={500}
-                                    height={500}
+                                    width={1200}
+                                    height={1200}
                                     loading="eager"
                                     className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-xl px-3"
                                     onClick={(e) =>
-                                        setOpenPreview(images[count])
+                                        setOpenPreview(imagesLen[count])
                                     }
                                 />
                                 <div
@@ -75,7 +76,7 @@ export default function Gallery({}: Props) {
                     )}
                 </div>
                 <div className="flex flex-row gap-2 justify-center">
-                    {images.map((l, i) => (
+                    {imagesLen.map((l:any, i:any) => (
                         <div
                             className={`w-2 h-2 ${
                                 count === i ? "bg-zinc-600" : "bg-zinc-200"

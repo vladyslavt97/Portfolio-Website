@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import Gallery from './Gallery'
 
 type Props = {}
 
@@ -12,15 +13,15 @@ export default function Drone({}: Props) {
         </div>
 
         <p>
-        <h2>Timeline</h2>
-        <h3>2020 => 2022 => 2024</h3>
-        <hr />
+        {/* <h2>Timeline</h2>
+        <h3>2020 ={'>'} 2022 ={'>'} 2024</h3> */}
         </p>
+        <hr />
 
-        
+        <Gallery/>
 
 
-        <Image src="/drone/IIKOE4762.jpg" alt='manyimages' width={900} height={900} />
+        <Image src="/drone/9.jpg" alt='manyimages' width={900} height={900} />
         <Image src="/drone/DJI_0067-PANO.jpg" alt='manyimages' width={1000} height={900} className='w-full'/>
     </div>
   )
