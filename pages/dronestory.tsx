@@ -6,7 +6,7 @@ type Props = {}
 
 export default function dronestory({}: Props) {
   return (
-    <div className="">
+    <div className="bg-white">
       <Drone/>
     </div>
   )

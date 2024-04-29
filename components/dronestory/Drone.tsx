@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import Gallery from './Gallery'
+import { IoClose  } from "react-icons/io5";
 
 type Props = {}
 
@@ -12,17 +13,28 @@ export default function Drone({}: Props) {
             <Image src="/drone/manyimages.jpg" alt='manyimages' width={2000} height={2000} className='w-screen'/>
         </div>
 
-        <p>
-        {/* <h2>Timeline</h2>
-        <h3>2020 ={'>'} 2022 ={'>'} 2024</h3> */}
-        </p>
+        <div className='flex flex-col justify-center items-center mt-10'>
+            <span className='italic'>Timeline</span>
+            <div className='flex flex-row justify-around w-full'>
+                <span>2020</span> <span>==={'>'}</span> <span>2022</span> <span>==={'>'}</span> <span>2024</span>
+            </div>
+        </div> 
+        <div className='flex flex-row justify-between items-center mx-10'>
+            <Image src="/drone/mini.jpg" alt='manyimages' width={300} height={300} />
+            <IoClose  size={50} color='blue'/>
+            <Image src="/drone/fpv/6.jpg" alt='6' width={300} height={300} className='rounded-lg' />
+        </div> 
+
         <hr />
         
         <h1 className='text-center mt-10 font-bold text-xl'>Gallery</h1>
         <Gallery/>
 
-
         <Image src="/drone/DJI_0067-PANO.jpg" alt='manyimages' width={2000} height={2000} className='w-full'/>
+
+        <h1 className='text-center mt-10 font-bold text-xl'>Videos</h1>
+        <Videos/>
+
         <Image src="/drone/IMG_6630-PANO.jpg" alt='manyimages' width={2000} height={2000} className='w-full'/>
     </div>
   )
