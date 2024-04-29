@@ -4,6 +4,9 @@ import Link from 'next/link'
 type Props = {}
 
 export default function DroneParts({}: Props) {
+    const totalPrice = ()=>{
+        return dronePartsJson.reduce((total, item) => total + parseFloat(item.price), 0);
+    }
   return (
     <div className=' md:px-52 pb-52'>
         <h1 className='text-center mt-10 font-bold text-xl'>Drone Parts</h1>
@@ -26,7 +29,10 @@ export default function DroneParts({}: Props) {
                 </div>
             </div>
             ))}
-
+            <div className='border-black border-b-2 h-[30px] grid grid-cols-2 text-center bg-blue-200'>
+                <div className='border-black border-r-2 '>Number of items: {dronePartsJson.length}</div>
+                <div className='border-black border-r-2 '>Total price: {totalPrice()}</div>
+            </div>
         </div>
     </div>
   )
