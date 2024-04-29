@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import Gallery from './Gallery'
 import { IoClose  } from "react-icons/io5";
+import DroneVideos from './dronevideos';
 
 type Props = {}
 
@@ -33,9 +34,9 @@ export default function Drone({}: Props) {
         <Image src="/drone/DJI_0067-PANO.jpg" alt='manyimages' width={2000} height={2000} className='w-full'/>
 
         <h1 className='text-center mt-10 font-bold text-xl'>Videos</h1>
-        <Videos/>
+        <DroneVideos/>
 
-        <Image src="/drone/IMG_6630-PANO.jpg" alt='manyimages' width={2000} height={2000} className='w-full'/>
+        {/* <Image src="/drone/IMG_6630-PANO.jpg" alt='manyimages' width={2000} height={2000} className='w-full'/> */}
     </div>
   )
 }
