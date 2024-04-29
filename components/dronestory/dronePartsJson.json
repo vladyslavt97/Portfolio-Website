@@ -43,5 +43,23 @@
         "title": "EMAX ECOII",
         "price": "92",
         "link": "https://de.aliexpress.com/item/1005004905551761.html?spm=a2g0o.order_list.order_list_main.124.51cd5c5fkdkW7X&gatewayAdapt=glo2deu"  
+    },
+    {
+        "image": "camera.png",
+        "title": "Foxeer cat 3 micro mini fpv kamera",
+        "price": "48",
+        "link": "https://de.aliexpress.com/item/1005005828326837.html?spm=a2g0o.order_list.order_list_main.109.273f5c5f7mDrlC&gatewayAdapt=glo2deu"  
+    },
+    {
+        "image": "battery.png",
+        "title": "Tattu Modellbau-Akkupack (LiPo) 14.8 V 3700 mAh",
+        "price": "60",
+        "link": "https://www.conrad.de/de/p/tattu-modellbau-akkupack-lipo-14-8-v-3700-mah-zellen-zahl-4-45-c-softcase-xt60-1644314.html"  
+    },
+    {
+        "image": "solder.png",
+        "title": "Basetech ZD-99 Lötstation analog 58 W +150 - +450 °C",
+        "price": "30",
+        "link": "https://www.conrad.de/de/p/basetech-zd-99-loetstation-analog-58-w-150-450-c-588415.html"  
     }
 ]
