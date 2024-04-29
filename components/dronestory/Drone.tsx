@@ -24,7 +24,7 @@ export default function Drone({}: Props) {
         </div> 
         <div className='flex flex-row justify-between items-center mx-10'>
             <Image src="/drone/mini.jpg" alt='manyimages' width={300} height={300} />
-            <IoClose  size={50} color='blue'/>
+            <IoClose  size={50} color='lightblue'/>
             <Image src="/drone/fpv/6.jpg" alt='6' width={300} height={300} className='rounded-lg' />
         </div> 
 
@@ -40,9 +40,7 @@ export default function Drone({}: Props) {
 
         <Image src="/drone/IMG_6630-PANO.jpg" alt='manyimages' width={2000} height={2000} className='w-full'/>
 
-        {/* FPV */}
         <FPV/>
-
 
     </div>
   )

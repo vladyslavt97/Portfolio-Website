@@ -32,7 +32,7 @@ export default function Gallery({}: Props) {
             <div className="flex flex-col gap-3">
                 <div className="md:mx-[100px] flex flex-row justify-center items-center">
                     <div className="hover:scale-125" onClick={countDown}>
-                        <FaChevronLeft size={30} color="white" />
+                        <FaChevronLeft size={30} color="lightblue" />
                     </div>
                     <Image
                         src={`/drone/${imagesLen[count]}.jpg`}
@@ -44,7 +44,7 @@ export default function Gallery({}: Props) {
                         onClick={(e) => setOpenPreview(imagesLen[count])}
                     />
                     <div className="hover:scale-125" onClick={countUp}>
-                        <FaChevronRight size={30} color="white" />
+                        <FaChevronRight size={30} color="lightblue" />
                     </div>
 
                     {openPreview !== "" && (
