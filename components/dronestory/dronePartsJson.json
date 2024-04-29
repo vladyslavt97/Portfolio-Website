@@ -2,17 +2,20 @@
     {
         "image": "controller.png",
         "title": "ESC",
-        "price": "71"
+        "price": "71",
+        "link": "https://de.aliexpress.com/item/1005005773046863.html?spm=a2g0o.order_list.order_list_main.62.273f5c5f7mDrlC&gatewayAdapt=glo2deu"
     },
     {
         "image": "props.png",
         "title": "Props",
-        "price": "11"
+        "price": "11",
+        "link": "https://de.aliexpress.com/item/1005003784398208.html?spm=a2g0o.order_list.order_list_main.47.273f5c5f7mDrlC&gatewayAdapt=glo2deu"
     },
     {
         "image": "elrs.png",
         "title": "Elrs 2,4 ghz nano expresslrs",
-        "price": "12"
+        "price": "12",
+        "link": "https://de.aliexpress.com/item/1005005912432371.html?spm=a2g0o.order_list.order_list_main.37.273f5c5f7mDrlC&gatewayAdapt=glo2deu"
     },
     {
         "image": "remote.png",
