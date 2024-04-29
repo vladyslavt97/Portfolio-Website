@@ -64,5 +64,29 @@
         "title": "Basetech ZD-99 Lötstation analog 58 W +150 - +450 °C",
         "price": "30",
         "link": "https://www.conrad.de/de/p/basetech-zd-99-loetstation-analog-58-w-150-450-c-588415.html"  
+    },
+    {
+        "image": "magnifying.png",
+        "title": "Magnifying Glass - Helping-hand",
+        "price": "10",
+        "link": "https://www.amazon.de/dp/B07K5T446N?psc=1&ref=ppx_yo2ov_dt_b_product_details"  
+    },
+    {
+        "image": "solderwire.png",
+        "title": "Solder",
+        "price": "8",
+        "link": "https://www.amazon.de/dp/B0CQQ7XLJJ?psc=1&ref=ppx_yo2ov_dt_b_product_details"  
+    },
+    {
+        "image": "tinner.png",
+        "title": "Tinner",
+        "price": "14",
+        "link": "https://www.amazon.de/dp/B002WI81XG?psc=1&ref=ppx_yo2ov_dt_b_product_details"  
+    },
+    {
+        "image": "tipset.png",
+        "title": "Replacement Soldering Tip Set",
+        "price": "7",
+        "link": "https://www.amazon.de/dp/B000V8GRIA?psc=1&ref=ppx_yo2ov_dt_b_product_details"  
     }
 ]
