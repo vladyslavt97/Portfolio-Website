@@ -8,7 +8,7 @@ export default function Drone({}: Props) {
   return (
     <div className="overflow-y-auto h-screen">
         <div className='relative'>
-        <h1 className='text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-[150px] qwe'>My Drone Story</h1>
+        <h1 className='text-center absolute top-2 left-1/2 transform -translate-x-1/2 text-white text-[50px] qwe'>My Drone Story</h1>
             <Image src="/drone/manyimages.jpg" alt='manyimages' width={2000} height={2000} className='w-screen'/>
         </div>
 
@@ -17,12 +17,13 @@ export default function Drone({}: Props) {
         <h3>2020 ={'>'} 2022 ={'>'} 2024</h3> */}
         </p>
         <hr />
-
+        
+        <h1 className='text-center mt-10 font-bold text-xl'>Gallery</h1>
         <Gallery/>
 
 
-        <Image src="/drone/9.jpg" alt='manyimages' width={900} height={900} />
-        <Image src="/drone/DJI_0067-PANO.jpg" alt='manyimages' width={1000} height={900} className='w-full'/>
+        <Image src="/drone/DJI_0067-PANO.jpg" alt='manyimages' width={2000} height={2000} className='w-full'/>
+        <Image src="/drone/IMG_6630-PANO.jpg" alt='manyimages' width={2000} height={2000} className='w-full'/>
     </div>
   )
 }
