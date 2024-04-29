@@ -17,6 +17,31 @@
     {
         "image": "remote.png",
         "title": "Radio master Tasche Fernbedienung fpv",
-        "price": "65"
+        "price": "65",
+        "link": "https://de.aliexpress.com/item/1005005906756833.html?spm=a2g0o.order_list.order_list_main.67.51cd5c5fkdkW7X&gatewayAdapt=glo2deu"
+    },
+    {
+        "image": "foxeer.png",
+        "title": "Foxeer Reaper Extreme 7",
+        "price": "65",
+        "link": "https://de.aliexpress.com/item/1005004740497750.html?spm=a2g0o.order_list.order_list_main.99.51cd5c5fkdkW7X&gatewayAdapt=glo2deu"
+    },
+    {
+        "image": "antenne.png",
+        "title": "High Gain Antenne",
+        "price": "12",
+        "link": "https://de.aliexpress.com/item/1005004343076237.html?spm=a2g0o.order_list.order_list_main.104.51cd5c5fkdkW7X&gatewayAdapt=glo2deu"  
+    },
+    {
+        "image": "frame.png",
+        "title": "RC 7 Zoll 315mm Kohle faser Quadcopter Rahmen",
+        "price": "19",
+        "link": "https://de.aliexpress.com/item/1005005530910105.html?spm=a2g0o.order_list.order_list_main.109.51cd5c5fkdkW7X&gatewayAdapt=glo2deu"  
+    },
+    {
+        "image": "motors.png",
+        "title": "EMAX ECOII",
+        "price": "92",
+        "link": "https://de.aliexpress.com/item/1005004905551761.html?spm=a2g0o.order_list.order_list_main.124.51cd5c5fkdkW7X&gatewayAdapt=glo2deu"  
     }
 ]
