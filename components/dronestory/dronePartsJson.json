@@ -88,5 +88,11 @@
         "title": "Replacement Soldering Tip Set",
         "price": "7",
         "link": "https://www.amazon.de/dp/B000V8GRIA?psc=1&ref=ppx_yo2ov_dt_b_product_details"  
+    },
+    {
+        "image": "charger.png",
+        "title": "12,6 V 10a Lithium-Batterie",
+        "price": "18",
+        "link": "https://de.aliexpress.com/item/1005005966403781.html?spm=a2g0o.order_list.order_list_main.52.49525c5fc5qSEy&gatewayAdapt=glo2deu"  
     }
 ]

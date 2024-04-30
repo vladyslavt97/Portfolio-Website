@@ -5,6 +5,7 @@ import { IoClose  } from "react-icons/io5";
 import DroneVideos from './DroneVideos';
 import FPV from './FPV';
 import DroneParts from './DroneParts';
+import End from './End';
 
 
 type Props = {}
@@ -44,6 +45,9 @@ export default function Drone({}: Props) {
         <FPV/>
 
         <DroneParts/>
+
+
+        <End/>
 
     </div>
   )
