@@ -166,3 +166,10 @@ body {
   color: yellow;
   letter-spacing: 20px;
 }
+
+
+.fadeouttrick{
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0)); /* Masking to apply fading effect */
+  mask-repeat: no-repeat; /* Prevent the mask from repeating */
+  mask-position: center; /* Center the mask */
+}
