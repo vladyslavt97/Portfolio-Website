@@ -61,6 +61,7 @@ export default function GitHubStats({}: Props) {
                 </div>
             </div>
         </div>
+        <h1 className="text-xs rounded-full">Public Contributions</h1>
         <GitHubContributions/>
     </div>
   )
