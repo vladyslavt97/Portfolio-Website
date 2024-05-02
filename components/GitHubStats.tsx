@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { Circles } from  'react-loader-spinner'
+import GitHubContributions from "./GitHubContributions";
 type Props = {}
 
 export default function GitHubStats({}: Props) {
@@ -18,7 +19,7 @@ export default function GitHubStats({}: Props) {
     }, [])
     
   return (
-    <div className="flex justify-center w-full text-center text-green-900" >
+    <div className="flex flex-col justify-center items-center text-center text-green-900" >
         {/* github */}
         <div className="flex flex-col">
             <h1 className="text-xl bg-green-600 rounded-full flex flex-row justify-center items-center gap-4 shadow-xl text-black">GitHub Stats <b className="text-green-400 animate-pulse text-sm shadow-xl">Live</b><span className="bg-green-400 animate-pulse w-4 h-4 rounded-full"></span></h1> 
@@ -60,6 +61,7 @@ export default function GitHubStats({}: Props) {
                 </div>
             </div>
         </div>
+        <GitHubContributions/>
     </div>
   )
 }
