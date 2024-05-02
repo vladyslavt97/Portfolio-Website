@@ -13,7 +13,6 @@ export default function GitHubContributions({}: Props) {
           const datesOnly = flattenedArray.map(timestamp => timestamp.substring(0, 10));
           const uniqueDatesSet = new Set(datesOnly);
           const uniqueDates = Array.from(uniqueDatesSet); // Convert the Set back to an array
-          console.log("uuu", uniqueDates.sort());
           setGetDates(uniqueDates.sort())
 
           //get the first date
@@ -21,7 +20,6 @@ export default function GitHubContributions({}: Props) {
 
           // Get today's date
           const today = new Date();
-          console.log("t: ", today);
           
           // Create an empty array to store the dates
           const allDates: string[] = [];
@@ -34,7 +32,6 @@ export default function GitHubContributions({}: Props) {
               
           }
           allDates.push(today.toISOString().split('T')[0]);
-          console.log(allDates);
           setAllTheDates(allDates)
               
           })
