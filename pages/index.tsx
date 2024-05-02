@@ -61,7 +61,7 @@ export default function Home() {
         </section>
 
         <Link href="#start">
-          <div className='absolute bottom-5 right-5 w-10 cursor-pointer opacity-50 flex items-end justify-end animate-bounce'>
+          <div className='absolute bottom-5 right-1 sm:right-5 w-10 cursor-pointer opacity-50 flex items-end justify-end animate-bounce'>
             <Image src="/arr.png" alt="arrow" width={100} height={100}
             className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer'/>
           </div>
