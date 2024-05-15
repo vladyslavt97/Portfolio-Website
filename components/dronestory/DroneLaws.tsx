@@ -7,15 +7,17 @@ export default function DroneLaws({}: Props) {
     <div className=" md:px-52 pb-52">
       <h1 className="text-center font-bold text-2xl my-5">Drone Laws</h1>
 
-      <h2>The laws have changed a lot in the past years:</h2>
-      <ul className=" list-decimal">
+      <h2 className="py-5 text-lg font-bold">
+        The laws have changed a lot in the past years:
+      </h2>
+      <ul className=" list-decimal flex flex-col gap-5">
         <li>Insurance - 10 cents/day or 39,96 per year</li>
         <li>
           You need an EU Drone Certificate before flying a drone. The EU Drone
           Licence has two certificates: the basic certificate and the
           supplementary certificate. A1-A3 is the basic certificate. If you want
           to fly a drone in Germany, you need to obtain this certificate from
-          250 grams.
+          <b className="px-2 text-lg">250 grams</b>.
         </li>
         <li>
           Drones may not fly above 100 meters (328 feet) without a permit. In
@@ -32,13 +34,11 @@ export default function DroneLaws({}: Props) {
           Drones may not be flown within 1.5 kilometers (.93 miles) or closer to
           an airport. Can not be flown over crowds, industrial areas, disaster
           areas, prisons, residential areas, certain traffic routes, and several
-          other areas designated as sensitive. See this map for more information
-          on where drones are banned in Germany, above and at a lateral distance
-          of 100 meters from federal highways, federal waterways, and railway
-          facilities.
+          other areas designated as sensitive. Not allowed above and at a
+          lateral distance of 100 meters from federal highways, federal
+          waterways, and railway facilities.
         </li>
       </ul>
-      <p></p>
     </div>
   );
 }

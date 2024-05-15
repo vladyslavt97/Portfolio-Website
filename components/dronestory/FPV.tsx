@@ -17,7 +17,7 @@ export default function FPV({}: Props) {
         <h1 className='text-center my-10 font-bold text-xl'>My FPV path...</h1>
         <div className='flex flex-row justify-between gap-2'>
             <Image src="/drone/fpv/1.jpg" alt='manyimages' width={1000} height={1000} className='w-[500px]'/>
-            <p>1. Putting together the frame and the motors can be a pain, because of the heat reducting objectives as well as your planned drone configuration. Therefore, choosing the right frame is crucial.
+            <p>1. Putting together the frame and the motors can be a pain, because of the heat reducing objectives as well as your planned drone configuration. Therefore, choosing the right frame is crucial.
             </p>
         </div>
         <div className='flex flex-row justify-between gap-2 my-10'>
