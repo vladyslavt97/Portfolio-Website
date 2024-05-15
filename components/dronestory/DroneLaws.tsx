@@ -15,7 +15,10 @@ export default function DroneLaws({}: Props) {
         <li>Insurance - 10 cents/day or 39,96 per year</li>
         <li>
           You need an{" "}
-          <Link href="https://www.dronelicense.eu/products/eu-drone-license-start">
+          <Link
+            href="https://www.dronelicense.eu/products/eu-drone-license-start"
+            className="text-blue-500 font-bold italic"
+          >
             EU Drone Certificate
           </Link>{" "}
           before flying a drone. The EU Drone Licence has two certificates: the
