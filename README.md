@@ -9,4 +9,4 @@ The technologies I used to implement this page are: Next.js, TailwindCSS, TypeSc
 <img src="./public/portfoliopage.gif" width="500px"/>
 
 
-It includes a strip payment as well.
+It includes an option to donate using a Stripe payment as well.
