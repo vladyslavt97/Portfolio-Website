@@ -10,3 +10,5 @@ The technologies I used to implement this page are: Next.js, TailwindCSS, TypeSc
 
 
 It includes an option to donate using a Stripe payment as well.
+
+###
