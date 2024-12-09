@@ -41,6 +41,7 @@ export default function Drone({}: Props) {
           alt="manyimages"
           width={300}
           height={300}
+          className="rounded-2xl h-[180px]"
         />
         <IoClose size={50} color="lightblue" />
         <Image
@@ -48,7 +49,7 @@ export default function Drone({}: Props) {
           alt="6"
           width={300}
           height={300}
-          className="rounded-lg"
+          className="rounded-2xl h-[180px]"
         />
       </div>
 

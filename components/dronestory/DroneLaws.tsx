@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 type Props = {};
@@ -13,10 +14,17 @@ export default function DroneLaws({}: Props) {
       <ul className=" list-decimal flex flex-col gap-5">
         <li>Insurance - 10 cents/day or 39,96 per year</li>
         <li>
-          You need an EU Drone Certificate before flying a drone. The EU Drone
-          Licence has two certificates: the basic certificate and the
-          supplementary certificate. A1-A3 is the basic certificate. If you want
-          to fly a drone in Germany, you need to obtain this certificate from
+          You need an{" "}
+          <Link
+            href="https://www.dronelicense.eu/products/eu-drone-license-start"
+            className="text-blue-500 font-bold italic"
+          >
+            EU Drone Certificate
+          </Link>{" "}
+          before flying a drone. The EU Drone Licence has two certificates: the
+          basic certificate and the supplementary certificate. A1-A3 is the
+          basic certificate. If you want to fly a drone in Germany, you need to
+          obtain this certificate from
           <b className="px-2 text-lg">250 grams</b>.
         </li>
         <li>
