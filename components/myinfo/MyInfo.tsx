@@ -18,18 +18,6 @@ export default function MyInfo() {
     return (
         <div>
             <div className="p-5">
-                {/* <div className="container">
-              <motion.h2
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1 }}
-                  viewport={{ once: true }}
-                  className="text-4xl text-teal-600 font-medium text-center text"
-              >
-                  Vladyslav Tsurkanenko
-              </motion.h2>
-          </div> */}
-                {/* <TextScramble phrases={phrases} /> */}
                 <div className="flex justify-center flex-col mx-auto w-28">
                     <TextEffect target="Vladyslav" finalColor="green-500" />
                     <TextEffect target="Tsurkanenko" finalColor="gray-500" />
@@ -55,16 +43,18 @@ export default function MyInfo() {
                     viewport={{ once: true }}
                     className="text-md py-5 leading-8 text-gray-800 dark:text-white text-center lg:mx-80"
                 >
-                    I am an IAM Developer & Technical Consultant at SITS. I have
-                    graduated from Spiced Academy a year ago, where I studied
-                    WebDevelopment. I am looking for possibility to learn and
-                    improve my skills with Typescript, Javascript, as well as
-                    advance my knowledge of FrontEnd and BackEnd development. I
-                    believe that my experience in banking, finance, and the
-                    skills such as: teamwork, taking initiative, and my
-                    analytical skills will help me in a new environment. I am
-                    very motivated to contribute to your projects and learn the
-                    process very quickly.
+                    I am an IAM Developer and Technical Consultant at SITS, with
+                    a background in Web Development from Spiced Academy in
+                    Berlin. I am eager to expand my expertise in TypeScript,
+                    JavaScript, Java, and SailPoint while deepening my knowledge
+                    of both Front-End and Back-End development. With a strong
+                    foundation in programming, banking, and finance, I bring
+                    valuable skills such as teamwork, initiative, and analytical
+                    thinking to the table. My motivation and adaptability enable
+                    me to quickly contribute to projects and thrive in new
+                    environments. I am passionate about continuous learning and
+                    am excited to apply my skills to drive success in your
+                    organization.
                 </motion.p>
             </div>
 
