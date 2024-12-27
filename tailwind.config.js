@@ -9,6 +9,9 @@ module.exports = {
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+        "text-green-500"
+    ],
   theme: {
     extend: {
       fontFamily: {
