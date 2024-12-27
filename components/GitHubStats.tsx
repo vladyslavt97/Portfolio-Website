@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Circles } from "react-loader-spinner";
 import GitHubContributions from "./GitHubContributions";
+import Image from "next/image";
 type Props = {};
 
 export default function GitHubStats({}: Props) {
@@ -22,8 +23,16 @@ export default function GitHubStats({}: Props) {
         <div className="flex flex-col justify-center items-center text-center text-green-900 bg-green-100 w-[80%] mx-auto rounded-xl p-2 shadow-lg">
             {/* github */}
             <div className="flex flex-col">
-                <h1 className="text-xl bg-green-600 rounded-full flex flex-row justify-center items-center gap-4 shadow-xl text-black">
-                    GitHub Stats{" "}
+                <h1 className="text-xl bg-green-600 rounded-full flex flex-row justify-center items-center shadow-xl text-black gap-4">
+                    <span className="flex flex-row py-1">
+                        <Image
+                            width={50}
+                            height={50}
+                            alt="gh"
+                            src="/GitHubLogo.png"
+                        />
+                        Stats:{" "}
+                    </span>
                     <b className="text-green-400 animate-pulse text-sm shadow-xl">
                         Live
                     </b>
