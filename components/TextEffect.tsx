@@ -43,7 +43,7 @@ export default function TextEffect({ target, finalColor }: Props) {
         const word = target; // You can change this to any word you want to animate
         updateLetters(word); // Start the updating process
     }, []); // Run only once on mount
-
+    let color = `text-${finalColor}`;
     return (
         <div className="flex justify-center items-center text-2xl text-white">
             {changingValue.split("").map((char, index) => {
@@ -58,7 +58,7 @@ export default function TextEffect({ target, finalColor }: Props) {
                         <span
                             className={
                                 char === targetChar
-                                    ? `text-${finalColor} font-semibold` // Correct letter color
+                                    ? `${color} font-semibold` // Correct letter color
                                     : "text-gray-500 filter blury" // Wrong letter with blur effect
                             }
                         >
