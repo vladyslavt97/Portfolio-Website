@@ -62,12 +62,17 @@ export default function MyInfo() {
                 </motion.p>
             </div>
 
-            <div className="flex justify-center flex-col items-center gap-5 bg-blue-500 w-[350px] mx-auto rounded-2xl shadow-lg">
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 2 }}
+                className="flex justify-center flex-col items-center gap-5 bg-gradient-to-br from-blue-300 via-blue-500 to-blue-700 w-[350px] mx-auto rounded-2xl shadow-lg"
+            >
                 <h1 className="text-white">
                     Please, support me via a Stripe payment:
                 </h1>
                 <StripePaymentStart />
-            </div>
+            </motion.div>
 
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
                 <motion.a

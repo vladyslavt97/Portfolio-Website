@@ -28,7 +28,7 @@ export default function Navigation() {
                 transition={{
                     duration: 1.5,
                 }}
-                className="py-3 flex justify-between"
+                className=" flex justify-between"
             >
                 <Logo />
 

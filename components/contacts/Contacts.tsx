@@ -8,8 +8,8 @@ export default function Contacts() {
             <motion.div
                 initial={{
                     opacity: 0,
-                    rotate: 5,
-                    y: -50,
+                    rotate: 3,
+                    y: -20,
                 }}
                 whileInView={{
                     opacity: 1,
@@ -24,7 +24,9 @@ export default function Contacts() {
                 Get in Touch
             </motion.div>
             <div className="p-3">
-                <h5 className="p-1 text-black italic">vladyslavt97@gmail.com</h5>
+                <h5 className="p-1 text-black italic">
+                    vladyslavt97@gmail.com
+                </h5>
                 <h5 className="p-1 text-black mb-10">
                     +491735709062, +380950174826
                 </h5>
