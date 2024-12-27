@@ -45,16 +45,20 @@ export default function MyInfo() {
                 >
                     I am an IAM Developer and Technical Consultant at SITS, with
                     a background in Web Development from Spiced Academy in
-                    Berlin. I am eager to expand my expertise in TypeScript,
-                    JavaScript, Java, and SailPoint while deepening my knowledge
-                    of both Front-End and Back-End development. With a strong
-                    foundation in programming, banking, and finance, I bring
-                    valuable skills such as teamwork, initiative, and analytical
-                    thinking to the table. My motivation and adaptability enable
-                    me to quickly contribute to projects and thrive in new
-                    environments. I am passionate about continuous learning and
-                    am excited to apply my skills to drive success in your
-                    organization.
+                    Berlin. I am eager to expand my expertise in{" "}
+                    <b className="text-blue-500">TypeScript</b>,{" "}
+                    <b className="text-yellow-500">JavaScript</b>,{" "}
+                    <b className="text-red-500">Java</b>, and{" "}
+                    <b className="text-blue-700">Sail</b>
+                    <b className="text-purple-700">Point</b> while deepening my
+                    knowledge of both Front-End and Back-End development. With a
+                    strong foundation in programming, banking, and finance, I
+                    bring valuable skills such as teamwork, initiative, and
+                    analytical thinking to the table. My motivation and
+                    adaptability enable me to quickly contribute to projects and
+                    thrive in new environments. I am passionate about continuous
+                    learning and am excited to apply my skills to drive success
+                    in your organization.
                 </motion.p>
             </div>
 
