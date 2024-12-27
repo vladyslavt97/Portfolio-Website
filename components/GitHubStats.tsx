@@ -19,7 +19,7 @@ export default function GitHubStats({}: Props) {
     }, []);
 
     return (
-        <div className="flex flex-col justify-center items-center text-center text-green-900 bg-green-100 ms:mx-28 rounded-xl p-2 shadow-lg">
+        <div className="flex flex-col justify-center items-center text-center text-green-900 bg-green-100 w-[80%] mx-auto rounded-xl p-2 shadow-lg">
             {/* github */}
             <div className="flex flex-col">
                 <h1 className="text-xl bg-green-600 rounded-full flex flex-row justify-center items-center gap-4 shadow-xl text-black">

@@ -46,7 +46,7 @@ export default function GitHubContributions({}: Props) {
     }, []);
 
     return (
-        <div className="flex flex-row flex-wrap gap-1 mx-10 md:mx-52">
+        <div className="flex flex-row flex-wrap gap-1 md:w-[80%]">
             {allTheDates?.slice(-365).map((i: string) => (
                 <div
                     key={i}
