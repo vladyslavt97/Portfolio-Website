@@ -183,3 +183,11 @@ body {
   font-weight: bold;
   font-family: Arial, sans-serif;
 }
+
+.text{
+  font-size: 6px;
+}
+
+.blury {
+    filter: blur(3px);
+}
