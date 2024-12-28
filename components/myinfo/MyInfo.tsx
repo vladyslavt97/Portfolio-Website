@@ -1,8 +1,6 @@
-import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import TextScramble from "../TextScramble";
 import StripePaymentStart from "../StripePaymentStart";
 import TextEffect from "../TextEffect";
 // import TextAnimation from "../TextAnimation";
@@ -68,46 +66,11 @@ export default function MyInfo() {
                 transition={{ duration: 2 }}
                 className="flex justify-center flex-col items-center gap-5 bg-gradient-to-br from-blue-300 via-blue-500 to-blue-700 w-[350px] mx-auto rounded-2xl shadow-lg"
             >
-                <h1 className="text-white">
+                <h1 className="text-white italic">
                     Please, support me via a Stripe payment:
                 </h1>
                 <StripePaymentStart />
             </motion.div>
-
-            <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-                <motion.a
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{
-                        duration: 1,
-                    }}
-                    viewport={{ once: true }}
-                    href="https://github.com/vladyslavt97"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <AiFillGithub
-                        className="dark:fill-white animate-pulse"
-                        color="black"
-                    />
-                </motion.a>
-                <motion.a
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{
-                        duration: 1.5,
-                    }}
-                    viewport={{ once: true }}
-                    href="https://www.linkedin.com/in/vladyslav-tsurkanenko/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <AiFillLinkedin
-                        className="dark:fill-white animate-pulse"
-                        color="darkblue"
-                    />
-                </motion.a>
-            </div>
 
             <motion.div
                 className="relative mx-auto bg-gradient-to-b from-teal-500 w-60 h-60 m-10 overflow-hidden shadow-lg rounded-full"

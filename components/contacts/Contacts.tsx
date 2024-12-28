@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 export default function Contacts() {
     return (
@@ -54,6 +55,41 @@ export default function Contacts() {
                         Send email 📨
                     </Link>
                 </motion.button>
+            </div>
+
+            <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
+                <motion.a
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{
+                        duration: 1,
+                    }}
+                    viewport={{ once: true }}
+                    href="https://github.com/vladyslavt97"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <AiFillGithub
+                        className="dark:fill-white animate-pulse"
+                        color="black"
+                    />
+                </motion.a>
+                <motion.a
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{
+                        duration: 1.5,
+                    }}
+                    viewport={{ once: true }}
+                    href="https://www.linkedin.com/in/vladyslav-tsurkanenko/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <AiFillLinkedin
+                        className="dark:fill-white animate-pulse"
+                        color="darkblue"
+                    />
+                </motion.a>
             </div>
         </div>
     );
