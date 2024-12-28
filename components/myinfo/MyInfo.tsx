@@ -64,7 +64,7 @@ export default function MyInfo() {
 
             <motion.div
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
                 transition={{ duration: 2 }}
                 className="flex justify-center flex-col items-center gap-5 bg-gradient-to-br from-blue-300 via-blue-500 to-blue-700 w-[350px] mx-auto rounded-2xl shadow-lg"
             >
