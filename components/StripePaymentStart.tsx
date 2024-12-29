@@ -60,7 +60,7 @@ export default function StripePaymentStart() {
                 className={`${
                     price === ""
                         ? "text-gray-400 bg-gray-500"
-                        : "text-yellow-600 bg-sky-500 hover:bg-sky-700"
+                        : "text-yellow-300 bg-sky-500 hover:bg-sky-700"
                 } rounded-md px-2 text-2xl text-white shadow-lg flex items-center gap-2`}
             >
                 Pay{" "}
