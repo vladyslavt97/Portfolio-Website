@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import StripePaymentStart from "../StripePaymentStart";
 import TextEffect from "../TextEffect";
+import { MyPicBorder } from "../MyPicBorder";
 // import TextAnimation from "../TextAnimation";
 
 export default function MyInfo() {
@@ -76,24 +76,16 @@ export default function MyInfo() {
                 className="relative mx-auto bg-gradient-to-b from-teal-500 w-60 h-60 m-10 overflow-hidden shadow-lg rounded-full"
                 initial={{
                     opacity: 0,
-                    borderRadius: "100%",
                 }}
                 transition={{
                     duration: 1.5,
                 }}
                 whileInView={{
                     opacity: 1,
-                    borderRadius: "100%",
                 }}
                 viewport={{ once: true }}
             >
-                <Image
-                    // className='rounded-full'
-                    src="/Vlad.png"
-                    alt="sometext"
-                    width={300}
-                    height={300}
-                />
+                <MyPicBorder />
             </motion.div>
         </div>
     );
