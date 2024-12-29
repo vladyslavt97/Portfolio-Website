@@ -15,12 +15,7 @@ import { RootState } from "../components/redux/store";
 import Link from "next/link";
 import { useEffect } from "react";
 import Ticker from "@/components/Ticker";
-
-const colors = [
-    "bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-pink-300 via-purple-300 to-indigo-400",
-    "bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500",
-    "bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-orange-300 via-lime-200 to-emerald-200",
-];
+import { bgColors } from "@/util/colors";
 
 export default function Home() {
     const darkmode = useSelector(
@@ -66,7 +61,7 @@ export default function Home() {
                 </div>
                 <div
                     className={`${
-                        colors[bgColorRedux - 1]
+                        bgColors[bgColorRedux - 1]
                     } w-screen h-screen wweerrr`}
                 ></div>
 
