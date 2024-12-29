@@ -33,7 +33,6 @@ export default function TextEffect({ target, finalColor }: Props) {
             ) {
                 updatedValue[i] = String.fromCharCode(charCode); // Update the character
                 setChangingValue(updatedValue.join("")); // Update the state with the current value
-                console.log(updatedValue.join("")); // Log for debugging
                 await delay(10); // Wait for 0.1 second before updating
             }
         }

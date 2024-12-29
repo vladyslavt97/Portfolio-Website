@@ -13,7 +13,6 @@ export default function GitHubContributions({}: Props) {
                 const datesOnly = flattenedArray.map((timestamp) =>
                     timestamp.substring(0, 10)
                 );
-                console.log("datesOnly: ", datesOnly);
                 const uniqueDatesSet = new Set(datesOnly);
                 const uniqueDates = Array.from(uniqueDatesSet); // Convert the Set back to an array
                 setGetDates(uniqueDates.sort());
