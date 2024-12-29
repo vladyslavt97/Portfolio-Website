@@ -32,7 +32,7 @@ export default function Navigation() {
             transition={{
                 duration: 1.5,
             }}
-            className=" flex justify-between relative -top-10"
+            className=" flex justify-between"
         >
             <Logo />
 

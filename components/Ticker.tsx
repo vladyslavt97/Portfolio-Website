@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Ticker = () => {
     return (
-        <Marquee autoFill speed={30} className="fadeouttrick relative -top-7">
+        <Marquee autoFill speed={30} className="fadeouttrick">
             {Skills.map((item, index) => (
                 <div key={index} className=" text-white w-16">
                     <Image
