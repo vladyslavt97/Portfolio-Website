@@ -6,7 +6,8 @@ type Props = {};
 
 export default function Violin({}: Props) {
     return (
-        <div className="flex justify-center items-center h-screen w-screen">
+        <div className="flex flex-col justify-start items-center w-screen bg-white px-3 overflow-y-auto h-screen">
+            <h1 className="text-xl font-bold mt-6">Gallery</h1>
             <AnimatedTestimonials
                 testimonials={[
                     {
@@ -23,6 +24,7 @@ export default function Violin({}: Props) {
                     },
                 ]}
             />
+            <h1 className="text-xl font-bold mt-12">Videos</h1>
         </div>
     );
 }
