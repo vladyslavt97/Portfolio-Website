@@ -34,7 +34,7 @@ export default function Contacts() {
                 <motion.button
                     initial={{
                         opacity: 0,
-                        x: -100,
+                        x: -20,
                     }}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}

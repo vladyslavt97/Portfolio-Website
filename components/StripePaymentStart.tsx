@@ -60,18 +60,24 @@ export default function StripePaymentStart() {
                 className={`${
                     price === ""
                         ? "text-gray-400 bg-gray-500"
-                        : "text-yellow-300 bg-sky-500 hover:bg-sky-700"
+                        : "text-yellow-300 bg-sky-600 hover:bg-sky-700"
                 } rounded-md px-2 text-2xl text-white shadow-lg flex items-center gap-2`}
             >
                 Pay{" "}
                 {price !== "" && (
-                    <Image
-                        src="/cards.png"
-                        width={30}
-                        height={30}
-                        alt="cards"
-                        loading="eager"
-                    />
+                    <>
+                        <span className="text-yellow-400 italic font-bold">
+                            {parseInt(price) / 100}{" "}
+                            <span className="text-green-400">$</span>
+                        </span>
+                        <Image
+                            src="/cards.png"
+                            width={30}
+                            height={30}
+                            alt="cards"
+                            loading="eager"
+                        />
+                    </>
                 )}
             </button>
             <h1 className="text-xs text-gray-200">
