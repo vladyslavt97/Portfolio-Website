@@ -1,6 +1,8 @@
-type Props = {};
 import Link from "next/link";
-import Email from "./email";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import { BiCopy } from "react-icons/bi";
+
+type Props = {};
 
 export default function Collaboration({}: Props) {
     return (
@@ -8,7 +10,12 @@ export default function Collaboration({}: Props) {
             <div className=" ">
                 Would you like a custom website for a reasonable price and
                 delivered quickly? Feel free to reach out to me via the email{" "}
-                <Email />
+                <div>vladyslavt97@gmail.com</div>
+                <div className=" flex flex-row justify-center font-bold">
+                    <CopyToClipboard text="vladyslavt97@gmail.com">
+                        <BiCopy />
+                    </CopyToClipboard>
+                </div>
                 or via the{" "}
                 <Link href="#form" className=" font-bold italic text-blue-800">
                     form

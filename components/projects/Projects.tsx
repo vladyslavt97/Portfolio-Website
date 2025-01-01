@@ -2,9 +2,9 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import projects from "../../projects.json";
 import { useState } from "react";
-import GitHubStats from "../GitHubStats";
-import { CardContainer, CardBody, CardItem } from "@/components/CardContainer";
+import { CardContainer, CardBody, CardItem } from "@/components/effect/CardContainer";
 import Link from "next/link";
+import GitHubStats from "../github/GitHubStats";
 
 export default function Projects() {
     const [showMore, setShowMore] = useState(false);

@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatedTestimonials } from "@/components/AnimatedTestimonials";
+import { AnimatedTestimonials } from "@/components/effect/AnimatedTestimonials";
 
 type Props = {};
 
