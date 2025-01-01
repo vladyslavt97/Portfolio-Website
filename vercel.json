@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/violin", "destination": "https://vladyslav-tsurkanenko.vercel.app/" }
+  ]
+}
