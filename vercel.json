@@ -1,8 +1,9 @@
 {
-  "rewrites": [
+  "redirects": [
     {
       "source": "/violin",
-      "destination": "https://vladyslav-tsurkanenko.vercel.app/"
+      "destination": "https://vladyslav-tsurkanenko.vercel.app/",
+      "permanent": false
     }
   ]
 }
