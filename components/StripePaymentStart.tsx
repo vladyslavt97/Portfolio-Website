@@ -33,7 +33,7 @@ export default function StripePaymentStart() {
     };
 
     return (
-        <div className="flex flex-col justify-center items-center gap-5 font-sans">
+        <div className="flex flex-col justify-center items-center gap-5 font-sans z-10">
             <div className="flex gap-5">
                 <div
                     className="bg-gradient-to-br from-green-400 to-slate-200 w-[70px] text-center rounded-2xl cursor-pointer hover:from-green-500 hover:to-white shadow-lg"
