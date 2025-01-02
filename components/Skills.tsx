@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import codewars from "../../public/codewars.png";
 import { motion } from "framer-motion";
-import Ticker from "../Ticker";
+import Ticker from "./Ticker";
 
 export default function Skills() {
     return (
