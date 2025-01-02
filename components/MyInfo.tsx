@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import StripePaymentStart from "../StripePaymentStart";
-import TextEffect from "../effect/TextEffect";
-import { MyPicBorder } from "../effect/MyPicBorder";
-import { BackgroundGradientAnimation } from "../effect/BackgroundGradientAnimation";
+import StripePaymentStart from "./StripePaymentStart";
+import TextEffect from "./effect/TextEffect";
+import { MyPicBorder } from "./effect/MyPicBorder";
+import { BackgroundGradientAnimation } from "./effect/BackgroundGradientAnimation";
 // import TextAnimation from "../TextAnimation";
 
 export default function MyInfo() {

@@ -2,11 +2,11 @@
 
 import Head from "next/head";
 import Image from "next/image";
-import Resume from "../components/resume/Resume";
-import Projects from "../components/projects/Projects";
-import Skills from "../components/skills/Skills";
+import Resume from "../components/Resume";
+import Projects from "../components/Projects";
+import Skills from "@/components/Skills";
 import Navigation from "../components/navigation/Navigation";
-import MyInfo from "../components/myinfo/MyInfo";
+import MyInfo from "@/components/MyInfo";
 import Collaboration from "../components/Collaboration";
 import Contacts from "../components/contacts/Contacts";
 import SendEmailToMe from "../components/contacts/sentemailtome/SendEmailToMe";

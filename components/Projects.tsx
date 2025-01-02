@@ -1,10 +1,14 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import projects from "../../projects.json";
+import projects from "../projects.json";
 import { useState } from "react";
-import { CardContainer, CardBody, CardItem } from "@/components/effect/CardContainer";
+import {
+    CardContainer,
+    CardBody,
+    CardItem,
+} from "@/components/effect/CardContainer";
 import Link from "next/link";
-import GitHubStats from "../github/GitHubStats";
+import GitHubStats from "./github/GitHubStats";
 
 export default function Projects() {
     const [showMore, setShowMore] = useState(false);
@@ -85,7 +89,7 @@ export default function Projects() {
                         }`}
                     >
                         <CardContainer className="inter-var bg-white">
-                            <CardBody className="bg-gradient-to-br from-green-100 via-green-200 to-green-300 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+                            <CardBody className="bg-gradient-to-br from-yellow-100 to-yellow-200 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
                                 <CardItem
                                     translateZ="50"
                                     className="text-xl font-bold text-neutral-600 dark:text-white"

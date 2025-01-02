@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import resume from "../../public/resume.jpg";
 import { motion } from "framer-motion";
 import { HiDownload } from "react-icons/hi";
 export default function Resume() {
@@ -28,8 +27,10 @@ export default function Resume() {
                 </a>
             </motion.div>
             <Image
-                src={resume}
+                src="/resume.jpg"
                 alt="resume"
+                width={1000}
+                height={1000}
                 className="drop-shadow-2xl my-10 p-20 lg:p-50 hover:p-0 transition-all duration-300 ease-in-out dark:bg-white cursor-pointer"
             />
         </div>
