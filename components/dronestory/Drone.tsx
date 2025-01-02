@@ -20,8 +20,8 @@ export default function Drone({}: Props) {
                 <Image
                     src="/drone/manyimages.jpg"
                     alt="manyimages"
-                    width={1000}
-                    height={1000}
+                    width={500}
+                    height={500}
                     className="w-screen"
                     loading="eager"
                     priority={true}
@@ -61,8 +61,8 @@ export default function Drone({}: Props) {
             <Image
                 src="/drone/DJI_0067-PANO.jpg"
                 alt="manyimages"
-                width={2000}
-                height={2000}
+                width={600}
+                height={600}
                 className="w-full"
             />
 
@@ -72,8 +72,8 @@ export default function Drone({}: Props) {
             <Image
                 src="/drone/IMG_6630-PANO.jpg"
                 alt="manyimages"
-                width={2000}
-                height={2000}
+                width={600}
+                height={600}
                 className="w-full"
             />
 

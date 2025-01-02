@@ -10,8 +10,8 @@ export default function End({}: Props) {
       <Image
         src="/drone/end.jpg"
         alt="brian"
-        width={2000}
-        height={2000}
+        width={500}
+        height={500}
         className="w-[full]"
       />
       <div className="flex flex-col justify-end items-end">
