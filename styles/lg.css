@@ -1,3 +1,18 @@
+/* iOS Safari (WebKit) – drop the SVG filter but keep saturation/brightness */
+@supports (-webkit-touch-callout: none) {
+  .liquid-glass::before {
+    filter: saturate(120%) brightness(1.15) !important; /* removes url(#lensFilter) */
+  }
+}
+
+/* Touch devices fallback (covers Chrome on iOS too) */
+@media (hover: none) and (pointer: coarse) {
+  .liquid-glass::before {
+    filter: saturate(120%) brightness(1.15) !important; /* keeps your look, no wobble */
+  }
+}
+
+
 
 
 /* new */
