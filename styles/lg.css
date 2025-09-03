@@ -3,12 +3,17 @@
 /* new */
 :root {
   --lg-bg-color: rgba(255, 255, 255, 0.25);
-  --lg-highlight: rgba(255, 255, 255, 0.75);
+  --lg-highlight: rgba(199, 199, 199, 0.75);
   /* --lg-text: #000000; */
 }
 
+.liquid-glass:hover {
+  transform: scale(1.05); /* 5% bigger */
+}
 .liquid-glass {
-  position: relative;
+  /* position: relative; */
+  cursor: pointer;
+  transition: transform 0.3s ease; /* smooth animation */
   background: transparent;
   border-radius: 2rem;
   overflow: hidden;
