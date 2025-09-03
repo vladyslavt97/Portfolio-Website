@@ -33,8 +33,10 @@ export default function MyInfo() {
                     {text}
                     <Cursor cursorColor="#F7AB0A" />
                 </motion.div>
-                <div className="liquid-glass text-red-400 font-bold fixed z-50">
-                    <span>Liquid glass</span>
+                <div className="fixed">
+                    <div className="liquid-glass text-red-400 font-bold fixed z-50">
+                        <span>Liquid glass</span>
+                    </div>
                 </div>
                 <motion.p
                     initial={{ opacity: 0 }}
