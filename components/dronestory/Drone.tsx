@@ -12,7 +12,7 @@ type Props = {};
 
 export default function Drone({}: Props) {
     return (
-        <div className="overflow-y-auto h-screen bg-gradient-to-br from-blue-100 to-yellow-100">
+        <div className="overflow-y-auto h-screen bg-gradient-to-br from-blue-100 to-yellow-100 text-black">
             <div className="relative">
                 <h1 className="text-center absolute top-2 left-1/2 transform -translate-x-1/2 text-white text-[50px] qwe">
                     My Drone Story
