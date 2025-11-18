@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import { bgColorChanger } from "../redux/bgChange";
+import { themeOptions } from "@/util/colors";
 
 type Props = {};
 
@@ -18,39 +19,16 @@ export default function BgColor({}: Props) {
         setOpened(false); // Close the modal after selection
     };
 
-    const themeOptions = [
-        {
-            id: 1,
-            label: "Aurora",
-            className:
-                "bg-[radial-gradient(circle_at_top,_#c084fc,_#a855f7,_#f472b6)]",
-            gradient:
-                "from-[#e3e8ff] via-[#f7f1ff] to-[#ffedf5] dark:from-[#1c1f3a] dark:via-[#231a38] dark:to-[#2d1f36]",
-        },
-        {
-            id: 2,
-            label: "Solstice",
-            className: "bg-[radial-gradient(circle,_#facc15,_#fb923c,_#f97316)]",
-            gradient:
-                "from-[#fff5d6] via-[#ffe6a7] to-[#ffd3a4] dark:from-[#2a1b00] dark:via-[#3a1b00] dark:to-[#4a1b00]",
-        },
-        {
-            id: 3,
-            label: "Breeze",
-            className:
-                "bg-[radial-gradient(circle_at_bottom,_#86efac,_#4ade80,_#22d3ee)]",
-            gradient:
-                "from-[#e8fff4] via-[#d7fbff] to-[#f4fffa] dark:from-[#012922] dark:via-[#013f3a] dark:to-[#002b3a]",
-        },
-    ];
-
-    const activeOption = themeOptions.find((option) => option.id === bgColorRedux);
+    const activeOption =
+        themeOptions.find((option) => option.id === bgColorRedux) ??
+        themeOptions[0];
 
     return (
         <div className="hidden md:block md:mx-5 md:my-2 relative">
             <button
                 onClick={() => setOpened(!opened)}
-                className={`rounded-full w-12 h-12 border-2 border-white/70 shadow-lg transition hover:scale-110 focus:outline-none ${activeOption?.className}`}
+                className="rounded-full w-12 h-12 border-2 border-white/70 shadow-lg transition hover:scale-110 focus:outline-none"
+                style={{ background: activeOption.swatch }}
                 aria-label="Choose site color theme"
             />
             {opened && (
@@ -80,7 +58,8 @@ export default function BgColor({}: Props) {
                                         bgColorRedux === option.id
                                             ? "border-teal-500 shadow-[0_0_30px_rgba(45,212,191,0.6)]"
                                             : "border-black/20 shadow-md"
-                                    } transition hover:scale-105 focus:outline-none ${option.className}`}
+                                    } transition hover:scale-105 focus:outline-none`}
+                                    style={{ background: option.swatch }}
                                     aria-label={`Activate ${option.label} theme`}
                                 />
                             ))}

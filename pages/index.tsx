@@ -15,6 +15,7 @@ import { RootState } from "../components/redux/store";
 import Link from "next/link";
 import { useEffect } from "react";
 import Ticker from "@/components/Ticker";
+import { themeOptions } from "@/util/colors";
 
 export default function Home() {
     const darkmode = useSelector(
@@ -29,12 +30,18 @@ export default function Home() {
         console.log("Welcome to my portfolio website!🎉");
     }, []);
 
+    const themeChoice = useSelector(
+        (state: RootState) => state.bgColor.bgColorValue
+    );
+
+    const currentTheme =
+        themeOptions.find((option) => option.id === themeChoice) ??
+        themeOptions[0];
+
     const mainBaseClasses =
-        "relative min-h-screen overflow-x-hidden scroll-smooth transition-colors duration-700 ease-out";
-    const unifiedBackground =
-        "bg-[#f8fbff] dark:bg-gray-950 text-gray-900 dark:text-white";
+        "relative min-h-screen overflow-x-hidden scroll-smooth text-gray-900 dark:text-white transition-colors duration-700 ease-out";
     const scrollBehavior = isOpen ? "overflow-y-hidden" : "overflow-y-auto";
-    const mainClassName = `${mainBaseClasses} ${unifiedBackground} ${scrollBehavior}`;
+    const mainClassName = `${mainBaseClasses} ${scrollBehavior}`;
 
     return (
         <div className={darkmode ? "dark" : ""}>
@@ -51,7 +58,10 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className={mainClassName}>
+            <main
+                className={mainClassName}
+                style={{ background: currentTheme.background }}
+            >
                 <div
                     aria-hidden="true"
                     className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white/40 via-transparent to-transparent dark:from-cyan-500/10 blur-3xl"
@@ -61,8 +71,9 @@ export default function Home() {
                     <Navigation />
                 </div>
                 <div
-                    className="w-screen h-screen wweerrr bg-gradient-to-b from-white via-[#f8fbff] to-[#eef4ff] dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 opacity-80"
+                    className="w-screen h-screen wweerrr opacity-80"
                     aria-hidden="true"
+                    style={{ background: currentTheme.overlay }}
                 ></div>
 
                 <MyInfo />
