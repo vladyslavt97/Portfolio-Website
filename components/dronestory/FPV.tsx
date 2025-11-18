@@ -1,97 +1,158 @@
-import Image from "next/image";
+import { useEffect } from "react";
 import YouTube, { YouTubeProps } from "react-youtube";
+import ImageWithSpinner from "./ImageWithSpinner";
 
-type Props = {};
+const buildSteps = [
+    {
+        id: 1,
+        title: "Frame + motors",
+        copy: "Putting together the frame and the motors is a puzzle of heat tolerance, carbon fiber dust, and planning your configuration. Choose the right frame and it rewards you with a drone that feels like it was born to fly.",
+        image: "/drone/fpv/1.jpg",
+        reverse: false,
+    },
+    {
+        id: 2,
+        title: "Screws + solder fumes",
+        copy: "Attaching the motors, setting up the stack, soldering every pad… it is more physical than expected. From tinning wires to balancing propellers, the tools you bring decide how chill the build day is.",
+        image: "/drone/fpv/2.jpg",
+        reverse: true,
+    },
+];
 
-export default function FPV({}: Props) {
+const imagePairs = [
+    ["/drone/fpv/3.jpg", "/drone/fpv/4.jpg"],
+    ["/drone/fpv/5.jpg", "/drone/fpv/6.jpg"],
+];
+
+const fpvVideos = ["GiswFxwjjCA", "q59SE4rUHP8", "vG0acaAqCaA"];
+
+const fpvImageManifest = Array.from(
+    new Set([
+        ...buildSteps.map((step) => step.image),
+        ...imagePairs.flat(),
+    ]),
+);
+
+export default function FPV() {
     const opts: YouTubeProps["opts"] = {
+        width: "100%",
+        height: "100%",
         playerVars: {
-            // https://developers.google.com/youtube/player_parameters
             autoplay: 0,
+            rel: 0,
         },
     };
 
+    useEffect(() => {
+        if (typeof window === "undefined") {
+            return;
+        }
+        const cache = fpvImageManifest.map((src) => {
+            const img = new window.Image();
+            img.src = src;
+            return img;
+        });
+        return () => {
+            cache.forEach((img) => {
+                img.src = "";
+            });
+        };
+    }, []);
+
     return (
-        <div className="md:px-10 md:py-20">
-            <h1 className="text-center my-10 font-bold text-2xl">
-                My FPV Path...
-            </h1>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 my-10">
-                <Image
-                    src="/drone/fpv/1.jpg"
-                    alt="Frame and motors"
-                    width={500}
-                    height={500}
-                    className="w-full object-cover rounded-md"
-                />
-                <p>
-                    1. Putting together the frame and the motors can be a pain,
-                    because of the heat reducing objectives as well as your
-                    planned drone configuration. Therefore, choosing the right
-                    frame is crucial.
+        <div className="rounded-[32px] border border-fuchsia-400/20 bg-gradient-to-br from-purple-900/40 via-slate-950/60 to-cyan-900/40 p-5 shadow-2xl shadow-black/40 sm:p-12">
+            <div className="text-center">
+                <p className="text-xs uppercase tracking-[0.5em] text-white/60">
+                    My FPV path
+                </p>
+                <h2 className="mt-2 text-3xl font-semibold">
+                    From kit parts to a custom rocket
+                </h2>
+                <p className="mt-3 text-white/70">
+                    FPV building is therapy and chaos at the same time. Here is
+                    the build log that took me from stock components to the
+                    freestyle monster I now send through warehouses.
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 my-10">
-                <p>
-                    2. Attaching the motors and tightening the screws turned out
-                    more physical than I thought. Starting at the soldering part
-                    and all the way to installing the propellers. Do not neglect
-                    the recommended tools.
-                </p>
-                <Image
-                    src="/drone/fpv/2.jpg"
-                    alt="Motors and screws"
-                    width={500}
-                    height={500}
-                    className="w-full object-cover rounded-md"
-                />
-            </div>
+            <div className="mt-12 flex flex-col gap-10">
+                {buildSteps.map((step) => (
+                    <div
+                        key={step.id}
+                        className="grid grid-cols-1 gap-6 md:grid-cols-2"
+                    >
+                        {!step.reverse && (
+                            <ImageWithSpinner
+                                src={step.image}
+                                alt={step.title}
+                                width={800}
+                                height={800}
+                                className="h-full w-full rounded-3xl border border-white/15 object-cover shadow-2xl"
+                                spinnerLabel="Build"
+                            />
+                        )}
+                        <div className="rounded-3xl border border-white/10 bg-slate-950/40 p-6 shadow-lg shadow-black/40">
+                            <p className="text-xs uppercase tracking-[0.5em] text-white/50">
+                                Step {step.id}
+                            </p>
+                            <h3 className="mt-2 text-2xl font-semibold">
+                                {step.title}
+                            </h3>
+                            <p className="mt-3 text-white/80">{step.copy}</p>
+                        </div>
+                        {step.reverse && (
+                            <ImageWithSpinner
+                                src={step.image}
+                                alt={step.title}
+                                width={800}
+                                height={800}
+                                className="h-full w-full rounded-3xl border border-white/15 object-cover shadow-2xl"
+                                spinnerLabel="Build"
+                            />
+                        )}
+                    </div>
+                ))}
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 my-10">
-                <Image
-                    src="/drone/fpv/3.jpg"
-                    alt="Drone building step 3"
-                    width={500}
-                    height={500}
-                    className="w-full object-cover rounded-md"
-                />
-                <Image
-                    src="/drone/fpv/4.jpg"
-                    alt="Drone building step 4"
-                    width={500}
-                    height={500}
-                    className="w-full object-cover rounded-md"
-                />
-            </div>
+                {imagePairs.map((pair, index) => (
+                    <div
+                        key={pair.join("-")}
+                        className="grid grid-cols-1 gap-6 sm:grid-cols-2"
+                    >
+                        {pair.map((imagePath, innerIndex) => (
+                            <figure
+                                key={imagePath}
+                                className="overflow-hidden rounded-3xl border border-white/10 shadow-xl shadow-black/40"
+                            >
+                                <ImageWithSpinner
+                                    src={imagePath}
+                                    alt={`Drone building step ${index * 2 + innerIndex + 3}`}
+                                    width={800}
+                                    height={800}
+                                    className="h-full w-full object-cover"
+                                    spinnerLabel="Detail"
+                                />
+                            </figure>
+                        ))}
+                    </div>
+                ))}
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 my-10">
-                <Image
-                    src="/drone/fpv/5.jpg"
-                    alt="Drone building step 5"
-                    width={500}
-                    height={500}
-                    className="w-full object-cover rounded-md"
-                />
-                <Image
-                    src="/drone/fpv/6.jpg"
-                    alt="Drone building step 6"
-                    width={500}
-                    height={500}
-                    className="w-full object-cover rounded-md"
-                />
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 my-10">
-                <div className="aspect-video">
-                    <YouTube opts={opts} videoId="GiswFxwjjCA" />
-                </div>
-                <div className="aspect-video">
-                    <YouTube opts={opts} videoId="q59SE4rUHP8" />
-                </div>
-                <div className="aspect-video">
-                    <YouTube opts={opts} videoId="vG0acaAqCaA" />
+                <div className="rounded-[28px] border border-white/10 bg-slate-950/50 p-6 shadow-xl shadow-black/40">
+                    <p className="text-xs uppercase tracking-[0.5em] text-white/60">
+                        FPV POV
+                    </p>
+                    <h3 className="mt-2 text-2xl font-semibold">
+                        My goggles point of view
+                    </h3>
+                    <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                        {fpvVideos.map((videoId) => (
+                            <div
+                                key={videoId}
+                                className="aspect-video overflow-hidden rounded-2xl border border-white/15 bg-black"
+                            >
+                                <YouTube opts={opts} videoId={videoId} />
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
