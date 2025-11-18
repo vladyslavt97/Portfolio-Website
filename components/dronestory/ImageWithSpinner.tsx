@@ -1,4 +1,5 @@
 import Image, { ImageProps } from "next/image";
+import type { StaticImageData } from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import LoadingSpinner from "./LoadingSpinner";
 
@@ -18,10 +19,13 @@ export default function ImageWithSpinner({
     const [loaded, setLoaded] = useState(false);
 
     const srcKey = useMemo(() => {
-        if (typeof imageProps.src === "string") {
-            return imageProps.src;
+        const currentSrc = imageProps.src;
+        if (typeof currentSrc === "string") {
+            return currentSrc;
         }
-        return imageProps.src.src;
+
+        const staticData = currentSrc as StaticImageData | undefined;
+        return staticData?.src ?? "";
     }, [imageProps.src]);
 
     useEffect(() => {

@@ -15,7 +15,6 @@ import { RootState } from "../components/redux/store";
 import Link from "next/link";
 import { useEffect } from "react";
 import Ticker from "@/components/Ticker";
-import { bgColors } from "@/util/colors";
 
 export default function Home() {
     const darkmode = useSelector(
@@ -25,13 +24,17 @@ export default function Home() {
     const isOpen = useSelector(
         (state: RootState) => state.openerState.openValue
     );
-    const bgColorRedux = useSelector(
-        (state: RootState) => state.bgColor.bgColorValue
-    );
 
     useEffect(() => {
         console.log("Welcome to my portfolio website!🎉");
     }, []);
+
+    const mainBaseClasses =
+        "relative min-h-screen overflow-x-hidden scroll-smooth transition-colors duration-700 ease-out";
+    const unifiedBackground =
+        "bg-[#f8fbff] dark:bg-gray-950 text-gray-900 dark:text-white";
+    const scrollBehavior = isOpen ? "overflow-y-hidden" : "overflow-y-auto";
+    const mainClassName = `${mainBaseClasses} ${unifiedBackground} ${scrollBehavior}`;
 
     return (
         <div className={darkmode ? "dark" : ""}>
@@ -48,21 +51,18 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main
-                className={
-                    isOpen
-                        ? "bg-gradient-to-tr from-yellow-200/50 to-lime-500/50 dark:bg-gray-600 dark:bg-none overflow-x-hidden h-[100vh]"
-                        : `bg-none dark:bg-gray-600 dark:bg-none overflow-x-hidden overflow-y-scroll h-[100vh]`
-                }
-            >
-                <div id="start" className="">
+            <main className={mainClassName}>
+                <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white/40 via-transparent to-transparent dark:from-cyan-500/10 blur-3xl"
+                />
+                <div id="start">
                     <Ticker />
                     <Navigation />
                 </div>
                 <div
-                    className={`${
-                        bgColors[bgColorRedux - 1]
-                    } w-screen h-screen wweerrr`}
+                    className="w-screen h-screen wweerrr bg-gradient-to-b from-white via-[#f8fbff] to-[#eef4ff] dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 opacity-80"
+                    aria-hidden="true"
                 ></div>
 
                 <MyInfo />
@@ -80,14 +80,14 @@ export default function Home() {
                     <SendEmailToMe />
                 </section>
 
-                <Link href="#start">
-                    <div className="absolute bottom-5 right-1 sm:right-5 w-10 cursor-pointer opacity-50 flex items-end justify-end animate-bounce">
+                <Link href="#start" aria-label="Back to top">
+                    <div className="fixed bottom-5 right-3 flex w-10 cursor-pointer items-end justify-end opacity-70 transition hover:opacity-100 sm:right-5">
                         <Image
                             src="/arr.png"
                             alt="arrow"
                             width={100}
                             height={100}
-                            className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
+                            className="h-10 w-10 animate-bounce rounded-full bg-white/80 p-1 shadow-lg transition filter grayscale hover:scale-110 hover:grayscale-0 dark:bg-gray-900/80"
                         />
                     </div>
                 </Link>

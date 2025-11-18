@@ -4,48 +4,44 @@ import StripePaymentStart from "./StripePaymentStart";
 import TextEffect from "./effect/TextEffect";
 import { MyPicBorder } from "./effect/MyPicBorder";
 import { BackgroundGradientAnimation } from "./effect/BackgroundGradientAnimation";
-// import TextAnimation from "../TextAnimation";
+
+const heroCTA = [
+    { label: "View Projects", href: "#projects" },
+    { label: "Download Résumé", href: "#resume" },
+];
 
 export default function MyInfo() {
-    const phrases = ["Vladyslav", "Tsurkanenko"];
-    const [text, count] = useTypewriter({
+    const [text] = useTypewriter({
         words: ["Full Stack Web Developer"],
         loop: true,
         delaySpeed: 2000,
     });
 
     return (
-        <div>
-            <div className="p-5">
-                <div className="flex justify-center flex-col mx-auto w-28">
+        <section className="relative isolate overflow-hidden px-4 py-16 sm:px-8">
+            <div className="pointer-events-none absolute inset-0 blur-3xl">
+                <div className="absolute -top-32 left-10 h-64 w-64 rounded-full bg-cyan-200/40 dark:bg-cyan-500/20" />
+                <div className="absolute bottom-0 right-5 h-72 w-72 rounded-full bg-indigo-200/50 dark:bg-indigo-500/20" />
+            </div>
+            <div className="relative mx-auto flex max-w-5xl flex-col items-center gap-10 rounded-[32px] bg-white/60 p-6 text-center shadow-2xl shadow-black/5 backdrop-blur dark:bg-gray-900/70">
+                <div className="flex flex-col items-center gap-2 text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
                     <TextEffect target="Vladyslav" finalColor="green-500" />
                     <TextEffect target="Tsurkanenko" finalColor="gray-500" />
                 </div>
                 <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{
-                        duration: 2,
-                    }}
-                    viewport={{ once: true }}
-                    className="text-2xl py-2 text-center text-gray-500"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                    className="text-base text-gray-600 dark:text-gray-200 sm:text-xl"
                 >
                     {text}
                     <Cursor cursorColor="#F7AB0A" />
                 </motion.div>
-                <div className="fixed">
-                    <div className="liquid-glass text-red-400 font-bold fixed z-50">
-                        <span>Liquid glass</span>
-                    </div>
-                </div>
                 <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{
-                        duration: 2,
-                    }}
-                    viewport={{ once: true }}
-                    className="text-md py-5 leading-8 text-gray-800 dark:text-white text-center lg:mx-80"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.2 }}
+                    className="text-base leading-7 text-gray-700 dark:text-gray-100 sm:text-lg"
                 >
                     I am an IAM Developer and Technical Consultant at SITS, with
                     a background in Web Development from Spiced Academy in
@@ -64,37 +60,45 @@ export default function MyInfo() {
                     learning and am excited to apply my skills to drive success
                     in your organization.
                 </motion.p>
+                <div className="flex flex-wrap items-center justify-center gap-4">
+                    {heroCTA.map((cta) => (
+                        <a
+                            key={cta.label}
+                            href={cta.href}
+                            className="rounded-full border border-teal-500/30 bg-gradient-to-r from-emerald-400 to-cyan-500 px-6 py-2 text-sm font-semibold uppercase tracking-[0.3em] text-white shadow-lg shadow-cyan-500/30 transition hover:scale-105 dark:from-emerald-500 dark:to-cyan-600"
+                        >
+                            {cta.label}
+                        </a>
+                    ))}
+                </div>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    className="flex w-full flex-col items-center gap-6 rounded-3xl border border-white/40 bg-gradient-to-br from-blue-400 via-blue-600 to-purple-600 p-6 text-white shadow-2xl shadow-blue-900/40"
+                >
+                    <BackgroundGradientAnimation className="flex w-full flex-col items-center gap-5 text-center">
+                        <h3 className="text-base font-semibold uppercase tracking-[0.4em] text-white/80">
+                            Support my work
+                        </h3>
+                        <p className="text-sm text-white/80">
+                            Enjoy the portfolio? Fuel the next experiment with a
+                            Stripe donation.
+                        </p>
+                        <StripePaymentStart />
+                    </BackgroundGradientAnimation>
+                </motion.div>
+
+                <motion.div
+                    className="relative mx-auto mt-4 h-56 w-56 overflow-hidden rounded-full border-4 border-white/70 shadow-2xl shadow-cyan-500/25"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                >
+                    <MyPicBorder />
+                </motion.div>
             </div>
-
-            <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 2 }}
-                className="flex justify-center flex-col items-center gap-5 bg-gradient-to-br from-blue-300 via-blue-500 to-blue-700 w-[350px] h-[200px] mx-auto rounded-2xl shadow-lg"
-            >
-                <BackgroundGradientAnimation className="flex justify-center flex-col items-center h-full gap-5">
-                    <h1 className="text-white italic text-center">
-                        Please, support me via a Stripe payment:
-                    </h1>
-                    <StripePaymentStart />
-                </BackgroundGradientAnimation>
-            </motion.div>
-
-            <motion.div
-                className="relative mx-auto bg-gradient-to-b from-teal-500 w-60 h-60 m-10 overflow-hidden shadow-lg rounded-full"
-                initial={{
-                    opacity: 0,
-                }}
-                transition={{
-                    duration: 1.5,
-                }}
-                whileInView={{
-                    opacity: 1,
-                }}
-                viewport={{ once: true }}
-            >
-                <MyPicBorder />
-            </motion.div>
-        </div>
+        </section>
     );
 }

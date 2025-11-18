@@ -1,98 +1,139 @@
-import React, { FormEvent, useRef, useState, ChangeEvent } from "react";
+import { FormEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Footer from "@/components/Footer";
 
-
-export default function SendEmailToMe(){
-    const [userName, setUserName] = useState<string>('');
-    const [emailState, setEmailState] = useState<string>('');
-    const [messageState, setMessageState] = useState<string>('');
-    const [sending, setSending] = useState<boolean>()
-    const [sent, setSent] = useState<boolean>()
+export default function SendEmailToMe() {
+    const [userName, setUserName] = useState("");
+    const [emailState, setEmailState] = useState("");
+    const [messageState, setMessageState] = useState("");
+    const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
     const form = useRef<HTMLFormElement>(null);
-  
-    const handleChangeUserName = (event: ChangeEvent<HTMLInputElement>) => {
-        setUserName(event.target.value);
-    }
-    const handleChangeEmail = (event: ChangeEvent<HTMLInputElement>) => {
-        setEmailState(event.target.value);
-    }
-    const handleChangeMessage = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-        setMessageState(event.target.value);
-    }
-    const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
-      setSending(true);
-      console.log('fsdfsf', form.current);
-      
-        if(form.current && process.env.NEXT_PUBLIC_YOUR_SERVICE_ID && process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID && process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY) {
-            emailjs
-            .sendForm(
-                process.env.NEXT_PUBLIC_YOUR_SERVICE_ID,
-                process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID,
-                form.current,
-                process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY
-            )
-            .then(
-                (result) => {
-                console.log(result.text);
-                setUserName('')
-                setEmailState('')
-                setMessageState('')
-                setSending(false);
-                setSent(true)
-                setTimeout(() => {
-                  console.log("Delayed for 2 second.");
-                  setSent(false);
-                }, 2000)
-                },
-                (error) => {
-                console.log(error.text);
-                }
-            );
-        }
 
+    const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        if (status === "sending") return;
+        setStatus("sending");
+
+        if (
+            form.current &&
+            process.env.NEXT_PUBLIC_YOUR_SERVICE_ID &&
+            process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID &&
+            process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY
+        ) {
+            try {
+                await emailjs.sendForm(
+                    process.env.NEXT_PUBLIC_YOUR_SERVICE_ID,
+                    process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID,
+                    form.current,
+                    process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY,
+                );
+                setUserName("");
+                setEmailState("");
+                setMessageState("");
+                setStatus("sent");
+                setTimeout(() => setStatus("idle"), 2500);
+            } catch (error) {
+                console.error(error);
+                setStatus("idle");
+            }
+        }
     };
 
-  return <div className="">
-        {sent && <div 
-        className=" bg-gradient-to-r from-cyan-500 to-teal-500 flex justify-center mt-10 mx-0 flex-col items-center rounded-tl-2xl rounded-tr-2xl h-[400px]" id="sending">
-            <h2 className=" text-2xl text-black">Sent 🎉</h2>
-          </div>
-        }
-        {sending && <div 
-        className=" bg-gradient-to-r from-cyan-500 to-teal-500 flex justify-center mt-10 mx-0 flex-col items-center rounded-tl-2xl rounded-tr-2xl h-[400px]" id="sending">
-            <h2 className=" text-2xl text-black">Sending...</h2>
-          </div>
-        }
-        {!sending && !sent &&
-          <form ref={form} onSubmit={sendEmail} 
-          className=" bg-gradient-to-r from-cyan-500 to-teal-500 flex justify-center mt-10 mx-0 flex-col items-center rounded-tl-2xl rounded-tr-2xl pb-20"
-          id="sendemail">
-            <label className=" text-lg text-black mt-5">Name</label>
-            <br />
-            <input className="rounded-lg bg-white text-black p-2" 
-              type="text" name="user_name"  placeholder="your name"
-              onChange={handleChangeUserName}
-              value={userName}/>
-            <br />
-            <label className=" text-lg text-black">Email</label>
-            <br />
-            <input className="rounded-lg bg-white text-black p-2"  
-              type="email" name="email" placeholder="email"
-              onChange={handleChangeEmail}
-              value={emailState}/>
-            <br />
-            <label className=" text-lg text-black">Message</label>
-            <br />
-            <textarea className="rounded-lg bg-white text-black p-2"  
-              name="message" placeholder="message"
-              onChange={handleChangeMessage}
-              value={messageState}
-              />
-            <br />
-            <button type="submit" className=" cursor-pointer bg-white px-8 py4 mb-10 rounded-lg text-black">SEND</button>
-          </form>}
-          <Footer/>
-      </div>
+    const formBody = (
+        <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="space-y-5"
+            id="sendemail"
+        >
+            <InputField
+                label="Name"
+                name="user_name"
+                value={userName}
+                onChange={setUserName}
+            />
+            <InputField
+                label="Email"
+                type="email"
+                name="email"
+                value={emailState}
+                onChange={setEmailState}
+            />
+            <TextareaField
+                label="Message"
+                name="message"
+                value={messageState}
+                onChange={setMessageState}
+            />
+            <button
+                type="submit"
+                className="w-full rounded-full bg-white/90 px-6 py-3 text-center text-sm font-semibold uppercase tracking-[0.4em] text-cyan-600 shadow-lg shadow-cyan-500/20 transition hover:translate-y-[-2px]"
+            >
+                Send
+            </button>
+        </form>
+    );
+
+    const stateView = (
+        <div className="flex h-full flex-col items-center justify-center text-2xl font-semibold text-white">
+            {status === "sending" ? "Sending…" : "Sent 🎉"}
+        </div>
+    );
+
+    return (
+        <div className="px-4 py-16">
+            <div className="mx-auto max-w-3xl rounded-[32px] bg-gradient-to-r from-cyan-500 to-teal-500 p-10 text-black shadow-2xl shadow-cyan-500/30">
+                {status === "idle" ? formBody : stateView}
+            </div>
+            <Footer />
+        </div>
+    );
+}
+
+type InputProps = {
+    label: string;
+    name: string;
+    value: string;
+    onChange: (value: string) => void;
+    type?: string;
 };
+
+function InputField({ label, name, value, onChange, type = "text" }: InputProps) {
+    return (
+        <label className="flex flex-col text-sm font-semibold">
+            <span className="mb-1 text-black/80">{label}</span>
+            <input
+                className="rounded-2xl border border-white/30 bg-white/90 px-4 py-3 text-black shadow-md focus:outline-none focus:ring-2 focus:ring-teal-300"
+                type={type}
+                name={name}
+                placeholder={label}
+                value={value}
+                onChange={(event) => onChange(event.target.value)}
+                required
+            />
+        </label>
+    );
+}
+
+type TextAreaProps = {
+    label: string;
+    name: string;
+    value: string;
+    onChange: (value: string) => void;
+};
+
+function TextareaField({ label, name, value, onChange }: TextAreaProps) {
+    return (
+        <label className="flex flex-col text-sm font-semibold">
+            <span className="mb-1 text-black/80">{label}</span>
+            <textarea
+                className="h-36 rounded-2xl border border-white/30 bg-white/90 px-4 py-3 text-black shadow-md focus:outline-none focus:ring-2 focus:ring-teal-300"
+                name={name}
+                placeholder={label}
+                value={value}
+                onChange={(event) => onChange(event.target.value)}
+                required
+            />
+        </label>
+    );
+}

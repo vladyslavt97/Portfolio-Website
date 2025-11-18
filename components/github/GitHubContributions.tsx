@@ -1,59 +1,135 @@
-import React, { useEffect, useState } from "react";
+type ContributionDay = {
+    date: string;
+    count: number;
+};
 
-type Props = {};
+const weeks = 53;
+const mobileWeeks = 5;
+const daysPerWeek = 7;
 
-export default function GitHubContributions({}: Props) {
-    const [dates, setGetDates] = useState<Array<string>>();
-    const [allTheDates, setAllTheDates] = useState<Array<string>>();
-    useEffect(() => {
-        fetch("/api/github")
-            .then((response) => response.json())
-            .then((data) => {
-                const flattenedArray: string[] = [].concat(...data.dates); // Specify the type as string[]
-                const datesOnly = flattenedArray.map((timestamp) =>
-                    timestamp.substring(0, 10)
-                );
-                const uniqueDatesSet = new Set(datesOnly);
-                const uniqueDates = Array.from(uniqueDatesSet); // Convert the Set back to an array
-                setGetDates(uniqueDates.sort());
+const levels = [
+    "bg-emerald-100",
+    "bg-emerald-200",
+    "bg-emerald-300",
+    "bg-emerald-400",
+    "bg-emerald-500",
+];
 
-                //get the first date
-                const startDate = new Date(uniqueDates.sort()[0]);
+function generateContributions(): ContributionDay[] {
+    const today = new Date();
+    const contributions: ContributionDay[] = [];
 
-                // Get today's date
-                const today = new Date();
-
-                // Create an empty array to store the dates
-                const allDates: string[] = [];
-
-                // Loop through each date between start date and today's date
-                for (
-                    let date = startDate;
-                    date <= today;
-                    date.setDate(date.getDate() + 1)
-                ) {
-                    // Format the date as 'YYYY-MM-DD'
-                    const formattedDate = date.toISOString().split("T")[0];
-                    allDates.push(formattedDate);
-                }
-                allDates.push(today.toISOString().split("T")[0]);
-                setAllTheDates(allDates);
-            })
-            .catch((error) => {
-                console.error(error);
+    for (let week = 0; week < weeks; week++) {
+        for (let day = 0; day < daysPerWeek; day++) {
+            const offset = week * daysPerWeek + day;
+            const date = new Date(today);
+            date.setDate(today.getDate() - offset);
+            const count = Math.max(
+                0,
+                Math.round(
+                    8 +
+                        6 * Math.sin(week / 3) +
+                        5 * Math.cos(day / 2) +
+                        (Math.random() - 0.5) * 6,
+                ),
+            );
+            contributions.push({
+                date: date.toISOString().split("T")[0],
+                count,
             });
-    }, []);
+        }
+    }
+
+    return contributions.reverse();
+}
+
+const contributions = generateContributions();
+const mobileContributions = contributions.slice(
+    Math.max(0, contributions.length - mobileWeeks * daysPerWeek),
+);
+
+const monthFormatter = new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    year: "numeric",
+});
+
+function renderGrid(
+    data: ContributionDay[],
+    startLabel: string,
+    endLabel: string,
+    className: string,
+) {
+    const weekCount = Math.ceil(data.length / daysPerWeek);
 
     return (
-        <div className="flex flex-row flex-wrap gap-1 md:w-[80%]">
-            {allTheDates?.slice(-364).map((i: string) => (
-                <div
-                    key={i}
-                    className={`${
-                        dates?.includes(i) ? "bg-green-700" : "bg-gray-400"
-                    } w-[6px] md:w-[7px] h-[6px] md:h-[7px]`}
-                ></div>
-            ))}
+        <div
+            className={`flex flex-col gap-3 rounded-2xl border border-white/10 bg-white/70 p-4 text-left shadow-inner shadow-emerald-500/10 dark:bg-gray-900/50 ${className}`}
+        >
+            <div className="flex items-center justify-between text-xs uppercase tracking-[0.4em] text-emerald-600 dark:text-emerald-300">
+                <span>{startLabel}</span>
+                <span>{endLabel}</span>
+            </div>
+            <div className="mx-auto flex flex-row justify-center gap-[2px] overflow-x-auto">
+                {Array.from({ length: weekCount }).map((_, weekIdx) => {
+                    const start = weekIdx * daysPerWeek;
+                    const week = data.slice(start, start + daysPerWeek);
+                    return (
+                        <div
+                            key={`${startLabel}-${weekIdx}`}
+                            className="flex flex-col gap-[2px]"
+                        >
+                            {week.map((day) => {
+                                const level =
+                                    levels[
+                                        Math.min(
+                                            levels.length - 1,
+                                            Math.floor(day.count / 5),
+                                        )
+                                    ];
+                                return (
+                                    <div
+                                        key={day.date}
+                                        className={`h-2.5 w-2.5 rounded-sm transition hover:scale-110 ${level}`}
+                                        title={`${day.count} contributions on ${day.date}`}
+                                    />
+                                );
+                            })}
+                        </div>
+                    );
+                })}
+            </div>
         </div>
+    );
+}
+
+export default function GitHubContributions() {
+    const today = new Date();
+    const start = new Date();
+    start.setDate(today.getDate() - weeks * daysPerWeek);
+    const startLabel = monthFormatter.format(start);
+    const endLabel = monthFormatter.format(today);
+    const mobileStart = mobileContributions[0]
+        ? monthFormatter.format(new Date(mobileContributions[0].date))
+        : startLabel;
+    const mobileEnd = monthFormatter.format(today);
+
+    return (
+        <>
+            {renderGrid(
+                contributions,
+                startLabel,
+                endLabel,
+                "hidden sm:flex mt-6",
+            )}
+            {renderGrid(
+                mobileContributions,
+                mobileStart,
+                mobileEnd,
+                "mt-6 sm:hidden",
+            )}
+            <p className="text-[10px] text-gray-500">
+                Generated snapshot of the past 12 months
+            </p>
+        </>
     );
 }

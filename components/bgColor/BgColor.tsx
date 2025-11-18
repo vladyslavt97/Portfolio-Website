@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { bgColorChanger } from "../redux/bgChange";
 import { RootState } from "../redux/store";
+import { bgColorChanger } from "../redux/bgChange";
 
 type Props = {};
 
@@ -18,49 +18,72 @@ export default function BgColor({}: Props) {
         setOpened(false); // Close the modal after selection
     };
 
+    const themeOptions = [
+        {
+            id: 1,
+            label: "Aurora",
+            className:
+                "bg-[radial-gradient(circle_at_top,_#c084fc,_#a855f7,_#f472b6)]",
+            gradient:
+                "from-[#e3e8ff] via-[#f7f1ff] to-[#ffedf5] dark:from-[#1c1f3a] dark:via-[#231a38] dark:to-[#2d1f36]",
+        },
+        {
+            id: 2,
+            label: "Solstice",
+            className: "bg-[radial-gradient(circle,_#facc15,_#fb923c,_#f97316)]",
+            gradient:
+                "from-[#fff5d6] via-[#ffe6a7] to-[#ffd3a4] dark:from-[#2a1b00] dark:via-[#3a1b00] dark:to-[#4a1b00]",
+        },
+        {
+            id: 3,
+            label: "Breeze",
+            className:
+                "bg-[radial-gradient(circle_at_bottom,_#86efac,_#4ade80,_#22d3ee)]",
+            gradient:
+                "from-[#e8fff4] via-[#d7fbff] to-[#f4fffa] dark:from-[#012922] dark:via-[#013f3a] dark:to-[#002b3a]",
+        },
+    ];
+
+    const activeOption = themeOptions.find((option) => option.id === bgColorRedux);
+
     return (
         <div className="hidden md:block md:mx-5 md:my-2 relative">
-            {bgColorRedux === 1 && (
-                <div
-                    onClick={(e) => setOpened(!opened)}
-                    className="rounded-full w-12 h-12 cursor-pointer border-white border-2 shadow-md hover:shadow-lg transition-transform duration-200 hover:scale-110 bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-pink-300 via-purple-300 to-indigo-400"
-                ></div>
-            )}
-            {bgColorRedux === 2 && (
-                <div
-                    onClick={(e) => setOpened(!opened)}
-                    className="rounded-full w-12 h-12 cursor-pointer border-white border-2 shadow-md hover:shadow-lg transition-transform duration-200 hover:scale-110 bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500"
-                ></div>
-            )}
-            {bgColorRedux === 3 && (
-                <div
-                    onClick={(e) => setOpened(!opened)}
-                    className="rounded-full w-12 h-12 cursor-pointer border-white border-2 shadow-md hover:shadow-lg transition-transform duration-200 hover:scale-110 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-orange-300 via-lime-200 to-emerald-200"
-                ></div>
-            )}
+            <button
+                onClick={() => setOpened(!opened)}
+                className={`rounded-full w-12 h-12 border-2 border-white/70 shadow-lg transition hover:scale-110 focus:outline-none ${activeOption?.className}`}
+                aria-label="Choose site color theme"
+            />
             {opened && (
                 <div className="z-[999]">
                     <div
-                        className="w-screen h-screen bg-black/70 fixed top-0 left-0 z-[998] transition-opacity duration-300"
-                        onClick={(e) => setOpened(!opened)}
-                    ></div>
-                    <div className="w-96 bg-gradient-to-tr from-white to-green-400 h-80 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-xl z-[999] shadow-xl p-6 transition-transform duration-300">
-                        <h1 className="font-serif text-teal-800 text-center text-xl font-bold bg-teal-300 border-2 border-teal-500 rounded-full px-5 py-2 mx-3 mb-6 shadow-sm">
-                            Pick the theme color:
-                        </h1>
-                        <div className="flex justify-center flex-row items-center gap-5">
-                            <div
-                                className="border-black border-2 w-20 h-20 rounded cursor-pointer shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300 bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-pink-300 via-purple-300 to-indigo-400"
-                                onClick={(e) => setColor(1)}
-                            ></div>
-                            <div
-                                className="border-black border-2 w-20 h-20 rounded cursor-pointer shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300 bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500"
-                                onClick={(e) => setColor(2)}
-                            ></div>
-                            <div
-                                className="border-black border-2 w-20 h-20 rounded cursor-pointer shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-orange-300 via-lime-200 to-emerald-200"
-                                onClick={(e) => setColor(3)}
-                            ></div>
+                        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[998]"
+                        onClick={() => setOpened(false)}
+                    />
+                    <div className="fixed top-1/2 left-1/2 w-[90vw] max-w-md -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-white/90 p-8 shadow-2xl backdrop-blur-lg dark:bg-gray-900/90 z-[999] border border-white/40">
+                        <div className="text-center">
+                            <p className="text-xs uppercase tracking-[0.4em] text-teal-500">
+                                Theme
+                            </p>
+                            <h1 className="mt-2 text-2xl font-semibold text-gray-900 dark:text-white">
+                                Pick the theme color
+                            </h1>
+                            <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                                Instantly restyle the background gradient across the site.
+                            </p>
+                        </div>
+                        <div className="mt-6 grid grid-cols-3 gap-4">
+                            {themeOptions.map((option) => (
+                                <button
+                                    key={option.id}
+                                    onClick={() => setColor(option.id)}
+                                    className={`relative flex h-20 w-20 items-center justify-center rounded-xl border-2 ${
+                                        bgColorRedux === option.id
+                                            ? "border-teal-500 shadow-[0_0_30px_rgba(45,212,191,0.6)]"
+                                            : "border-black/20 shadow-md"
+                                    } transition hover:scale-105 focus:outline-none ${option.className}`}
+                                    aria-label={`Activate ${option.label} theme`}
+                                />
+                            ))}
                         </div>
                     </div>
                 </div>

@@ -1,38 +1,41 @@
-import React, { useState } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { HiDownload } from "react-icons/hi";
+import ImageWithSpinner from "./dronestory/ImageWithSpinner";
+
 export default function Resume() {
     return (
-        <div className="flex justify-center flex-col items-center max-w-[700px] mx-auto">
-            <hr className="h-1 bg-gradient-to-tr from-yellow-500 to-lime-400 w-[100vw] mt-20" />
-            <h2
-                className="text-center mt-20 text-3xl text-teal-500"
-                id="resume"
-            >
+        <section
+            className="mx-auto flex max-w-4xl flex-col items-center px-4 py-16"
+            id="resume"
+        >
+            <p className="text-sm uppercase tracking-[0.5em] text-teal-500">
                 Resume
+            </p>
+            <h2 className="mt-2 text-3xl font-semibold text-gray-900 dark:text-white">
+                Snapshot of my experience
             </h2>
-            <motion.div
-                transition={{ duration: 1 }}
-                whileHover={{ scale: 1.1 }}
-                className="flex justify-center flex-col my-2"
+            <p className="mt-3 text-center text-base text-gray-600 dark:text-gray-300">
+                Download the latest CV or take a peek at the preview below.
+            </p>
+            <motion.a
+                href="/CV_Vladyslav_Tsurkanenko.pdf"
+                download
+                whileHover={{ scale: 1.05 }}
+                className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500 px-6 py-3 text-sm font-semibold uppercase tracking-[0.4em] text-white shadow-lg shadow-cyan-500/30"
             >
-                <a
-                    href="/CV_Vladyslav_Tsurkanenko.pdf"
-                    download
-                    className="w-60 mx-auto mt-5 bg-teal-500 hover:bg-teal-900 text-white font-bold py-2 px-4 rounded text-center drop-shadow-2xl flex flex-row justify-center"
-                >
-                    Download
-                    <HiDownload className="text-xl mx-2" />
-                </a>
-            </motion.div>
-            <Image
-                src="/resume.jpg"
-                alt="resume"
-                width={1000}
-                height={1000}
-                className="drop-shadow-2xl my-10 p-20 lg:p-50 hover:p-0 transition-all duration-300 ease-in-out dark:bg-white cursor-pointer"
-            />
-        </div>
+                <HiDownload />
+                Download PDF
+            </motion.a>
+            <div className="mt-10 w-full overflow-hidden rounded-[32px] border border-white/20 bg-white/80 p-4 shadow-2xl shadow-black/10 backdrop-blur dark:bg-gray-900/70">
+                <ImageWithSpinner
+                    src="/resume.jpg"
+                    alt="Resume preview"
+                    width={1200}
+                    height={1600}
+                    className="h-full w-full rounded-[24px] object-cover"
+                    spinnerLabel="Loading résumé"
+                />
+            </div>
+        </section>
     );
 }

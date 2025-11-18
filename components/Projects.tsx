@@ -7,148 +7,111 @@ import {
     CardBody,
     CardItem,
 } from "@/components/effect/CardContainer";
-import Link from "next/link";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
 import GitHubStats from "./github/GitHubStats";
+
+const accentPalette = [
+    "from-amber-100 via-amber-200 to-orange-100",
+    "from-cyan-100 via-sky-100 to-indigo-100",
+    "from-rose-100 via-pink-100 to-amber-100",
+];
 
 export default function Projects() {
     const [showMore, setShowMore] = useState(false);
 
     return (
-        <div>
-            <h2
-                className="mt-20 py-4 text-teal-500 text-3xl pt-8 pb-2 text-center"
-                id="projects"
-            >
-                My Projects
-            </h2>
-            <GitHubStats />
-            {/* <div className="lg:grid-cols-3 lg:grid gap-10 md:flex-wrap xl:mx-40 lg:mx-10">
-                {projects.map((project, index) => (
-                    <motion.div
-                        initial={{
-                            rotateZ: 2,
-                            opacity: 0.5,
-                        }}
-                        transition={{ duration: 1 }}
-                        whileInView={{
-                            rotateZ: 0,
-                            opacity: 1,
-                        }}
-                        whileHover={{ scale: 1.1 }}
-                        key={index}
-                        className={`${
-                            index > 2 && !showMore
-                                ? "hidden"
-                                : "text-center shadow-2xl my-10 p-5 mx-10 bg-white/30 rounded-lg md:mx-40 lg:mx-10 basis-1/3 flex-1 flex items-center justify-center flex-col"
-                        }`}
-                    >
-                        <h4 className="text-gray-800 py-1 text-xl font-bold">
-                            {project.title}
-                        </h4>
-                        <p className="text-black">{project.description}</p>
-                        <Image
-                            src={project.image}
-                            alt={project.title}
-                            className="m-5 rounded-lg w-[80%]"
-                            priority={true}
-                            width={500}
-                            height={500}
-                        />
-                        <div className="flex flex-row">
-                            <a
-                                href={project.code}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-2"
-                            >
-                                Code
-                            </a>
-                            {project.website !== "" && (
-                                <a
-                                    href={project.website}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-2"
-                                >
-                                    Website
-                                </a>
-                            )}
-                        </div>
-                    </motion.div>
-                ))}
-            </div> */}
-
-            <div className="rounded-2xl">
-                {projects.map((project, index) => (
-                    <motion.div
-                        key={index}
-                        className={`${
-                            index > 2 && !showMore
-                                ? "hidden"
-                                : "flex items-center justify-center flex-col mx-3 mx:m-0"
-                        }`}
-                    >
-                        <CardContainer className="inter-var bg-white">
-                            <CardBody className="bg-gradient-to-br from-yellow-100 to-yellow-200 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
-                                <CardItem
-                                    translateZ="50"
-                                    className="text-xl font-bold text-neutral-600 dark:text-white"
-                                >
-                                    {project.title}
-                                </CardItem>
-                                <CardItem
-                                    as="p"
-                                    translateZ="60"
-                                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
-                                >
-                                    {project.description}
-                                </CardItem>
-                                <CardItem
-                                    translateZ="100"
-                                    className="w-full mt-4"
-                                >
-                                    <Image
-                                        src={project.image}
-                                        alt={project.title}
-                                        className="m-5 rounded-lg w-[80%]"
-                                        priority={true}
-                                        width={500}
-                                        height={500}
-                                    />
-                                </CardItem>
-                                <div className="flex justify-between items-center mt-20">
-                                    <a
-                                        href={project.code}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-2"
-                                    >
-                                        Code
-                                    </a>
-                                    {project.website !== "" && (
-                                        <a
-                                            href={project.website}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-2"
-                                        >
-                                            Website
-                                        </a>
-                                    )}
-                                </div>
-                            </CardBody>
-                        </CardContainer>
-                    </motion.div>
-                ))}
+        <section className="px-4 py-16 sm:px-6 lg:px-8" id="projects">
+            <div className="mx-auto max-w-5xl text-center">
+                <h2 className="text-3xl font-semibold text-teal-500">
+                    My Projects
+                </h2>
+                <p className="mt-3 text-base text-gray-600 dark:text-gray-300">
+                    A curated list of experiments, freelance adventures, and
+                    hackathon builds.
+                </p>
             </div>
-            <div className="flex justify-center items-center w-full">
+            <div className="mt-10">
+                <GitHubStats />
+            </div>
+            <div className="mt-10 grid grid-cols-1 gap-4 sm:gap-6">
+                {projects.map((project, index) => {
+                    const accent = accentPalette[index % accentPalette.length];
+                    const hidden = index > 2 && !showMore;
+                    return (
+                        <motion.div
+                            key={project.title}
+                            className={hidden ? "hidden" : "flex justify-center"}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.7, delay: index * 0.05 }}
+                        >
+                            <CardContainer className="inter-var w-full max-w-[28rem] aspect-square">
+                                <CardBody className="relative flex h-full w-full flex-col overflow-hidden rounded-3xl border border-black/5 bg-transparent p-0 shadow-2xl shadow-black/10 dark:border-white/10">
+                                    <div
+                                        className={`absolute inset-0 bg-gradient-to-br ${accent}`}
+                                    />
+                                    <div className="relative flex h-full flex-col gap-4 bg-white/85 p-6 backdrop-blur-sm dark:bg-gray-900/80">
+                                        <CardItem
+                                            translateZ="50"
+                                            className="text-2xl font-semibold text-gray-900 dark:text-white"
+                                        >
+                                            {project.title}
+                                        </CardItem>
+                                        <CardItem
+                                            as="p"
+                                            translateZ="50"
+                                            className="text-sm text-gray-700 dark:text-gray-200"
+                                        >
+                                            {project.description}
+                                        </CardItem>
+                                        <CardItem translateZ="80" className="flex-1">
+                                            <Image
+                                                src={project.image}
+                                                alt={project.title}
+                                                className="h-full w-full rounded-2xl border border-black/5 object-cover shadow-lg shadow-black/20 dark:border-white/10"
+                                                priority={index < 2}
+                                                width={800}
+                                                height={800}
+                                            />
+                                        </CardItem>
+                                        <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
+                                            <a
+                                                href={project.code}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-2 rounded-full border border-gray-900/10 bg-white px-4 py-2 text-sm font-semibold text-gray-900 shadow-md transition hover:translate-y-[-2px] dark:bg-gray-800 dark:text-white"
+                                            >
+                                                <FiGithub />
+                                                Code
+                                            </a>
+                                            {project.website !== "" && (
+                                                <a
+                                                    href={project.website}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-teal-500 px-4 py-2 text-sm font-semibold text-white shadow-md transition hover:translate-y-[-2px]"
+                                                >
+                                                    <FiExternalLink />
+                                                    Live site
+                                                </a>
+                                            )}
+                                        </div>
+                                    </div>
+                                </CardBody>
+                            </CardContainer>
+                        </motion.div>
+                    );
+                })}
+            </div>
+            <div className="mt-10 flex justify-center">
                 <button
-                    onClick={(e) => setShowMore(!showMore)}
-                    className="bg-green-500 px-2 rounded-xl drop-shadow-lg hover:bg-green-300"
+                    onClick={() => setShowMore((prev) => !prev)}
+                    className="rounded-full border border-teal-500/40 bg-white/80 px-6 py-2 text-sm font-semibold uppercase tracking-[0.4em] text-teal-600 shadow-lg shadow-teal-500/20 transition hover:scale-105 dark:bg-gray-900/60 dark:text-teal-300"
                 >
-                    {showMore ? "Show Less" : "Show more"}
+                    {showMore ? "Show Less" : "Show More"}
                 </button>
             </div>
-        </div>
+        </section>
     );
 }
