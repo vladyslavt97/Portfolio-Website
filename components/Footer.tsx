@@ -25,8 +25,8 @@ export default function Footer({}: Props) {
                     </div>
                     <div className="mr-16 md:mr-12 text-xs mt-2 flex items-end flex-col">
                         <h3 className="flex flex-row gap-3">
-                            vladyslavt97@gmail.com
-                            <CopyToClipboard text="vladyslavt97@gmail.com">
+                            vladyslav.tsurkanenko@hotmail.com
+                            <CopyToClipboard text="vladyslav.tsurkanenko@hotmail.com">
                                 <BiCopy className="cursor-pointer" />
                             </CopyToClipboard>
                         </h3>

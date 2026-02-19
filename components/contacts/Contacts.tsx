@@ -5,7 +5,7 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 const contactCards = [
     {
         label: "Email",
-        value: "vladyslavt97@gmail.com",
+        value: "vladyslav.tsurkanenko@hotmail.com",
     },
     {
         label: "Phone",

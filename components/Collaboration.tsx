@@ -4,7 +4,7 @@ import { BiCopy } from "react-icons/bi";
 
 export default function Collaboration() {
     const [copied, setCopied] = useState(false);
-    const email = "vladyslavt97@gmail.com";
+    const email = "vladyslav.tsurkanenko@hotmail.com";
 
     const copyEmail = () => {
         navigator.clipboard.writeText(email);
