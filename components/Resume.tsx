@@ -18,7 +18,7 @@ export default function Resume() {
                 Download the latest CV or take a peek at the preview below.
             </p>
             <motion.a
-                href="/CV_Vladyslav_Tsurkanenko.pdf"
+                href="/Vladyslav Tsurkanenko - CV.pdf"
                 download
                 whileHover={{ scale: 1.05 }}
                 className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500 px-6 py-3 text-sm font-semibold uppercase tracking-[0.4em] text-white shadow-lg shadow-cyan-500/30"
@@ -28,7 +28,7 @@ export default function Resume() {
             </motion.a>
             <div className="mt-10 w-full overflow-hidden rounded-[32px] border border-white/20 bg-white/80 p-4 shadow-2xl shadow-black/10 backdrop-blur dark:bg-gray-900/70">
                 <ImageWithSpinner
-                    src="/resume.jpg"
+                    src="/resume.png"
                     alt="Resume preview"
                     width={1200}
                     height={1600}
