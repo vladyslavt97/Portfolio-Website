@@ -12,13 +12,13 @@ export default function Violin({}: Props) {
                 testimonials={[
                     {
                         quote: "I play with my heart",
-                        name: "Berlin 2024",
+                        name: "Berlin 2026",
                         designation: "kamermusikverein",
                         src: "/violin/vlad2.png",
                     },
                     {
                         quote: "I play with my heart",
-                        name: "Berlin 2024",
+                        name: "Berlin 2026",
                         designation: "kamermusikverein",
                         src: "/violin/vlad3.png",
                     },

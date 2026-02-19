@@ -76,7 +76,7 @@ export default function Footer({}: Props) {
                 <Link href="/dronestory" className="text-white italic">
                     Drone Story
                 </Link>
-                <span>© 2024 Vladyslav Tsurkanenko - Developer</span>
+                <span>© 2026 Vladyslav Tsurkanenko - Developer</span>
             </div>
         </div>
     );

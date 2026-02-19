@@ -99,7 +99,7 @@ export default function Drone() {
                         </h1>
                         <p className="max-w-3xl text-base text-white/80 sm:text-lg md:text-xl">
                             I started with a tiny DJI Mini in 2020 and ended up
-                            soldering FPV rockets by 2024. This page is the
+                            soldering FPV rockets by 2026. This page is the
                             scrapbook of every crash, sunrise, and adrenaline
                             spike along the way.
                         </p>
